@@ -107,10 +107,11 @@ theme: melody
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  #type: ''
-  type: git                       # type为git
-  # 编译后静态页面文件推送到该仓库的gh-pages分支，后面也只部署该分支
-  #repo: git@https://gitee.com/Meloor/blog.git  # 编译后静态文件的仓库URL 不是原码的URL
-  repo: git@gitee.com:Meloor/meloor.git # 注意是ssh方式
+- type: git
+  repo: git@gitee.com:Meloor/meloor.git
   branch: gh-pages
-  # branch: master
+  message: "deploy to gitee pages"
+- type: git
+  repo: git@github.com:Meloor/Meloor.github.io.git
+  branch: gh-pages
+  message: "deploy to github pages"
