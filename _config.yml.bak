@@ -5,28 +5,21 @@
 # Site
 title: Meloor's Blog
 subtitle: DateBase learning...
-description: '回想旋律·美乐奥尔的博客;database,java,c++,python;数据库、java、c++、python'
-keywords: 'database,java,c++,python'
+description: ''
+keywords: #'java,c++,python'
 author: Meloor
-language: zh-cn #zh-cn #en
-# language: #国际化
-# - zh-cn #zh-cn #en
-# - en
-# language: en #zh-cn #en
-timezone: 'Asia/Shanghai'
+language: en #zh-cn #en
+timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
 # url: http://example.com
 # root: / 
-# url:  http://meloor.gitee.io/ #仓库名为Meloor(与账户名同名)
+url:  http://meloor.gitee.io/ #仓库名为Meloor(与账户名同名)
 # url:  http://meloor.gitee.io/blog/ #blog为gitee仓库名
-url:  http://meloor.xyz/ #自定义域名
-root: /  # 点击“home"跳转的目录
-# permalink: :year/:month/:day/:title/
-permalink: :category/:lang/:title/
+root: / # 点击“home"跳转的目录
+permalink: :year/:month/:day/:title/
 permalink_defaults:
-  lang: zh-cn
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
@@ -39,29 +32,29 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: "static_pages/**/*"
+skip_render:
 
 # Writing
-new_post_name: :lang/:title.md # File name of new posts
-default_layout: draft #[post,page,draft]
+new_post_name: :title.md # File name of new posts
+default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
   exclude: ''
-filename_case: 1 #把文件名称转换为 (1) 小写或 (2) 大写,0不转换
-render_drafts: true #预览草稿
+filename_case: 0
+render_drafts: false
 post_asset_folder: true
-relative_link: false #把链接改为与根目录的相对位址, 如果域名不变，建议修改为false使用绝对链接
+relative_link: false
 future: true
-highlight: #代码块的设置, 请参考 Highlight.js 进行设置
+highlight:
   enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
-prismjs: #代码块的设置, 请参考 PrismJS 进行设置
+prismjs:
   enable: false
   preprocess: true
   line_number: true
@@ -109,8 +102,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: landscape
-# theme: melody
-theme: false
+theme: melody
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
