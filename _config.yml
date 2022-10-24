@@ -2,13 +2,14 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# Site
+# Site # Fluid theme的title在_config.fluid.yml中设置
 title: Meloor's Blog
 subtitle: DateBase learning...
 description: '回想旋律·美乐奥尔的博客;database,java,c++,python;数据库、java、c++、python'
 keywords: 'database,java,c++,python'
 author: Meloor
-language: zh-cn #zh-cn #en
+# language: zh-cn #zh-cn #en #zh-CN
+language: zh-CN
 # language: #国际化
 # - zh-cn #zh-cn #en
 # - en
@@ -21,7 +22,7 @@ timezone: 'Asia/Shanghai'
 # root: / 
 # url:  http://meloor.gitee.io/ #仓库名为Meloor(与账户名同名)
 # url:  http://meloor.gitee.io/blog/ #blog为gitee仓库名
-url:  http://meloor.xyz/ #自定义域名
+url:  http://meloor.xyz/ #自定义域名 relative_link: true #把链接改为与根目录的相对位址
 root: /  # 点击“home"跳转的目录
 # permalink: :year/:month/:day/:title/
 permalink: :category/:lang/:title/
@@ -50,9 +51,9 @@ external_link:
   field: site # Apply to the whole site
   exclude: ''
 filename_case: 1 #把文件名称转换为 (1) 小写或 (2) 大写,0不转换
-render_drafts: true #预览草稿
+render_drafts: false #预览草稿
 post_asset_folder: true
-relative_link: false #把链接改为与根目录的相对位址, 如果域名不变，建议修改为false使用绝对链接
+relative_link: true #把链接改为与根目录的相对位址, 如果域名不变，建议修改为false使用绝对链接
 future: true
 highlight: #代码块的设置, 请参考 Highlight.js 进行设置
   enable: true
@@ -110,7 +111,7 @@ ignore:
 ## Themes: https://hexo.io/themes/
 # theme: landscape
 # theme: melody
-theme: false
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

@@ -1,6 +1,8 @@
 ---
-title: 个人简历 #about
+title: 回想旋律·美乐奥 #about
 date: 2020-11-12 22:20:50
+layout: about
+banner_img: https://w.wallhaven.cc/full/gp/wallhaven-gpj5xq.jpg
 ---
 
 ## Info
@@ -8,21 +10,24 @@ date: 2020-11-12 22:20:50
 <!-- ![头像](/imgs/me.jpg) -->
 <!-- - ![头像](../imgs/me.jpg) -->
 
-- **姓名**：梅勒
+- **姓名**：回想旋律·美乐奥
+- **Name**: Meloor
+- **Desc**: Melody of Recollection
+
 
 ## Learning
 
 * DataBase
 * RootCauseAnalysis  
 * ...
-<!-- - 电话：13317200597 -->
 
-## Blogs
 
-- **博客(CSDN)**：[https://blog.csdn.net/Meloor](https://blog.csdn.net/Meloor)
-- **个人博客**：[https://meloor.gitee.io](https://meloor.gitee.io)
+<!-- ## Blogs
+
+- **blog**：[https://meloor.xyz](https://meloor.xyz)
+- **CSDN blog**：[https://blog.csdn.net/Meloor](https://blog.csdn.net/Meloor)
 - **gitee**：[https://gitee.com/Meloor](https://gitee.com/Meloor)
-- **github**：[https://github.com/Meloor](https://github.com/Meloor)
+- **github**：[https://github.com/Meloor](https://github.com/Meloor) -->
 
 
 ## Education

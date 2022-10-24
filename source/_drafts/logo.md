@@ -1,3 +1,10 @@
+---
+title: logo
+date: 2020-11-14 22:16:35
+tags: 
+categories:
+---
+
 todo: 学习下logo怎么加。
 # TechXueXi
 <p align="center">TechXueXi 是一款使用python语言编写的学 xi 工具。可达 45 分/天</p>
