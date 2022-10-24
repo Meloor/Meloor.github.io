@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="icon" href="/imgs/meloor-favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -27,6 +27,8 @@
 <meta property="article:tag" content="database,java,c++,python">
 <meta name="twitter:card" content="summary_large_image">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>Meloor&#39;s Blog</title>
@@ -86,8 +88,8 @@
 <div class="header-inner" style="height: 100vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Meloor&#39;s Blog</strong>
+    <a class="navbar-brand" href="index.html">
+      <strong>美乐奥的回想旋律</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -105,7 +107,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="index.html">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -153,9 +155,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
+              <a class="nav-link" href="/gallery/">
+                <i class="iconfont icon-images"></i>
+                gallery
               </a>
             </li>
           
@@ -168,6 +170,18 @@
               <a class="nav-link" href="/links/">
                 <i class="iconfont icon-link-fill"></i>
                 友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
               </a>
             </li>
           
@@ -194,13 +208,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/imgs/bgs/wallhaven-rr3zvm.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="DateBase learning..."></span>
+            <span id="subtitle" data-typed-text="DataBase learning..."></span>
           
         </div>
 
@@ -236,21 +250,136 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/web/java/zh-cn/Java%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%EF%BC%88%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3%EF%BC%89/" target="_self">
-          <img src="https://dogefs.s3.ladydaily.com/fluid/storage/coding-imagehost/cover.png?w=480&amp;fmt=webp" srcset="/img/loading.gif" lazyload alt="Java访问权限（类、接口、内部类、内部接口）">
+        <a href="web/%E6%95%B0%E6%8D%AE%E5%BA%93/zh-cn/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95/" target="_self">
+          <img src="/imgs/bgs/wallhaven-l3lkxq-small.png" srcset="/img/loading.gif" lazyload alt="数据库索引">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/web/java/zh-cn/Java%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%EF%BC%88%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3%EF%BC%89/" target="_self">
+        <a href="web/%E6%95%B0%E6%8D%AE%E5%BA%93/zh-cn/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95/" target="_self">
+          数据库索引
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt " href="web/%E6%95%B0%E6%8D%AE%E5%BA%93/zh-cn/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95/" target="_self">
+        <div>
+          参考博客：  数据库索引原理 五种索引类型 什么是数据库索引，是怎么工作的 (好文推荐)  前面有看不懂的地方可以跳过先看原理。 索引是什么索引是一种数据结构。为了加速对表中数据行的检索而创建的。 作用(优点)使用索引的全部意义就是通过减少一张表中需要查询的记录/行的数目来加快搜索的速度  大大加快数据的检索速度; 创建唯一性索引，保证数据库表中每一行数据的唯一性; 加速表和表之间的连接; (查询
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-23 18:01" pubdate>
+              2020-11-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="categories/web/" class="category-chain-item">web</a>
+  
+  
+    <span>></span>
+    
+  <a href="categories/web/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+            
+              <a href="tags/b-%E6%A0%91/">#B+树</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="uncategorized/zh-cn/how-to-use-hexo/" target="_self">
+          <img src="/imgs/bgs/wallhaven-l3lkxq-small.png" srcset="/img/loading.gif" lazyload alt="how to use hexo">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="uncategorized/zh-cn/how-to-use-hexo/" target="_self">
+          how to use hexo
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt " href="uncategorized/zh-cn/how-to-use-hexo/" target="_self">
+        <div>
+          how to use hexowait for writting… plugins研究中… 1. hexo-sererHexo 3.0 把服务器独立成了个别模块，您必须先安装 hexo-server 才能使用。  npm install hexo-server –save  confighexo配置 writtinghexo写作new, layout=[post,page,draft]分别生成到不
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-10-24 22:02" pubdate>
+              2022-10-24
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="web/java/zh-cn/Java%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%EF%BC%88%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3%EF%BC%89/" target="_self">
+          <img src="/imgs/bgs/wallhaven-l3lkxq-small.png" srcset="/img/loading.gif" lazyload alt="Java访问权限（类、接口、内部类、内部接口）">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="web/java/zh-cn/Java%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%EF%BC%88%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3%EF%BC%89/" target="_self">
           Java访问权限（类、接口、内部类、内部接口）
         </a>
       </h1>
 
       
-      <a class="index-excerpt " href="/web/java/zh-cn/Java%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%EF%BC%88%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3%EF%BC%89/" target="_self">
+      <a class="index-excerpt " href="web/java/zh-cn/Java%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%EF%BC%88%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3%EF%BC%89/" target="_self">
         <div>
           ref:  菜鸟教程-java教程 《Java编程思想》【Bruce Eckel著】  访问权限修饰符有些类型只能使用部分访问权限修饰符，并且有默认修饰符  public, 所有类可见private, 当前类可见default（缺省）, 同一包内可见protected, 同一包内可见，不同包的子孙类可见  类的访问权限（不含内部类）类只有public,default两种访问形式  default类
         </div>
@@ -276,12 +405,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/web/" class="category-chain-item">web</a>
+  <a href="categories/web/" class="category-chain-item">web</a>
   
   
     <span>></span>
     
-  <a href="/categories/web/java/" class="category-chain-item">Java</a>
+  <a href="categories/web/java/" class="category-chain-item">Java</a>
   
   
 
@@ -298,7 +427,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3/">#内部类、内部接口</a>
+              <a href="tags/%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3/">#内部类、内部接口</a>
             
           </div>
         
@@ -310,216 +439,21 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/uncategorized/zh-cn/logo/" target="_self">
-          <img src="https://dogefs.s3.ladydaily.com/fluid/storage/coding-imagehost/cover.png?w=480&amp;fmt=webp" srcset="/img/loading.gif" lazyload alt="">
+        <a href="web/web/zh-cn/http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE/" target="_self">
+          <img src="/imgs/bgs/wallhaven-l3lkxq-small.png" srcset="/img/loading.gif" lazyload alt="http与https协议">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/uncategorized/zh-cn/logo/" target="_self">
-          
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt " href="/uncategorized/zh-cn/logo/" target="_self">
-        <div>
-          todo: 学习下logo怎么加。 TechXueXiTechXueXi 是一款使用python语言编写的学 xi 工具。可达 45 分/天    &nbsp; &nbsp;   请点击页面顶部靠右star与fork  &nbsp; &nbsp; &nbsp;     &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp;   &nbsp; &ensp;  &ensp;&ensp
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-10-25 02:54" pubdate>
-              2022-10-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/uncategorized/zh-cn/a-draft/" target="_self">
-          <img src="https://dogefs.s3.ladydaily.com/fluid/storage/coding-imagehost/cover.png?w=480&amp;fmt=webp" srcset="/img/loading.gif" lazyload alt="a draft">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/uncategorized/zh-cn/a-draft/" target="_self">
-          a draft
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt " href="/uncategorized/zh-cn/a-draft/" target="_self">
-        <div>
-          a draft这是一篇草稿…
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-10-25 02:54" pubdate>
-              2022-10-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/uncategorized/zh-cn/draft2/" target="_self">
-          <img src="https://dogefs.s3.ladydaily.com/fluid/storage/coding-imagehost/cover.png?w=480&amp;fmt=webp" srcset="/img/loading.gif" lazyload alt="draft2">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/uncategorized/zh-cn/draft2/" target="_self">
-          draft2
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt " href="/uncategorized/zh-cn/draft2/" target="_self">
-        <div>
-          
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-10-25 02:54" pubdate>
-              2022-10-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/uncategorized/zh-cn/%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6/" target="_self">
-          <img src="https://dogefs.s3.ladydaily.com/fluid/storage/coding-imagehost/cover.png?w=480&amp;fmt=webp" srcset="/img/loading.gif" lazyload alt="标签插件">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/uncategorized/zh-cn/%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6/" target="_self">
-          标签插件
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt " href="/uncategorized/zh-cn/%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6/" target="_self">
-        <div>
-          todo …
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-10-25 02:54" pubdate>
-              2022-10-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/uncategorized/zh-cn/how-to-use-hexo/" target="_self">
-          <img src="https://dogefs.s3.ladydaily.com/fluid/storage/coding-imagehost/cover.png?w=480&amp;fmt=webp" srcset="/img/loading.gif" lazyload alt="how to use hexo">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/uncategorized/zh-cn/how-to-use-hexo/" target="_self">
-          how to use hexo
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt " href="/uncategorized/zh-cn/how-to-use-hexo/" target="_self">
-        <div>
-          how to use hexowait for writting… plugins研究中… 1. hexo-sererHexo 3.0 把服务器独立成了个别模块，您必须先安装 hexo-server 才能使用。  npm install hexo-server –save  confighexo配置 writtinghexo写作new, layout=[post,page,draft]分别生成到不
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-10-24 22:02" pubdate>
-              2022-10-24
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/web/web/zh-cn/http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE/" target="_self">
-          <img src="https://dogefs.s3.ladydaily.com/fluid/storage/coding-imagehost/cover.png?w=480&amp;fmt=webp" srcset="/img/loading.gif" lazyload alt="http与https协议">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/web/web/zh-cn/http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE/" target="_self">
+        <a href="web/web/zh-cn/http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE/" target="_self">
           http与https协议
         </a>
       </h1>
 
       
-      <a class="index-excerpt " href="/web/web/zh-cn/http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE/" target="_self">
+      <a class="index-excerpt " href="web/web/zh-cn/http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE/" target="_self">
         <div>
           http&amp;https协议参考博客：  HTTP和HTTPS协议，看一篇就够了  什么是http超文本传输协议，是一个基于请求与响应，无状态的，应用层的协议，常基于TCP/IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种发布和接收HTML页面的方法。  默认端口80， 如果 一台主机上有多个服务器呢?http报文格式
         </div>
@@ -545,12 +479,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/web/" class="category-chain-item">web</a>
+  <a href="categories/web/" class="category-chain-item">web</a>
   
   
     <span>></span>
     
-  <a href="/categories/web/web/" class="category-chain-item">web</a>
+  <a href="categories/web/web/" class="category-chain-item">web</a>
   
   
 
@@ -567,9 +501,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/http/">#http</a>
+              <a href="tags/http/">#http</a>
             
-              <a href="/tags/https/">#https</a>
+              <a href="tags/https/">#https</a>
             
           </div>
         
@@ -581,21 +515,21 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/web/web/zh-cn/cookie-session%E6%9C%BA%E5%88%B6/" target="_self">
-          <img src="https://dogefs.s3.ladydaily.com/fluid/storage/coding-imagehost/cover.png?w=480&amp;fmt=webp" srcset="/img/loading.gif" lazyload alt="cookie/session机制(持续更新)">
+        <a href="web/web/zh-cn/cookie-session%E6%9C%BA%E5%88%B6/" target="_self">
+          <img src="/imgs/bgs/wallhaven-l3lkxq-small.png" srcset="/img/loading.gif" lazyload alt="cookie/session机制(持续更新)">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/web/web/zh-cn/cookie-session%E6%9C%BA%E5%88%B6/" target="_self">
+        <a href="web/web/zh-cn/cookie-session%E6%9C%BA%E5%88%B6/" target="_self">
           cookie/session机制(持续更新)
         </a>
       </h1>
 
       
-      <a class="index-excerpt " href="/web/web/zh-cn/cookie-session%E6%9C%BA%E5%88%B6/" target="_self">
+      <a class="index-excerpt " href="web/web/zh-cn/cookie-session%E6%9C%BA%E5%88%B6/" target="_self">
         <div>
           参考博客：  cookie和session的详解与区别   　会话（Session）跟踪是Web程序中常用的技术，用来跟踪用户的整个会话。常用的会话跟踪技术是Cookie与Session：  Cookie通过在客户端记录信息确定用户身份。 Session通过在服务器端记录信息确定用户身份。 什么时候不能用Cookie，什么时候不能用Session。cookie为什么使用cookie HTTP协议是
         </div>
@@ -621,12 +555,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/web/" class="category-chain-item">web</a>
+  <a href="categories/web/" class="category-chain-item">web</a>
   
   
     <span>></span>
     
-  <a href="/categories/web/web/" class="category-chain-item">web</a>
+  <a href="categories/web/web/" class="category-chain-item">web</a>
   
   
 
@@ -643,9 +577,9 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/cookie/">#cookie</a>
+              <a href="tags/cookie/">#cookie</a>
             
-              <a href="/tags/session/">#session</a>
+              <a href="tags/session/">#session</a>
             
           </div>
         
@@ -657,21 +591,21 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/" target="_self">
-          <img src="https://dogefs.s3.ladydaily.com/fluid/storage/coding-imagehost/cover.png?w=480&amp;fmt=webp" srcset="/img/loading.gif" lazyload alt="http请求返回状态码">
+        <a href="web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/" target="_self">
+          <img src="/imgs/bgs/wallhaven-l3lkxq-small.png" srcset="/img/loading.gif" lazyload alt="http请求返回状态码">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/" target="_self">
+        <a href="web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/" target="_self">
           http请求返回状态码
         </a>
       </h1>
 
       
-      <a class="index-excerpt " href="/web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/" target="_self">
+      <a class="index-excerpt " href="web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/" target="_self">
         <div>
           参考博客：  HTTP请求返回状态码详解 常用的HTTP状态码(面试中常问到…)  首先，什么是状态码？状态码的职责是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 接着来，状态码有哪些种类？接下来我们详细说一说常用的状态码（背吧，别犹豫） 2XX 成功200 ok（请求成功）204 no content （请求成功，但是没有结
         </div>
@@ -697,12 +631,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/web/" class="category-chain-item">web</a>
+  <a href="categories/web/" class="category-chain-item">web</a>
   
   
     <span>></span>
     
-  <a href="/categories/web/web/" class="category-chain-item">web</a>
+  <a href="categories/web/web/" class="category-chain-item">web</a>
   
   
 
@@ -719,7 +653,7 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/http/">#http</a>
+              <a href="tags/http/">#http</a>
             
           </div>
         
@@ -731,21 +665,21 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/" target="_self">
-          <img src="https://dogefs.s3.ladydaily.com/fluid/storage/coding-imagehost/cover.png?w=480&amp;fmt=webp" srcset="/img/loading.gif" lazyload alt="http请求类型">
+        <a href="web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/" target="_self">
+          <img src="/imgs/bgs/wallhaven-l3lkxq-small.png" srcset="/img/loading.gif" lazyload alt="http请求类型">
         </a>
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/" target="_self">
+        <a href="web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/" target="_self">
           http请求类型
         </a>
       </h1>
 
       
-      <a class="index-excerpt " href="/web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/" target="_self">
+      <a class="index-excerpt " href="web/web/zh-cn/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/" target="_self">
         <div>
           参考博客:  HTTP请求的几种类型  HTTP请求方式中8种请求方法（简单介绍) http报文格式(重要) http的请求报文由：请求行、首部、空行、主体(请求数据)四个部分组成。其中请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔  一个响应由状态行、响应头部、空行和响应数据4部分组成。   请求头和响应头 HTTP请求头详解  首部，消息报头，用来说明客户端
         </div>
@@ -771,12 +705,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/web/" class="category-chain-item">web</a>
+  <a href="categories/web/" class="category-chain-item">web</a>
   
   
     <span>></span>
     
-  <a href="/categories/web/web/" class="category-chain-item">web</a>
+  <a href="categories/web/web/" class="category-chain-item">web</a>
   
   
 
@@ -793,9 +727,224 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/http/">#http</a>
+              <a href="tags/http/">#http</a>
             
           </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/zh-cn/%E5%9F%BA%E4%BA%8E%E5%BF%AB%E6%8E%92partition%E6%B1%82%E7%AC%ACk%E5%A4%A7%E6%95%B0/" target="_self">
+          <img src="/imgs/bgs/wallhaven-l3lkxq-small.png" srcset="/img/loading.gif" lazyload alt="基于快排partition求第k大数">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/zh-cn/%E5%9F%BA%E4%BA%8E%E5%BF%AB%E6%8E%92partition%E6%B1%82%E7%AC%ACk%E5%A4%A7%E6%95%B0/" target="_self">
+          基于快排partition求第k大数
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt " href="%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/zh-cn/%E5%9F%BA%E4%BA%8E%E5%BF%AB%E6%8E%92partition%E6%B1%82%E7%AC%ACk%E5%A4%A7%E6%95%B0/" target="_self">
+        <div>
+          参考博客：面试题：从 n 个数中找出第 K 大的数 适合海量数据的 o(nlogk)的方法借助外部数据结构（最小堆），也可以不借助外部的数据结构，手动实现一个最小堆。堆中最多 k 个元素，扫描数组 O(n), 每次向堆中插入元素，删除元素，保持堆中元素是当前最大的 k 的数字。更新堆时间 logk, 总时间 nlogk 基于快速排序的 partion 方法，时间复杂度为 o(n)快排中 parti
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-03 21:39" pubdate>
+              2020-12-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="category-chain-item">数据结构与算法</a>
+  
+  
+    <span>></span>
+    
+  <a href="categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/" class="category-chain-item">算法题</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="tags/%E5%BF%AB%E6%8E%92/">#快排</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="web/web/zh-cn/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/" target="_self">
+          <img src="/imgs/bgs/wallhaven-l3lkxq-small.png" srcset="/img/loading.gif" lazyload alt="前后端分离架构">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="web/web/zh-cn/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/" target="_self">
+          前后端分离架构
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt " href="web/web/zh-cn/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/" target="_self">
+        <div>
+          参考：到底什么是前后端分离 1到底什么是前后端分离 2到底什么是前后端分离 3 前后端分离是个架构设计问题。所谓架构设计，实际上是如何合理的对现实的人力架构进行系统映射，以便最大限度的提高整个公司的运行效率。 前后端的定义前后端定义，不应该是以语言来定义，而是应该以它的运行环境  Html+CSS+JS，都是在浏览器端执行，统一称之为前端。(用户能看到) Java，C，Python，PHP 这些在
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-28 22:57" pubdate>
+              2020-11-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="categories/web/" class="category-chain-item">web</a>
+  
+  
+    <span>></span>
+    
+  <a href="categories/web/web/" class="category-chain-item">web</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/">#前后端分离</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/zh-cn/%E5%A4%A7%E5%9B%9B%E7%9A%84%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" target="_self">
+          <img src="/imgs/bgs/wallhaven-l3lkxq-small.png" srcset="/img/loading.gif" lazyload alt="大四的经验分享">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/zh-cn/%E5%A4%A7%E5%9B%9B%E7%9A%84%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" target="_self">
+          大四的经验分享
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt " href="%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/zh-cn/%E5%A4%A7%E5%9B%9B%E7%9A%84%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" target="_self">
+        <div>
+          前言 亲爱的学弟学妹们好，我是 17 级的王智慧，现在大四，已经推免到了东北大学计算机科学与工程学院。我也是很高兴能见到这么多数媒的新鲜面孔，你们很多学长都出去实习去了或者还在考研，其实他们挺想见你们的。 我作为一个大四的老老学长，就给大家分享一下我大学四年的经验总结吧。我讲的内容主要有三部分，目标，学习，生活。  目标 目标，四年后干嘛，求职或者升学考研。如果你来问我们大四的学长学姐，很多人都会
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-25 16:40" pubdate>
+              2020-11-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="categories/%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/" class="category-chain-item">经验|总结|感悟</a>
+  
+  
+    <span>></span>
+    
+  <a href="categories/%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/" class="category-chain-item">其他</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
         
       </div>
     </article>
@@ -805,7 +954,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+      <span class="page-number current">1</span><a class="page-number" href="page/2/#board">2</a><a class="extend next" rel="next" href="page/2/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
@@ -859,6 +1008,41 @@
     </div>
   
   
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      闽ICP备17027673-7号
+    </a>
+  </span>
+  
+</div>
+
   
   
 </div>
@@ -911,6 +1095,8 @@
 
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

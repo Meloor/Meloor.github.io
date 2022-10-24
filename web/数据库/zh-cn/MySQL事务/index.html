@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/fluid.png">
+  <link rel="icon" href="../../../../imgs/meloor-favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -24,11 +24,13 @@
 <meta property="og:description" content="参考博客讲的非常清楚，下面是补充的笔记 事务定义事务(Transsction)  事务：一个最小的不可再分的工作单元；通常一个事务对应一个完整的业务(例如银行账户转账业务，该业务就是一个最小的工作单元) 一个完整的业务需要批量的 DML(insert、update、delete)语句共同联合完成 (也有说法包含 selecet?) 事务只和 DML 语句有关，或者说DML 语句才有事务。这个和业务">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-14T14:16:35.000Z">
-<meta property="article:modified_time" content="2022-10-24T18:54:22.424Z">
+<meta property="article:modified_time" content="2022-10-24T19:25:12.068Z">
 <meta property="article:author" content="Meloor">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>MySQL事务 - Meloor&#39;s Blog</title>
@@ -55,12 +57,12 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="/css/main.css" />
+<link  rel="stylesheet" href="../../../../css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
   
 
 
@@ -76,8 +78,8 @@
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+  <script  src="../../../../js/utils.js" ></script>
+  <script  src="../../../../js/color-schema.js" ></script>
   
 
 
@@ -94,8 +96,8 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Meloor&#39;s Blog</strong>
+    <a class="navbar-brand" href="../../../../index.html">
+      <strong>美乐奥的回想旋律</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -113,7 +115,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="../../../../index.html">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -125,7 +127,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="../../../../archives/">
                 <i class="iconfont icon-archive-fill"></i>
                 归档
               </a>
@@ -137,7 +139,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="../../../../categories/">
                 <i class="iconfont icon-category-fill"></i>
                 分类
               </a>
@@ -149,7 +151,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="../../../../tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 标签
               </a>
@@ -161,9 +163,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
+              <a class="nav-link" href="../../../../gallery/">
+                <i class="iconfont icon-images"></i>
+                gallery
               </a>
             </li>
           
@@ -173,9 +175,21 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="../../../../links/">
                 <i class="iconfont icon-link-fill"></i>
                 友链
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
               </a>
             </li>
           
@@ -202,7 +216,7 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://w.wallhaven.cc/full/l3/wallhaven-l3lkxq.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
@@ -215,6 +229,11 @@
         
           
   <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        Meloor
+      </span>
     
     
       <span class="post-meta">
@@ -346,12 +365,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/web/" class="category-chain-item">web</a>
+  <a href="../../../../categories/web/" class="category-chain-item">web</a>
   
   
     <span>></span>
     
-  <a href="/categories/web/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  <a href="../../../../categories/web/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
   
   
 
@@ -368,7 +387,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/mysql/">#MySQL</a>
+        <a href="../../../../tags/mysql/">#MySQL</a>
       
     </div>
   
@@ -425,7 +444,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/zh-cn/2020%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BF%9D%E7%A0%94%E4%B8%8A%E5%B2%B8%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" title="2020计算机保研上岸经验分享">
+                      <a href="../../../../%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/zh-cn/2020%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BF%9D%E7%A0%94%E4%B8%8A%E5%B2%B8%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" title="2020计算机保研上岸经验分享">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">2020计算机保研上岸经验分享</span>
                         <span class="visible-mobile">上一篇</span>
@@ -435,7 +454,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/web/front-end/zh-cn/gitee+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="gitee+hexo搭建个人博客">
+                      <a href="../../../front-end/zh-cn/gitee+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="gitee+hexo搭建个人博客">
                         <span class="hidden-mobile">gitee+hexo搭建个人博客</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -540,6 +559,41 @@
     </div>
   
   
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      闽ICP备17027673-7号
+    </a>
+  </span>
+  
+</div>
+
   
   
 </div>
@@ -562,8 +616,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
+<script  src="../../../../js/events.js" ></script>
+<script  src="../../../../js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -585,7 +639,7 @@
 
 
   
-    <script  src="/js/img-lazyload.js" ></script>
+    <script  src="../../../../js/img-lazyload.js" ></script>
   
 
 
@@ -684,7 +738,9 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="/js/local-search.js" ></script>
+  <script  src="../../../../js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
@@ -692,7 +748,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+<script  src="../../../../js/boot.js" ></script>
 
 
   
