@@ -236,7 +236,9 @@ custom_js:
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
-custom_css:
+custom_css: 
+  /css/iconfont.css
+  # /css/custom.css
 
 # 网页访问统计
 # Analysis of website visitors
@@ -362,8 +364,36 @@ navbar:
     # - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
     # - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     # - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    - { key: "gallery", link: "/gallery/index.html", icon: "iconfont icon-images" }
-    - { key: "links", link: "/links/index.html", icon: "iconfont icon-link-fill" }
+    - {
+      key: 'life',
+      # link: '/:lang/', #测试一下
+      icon: "iconfont icon-heartbeat", 
+      submenu: [
+        { key: "gallery", link: "/gallery/index.html", icon: "iconfont icon-images" },
+        { key: "movie", link: "/movie/index.html", icon: "iconfont icon-movie1" } # movie,movie-fill,movie1
+      ]
+    }
+    # - { key: "gallery", link: "/gallery/index.html", icon: "iconfont icon-images" }
+    # - { key: "links", link: "/links/index.html", icon: "iconfont icon-link-fill" }
+    - {
+      key: 'explore',
+      # link: '/:lang/', #测试一下
+      icon: "iconfont icon-ic_explore_px", #ic_explore_px,explore1,explore2,explore3,explore4,explore
+      submenu: [
+        { key: "vue-page", link: "https://meloor.xyz/vue-page/", icon: "iconfont icon-vue" }, # github的vue-page仓库建立的pages
+        { key: "static_pages", link: "/static_pages/", icon: "iconfont icon-vue" }, #当前hexo项目的嵌套的vue静态page
+      ]
+    }
+    - {
+      key: 'links',
+      link: "/links/index.html", #测试一下
+      icon: "iconfont icon-link-fill",
+      submenu: [
+        { key: "links", link: "/links/index.html", icon: "iconfont icon-link-fill" },
+        { key: "徐文昊的碎碎念", link: "https://xuwh.top/", icon: "iconfont icon-link-fill" },
+        { key: "美乐奥的回想旋律", link: "https://meloor.xyz/", icon: "iconfont icon-link-fill" },
+      ]
+    }
     - { key: "about", link: "/about/index.html", icon: "iconfont icon-user-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件

@@ -43,6 +43,21 @@ catalogue:
   title: '目录'
   subtitle: '目录'
 
+explore:
+  menu: '探索'
+  title: '探索'
+  subtitle: '探索'
+
+life:
+  menu: '跳动'
+  title: '跳动'
+  subtitle: '跳动'
+
+movie:
+  menu: '电影'
+  title: '电影'
+  subtitle: '电影'
+
 page404:
   menu: '页面不存在'
   title: '页面不存在'
