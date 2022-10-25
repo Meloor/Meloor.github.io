@@ -25,7 +25,7 @@ timezone: 'Asia/Shanghai'
 url:  http://meloor.xyz/ #自定义域名 relative_link: true #把链接改为与根目录的相对位址
 root: /  # 点击“home"跳转的目录
 # permalink: :year/:month/:day/:title/
-permalink: :category/:lang/:title/
+permalink: :lang/:category/:title/
 permalink_defaults:
   lang: zh-cn
 pretty_urls:
@@ -43,7 +43,7 @@ i18n_dir: :lang
 skip_render: "static_pages/**/*"
 
 # Writing
-new_post_name: :lang/:title.md # File name of new posts
+new_post_name: :title.md # File name of new posts
 default_layout: draft #[post,page,draft]
 titlecase: false # Transform title into titlecase
 external_link:
