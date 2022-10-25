@@ -1,0 +1,57 @@
+/* 阿里巴巴iconfont 自定义图标  https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=3729136 */
+@font-face {
+    font-family: "iconfont"; /* Project id 3729136 */
+    src: url('//at.alicdn.com/t/c/font_3729136_w8xw2ht8d5q.woff2?t=1666707220398') format('woff2'),
+         url('//at.alicdn.com/t/c/font_3729136_w8xw2ht8d5q.woff?t=1666707220398') format('woff'),
+         url('//at.alicdn.com/t/c/font_3729136_w8xw2ht8d5q.ttf?t=1666707220398') format('truetype');
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    /* font-size: 16px; */
+    font-size: 32px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-movie1:before {
+    content: "\e629";
+  }
+  
+  .icon-movie-fill:before {
+    content: "\e725";
+  }
+  
+  .icon-movie:before {
+    content: "\e701";
+  }
+  
+  .icon-heartbeat:before {
+    content: "\e732";
+  }
+  
+  .icon-explore1:before {
+    content: "\e71f";
+  }
+  
+  .icon-explore2:before {
+    content: "\eb41";
+  }
+  
+  .icon-explore3:before {
+    content: "\e668";
+  }
+  
+  .icon-ic_explore_px:before {
+    content: "\e64b";
+  }
+  
+  .icon-explore:before {
+    content: "\e68a";
+  }
+  
+  .icon-vue:before {
+    content: "\e69a";
+  }
+  

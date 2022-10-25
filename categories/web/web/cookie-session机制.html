@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN,en,default" data-default-color-scheme=auto>
 
 
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/fluid.png">
-  <link rel="icon" href="../../../../imgs/meloor-favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../img/fluid.png">
+  <link rel="icon" href="../../../imgs/meloor-favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -16,24 +16,25 @@
   <meta name="author" content="Meloor">
   <meta name="keywords" content="database,java,c++,python">
   
-    <meta name="description" content="参考博客讲的非常清楚，下面是补充的笔记 事务定义事务(Transsction)  事务：一个最小的不可再分的工作单元；通常一个事务对应一个完整的业务(例如银行账户转账业务，该业务就是一个最小的工作单元) 一个完整的业务需要批量的 DML(insert、update、delete)语句共同联合完成 (也有说法包含 selecet?) 事务只和 DML 语句有关，或者说DML 语句才有事务。这个和业务">
+    <meta name="description" content="参考博客：  cookie和session的详解与区别   　会话（Session）跟踪是Web程序中常用的技术，用来跟踪用户的整个会话。常用的会话跟踪技术是Cookie与Session：  Cookie通过在客户端记录信息确定用户身份。 Session通过在服务器端记录信息确定用户身份。 什么时候不能用Cookie，什么时候不能用Session。cookie为什么使用cookie HTTP协议是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL事务">
-<meta property="og:url" content="http://meloor.xyz/zh-cn/web/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E4%BA%8B%E5%8A%A1/index.html">
+<meta property="og:title" content="cookie&#x2F;session机制(持续更新)">
+<meta property="og:url" content="http://meloor.xyz/categories/web/web/cookie-session%E6%9C%BA%E5%88%B6.html">
 <meta property="og:site_name" content="Meloor&#39;s Blog">
-<meta property="og:description" content="参考博客讲的非常清楚，下面是补充的笔记 事务定义事务(Transsction)  事务：一个最小的不可再分的工作单元；通常一个事务对应一个完整的业务(例如银行账户转账业务，该业务就是一个最小的工作单元) 一个完整的业务需要批量的 DML(insert、update、delete)语句共同联合完成 (也有说法包含 selecet?) 事务只和 DML 语句有关，或者说DML 语句才有事务。这个和业务">
+<meta property="og:description" content="参考博客：  cookie和session的详解与区别   　会话（Session）跟踪是Web程序中常用的技术，用来跟踪用户的整个会话。常用的会话跟踪技术是Cookie与Session：  Cookie通过在客户端记录信息确定用户身份。 Session通过在服务器端记录信息确定用户身份。 什么时候不能用Cookie，什么时候不能用Session。cookie为什么使用cookie HTTP协议是">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-14T14:16:35.000Z">
+<meta property="article:published_time" content="2020-12-03T14:09:35.000Z">
 <meta property="article:modified_time" content="2022-10-25T03:10:15.987Z">
 <meta property="article:author" content="Meloor">
-<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="cookie">
+<meta property="article:tag" content="session">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>MySQL事务 - Meloor&#39;s Blog</title>
+  <title>cookie/session机制(持续更新) - Meloor&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -57,14 +58,18 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="../../../../css/main.css" />
+<link  rel="stylesheet" href="../../../css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="../../../css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../css/highlight-dark.css" />
   
 
+
+
+  
+<link rel="stylesheet" href="../../../css/iconfont.css">
 
 
 
@@ -78,8 +83,8 @@
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="../../../../js/utils.js" ></script>
-  <script  src="../../../../js/color-schema.js" ></script>
+  <script  src="../../../js/utils.js" ></script>
+  <script  src="../../../js/color-schema.js" ></script>
   
 
 
@@ -96,7 +101,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
       <strong>美乐奥的回想旋律</strong>
     </a>
 
@@ -115,7 +120,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../index.html">
+              <a class="nav-link" href="../../../index.html">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -137,15 +142,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../archives/">
-                    <i class="iconfont icon-archive-fill"></i>
-                    归档
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="../../../../categories/">
+                  <a class="dropdown-item" href="../../../categories/">
                     <i class="iconfont icon-category-fill"></i>
                     分类
                   </a>
@@ -153,9 +150,121 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../tags/">
+                  <a class="dropdown-item" href="../../../tags/index.html">
                     <i class="iconfont icon-tags-fill"></i>
                     标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../archives/index.html">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-heartbeat"></i>
+                跳动
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../gallery/index.html">
+                    <i class="iconfont icon-images"></i>
+                    画廊
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../movie/index.html">
+                    <i class="iconfont icon-movie1"></i>
+                    电影
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-ic_explore_px"></i>
+                探索
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/vue-page/">
+                    <i class="iconfont icon-vue"></i>
+                    vue-page
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../static_pages/">
+                    <i class="iconfont icon-vue"></i>
+                    static_pages
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../links/index.html">
+                    <i class="iconfont icon-link-fill"></i>
+                    友链
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://xuwh.top/">
+                    <i class="iconfont icon-link-fill"></i>
+                    徐文昊的碎碎念
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/">
+                    <i class="iconfont icon-link-fill"></i>
+                    美乐奥的回想旋律
                   </a>
                 
               </div>
@@ -167,31 +276,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../gallery/">
-                <i class="iconfont icon-images"></i>
-                画廊
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../links/">
-                <i class="iconfont icon-link-fill"></i>
-                友链
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../about/">
+              <a class="nav-link" href="../../../about/index.html">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -226,7 +311,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="MySQL事务"></span>
+            <span id="subtitle" data-typed-text="cookie/session机制(持续更新)"></span>
           
         </div>
 
@@ -242,8 +327,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-11-14 22:16" pubdate>
-          2020年11月14日 晚上
+        <time datetime="2020-12-03 22:09" pubdate>
+          2020年12月3日 晚上
         </time>
       </span>
     
@@ -254,7 +339,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.5k 字
         
       </span>
     
@@ -265,7 +350,7 @@
         
         
         
-          10 分钟
+          13 分钟
         
       </span>
     
@@ -313,7 +398,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">MySQL事务</h1>
+            <h1 style="display: none">cookie/session机制(持续更新)</h1>
             
               <p class="note note-info">
                 
@@ -326,50 +411,48 @@
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/w_linux/article/details/79666086">参考博客</a>讲的非常清楚，下面是补充的笔记</p>
-<h2 id="事务定义"><a href="#事务定义" class="headerlink" title="事务定义"></a>事务定义</h2><p>事务(Transsction)</p>
+                <p>参考博客：</p>
 <ul>
-<li>事务：<strong>一个最小的不可再分的工作单元</strong>；通常一个事务对应一个完整的业务(例如银行账户转账业务，该业务就是一个最小的工作单元)</li>
-<li>一个完整的业务需要批量的 DML(insert、update、delete)语句共同联合完成 <strong>(也有说法包含 selecet?)</strong></li>
-<li>事务只和 DML 语句有关，或者说<strong>DML 语句才有事务</strong>。这个和业务逻辑有关，业务逻辑不同，DML 语句的个数不同</li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/l199616j/p/11195667.html">cookie和session的详解与区别 </a></li>
 </ul>
+<p>　会话（Session）跟踪是Web程序中常用的技术，用来跟踪用户的整个会话。<strong>常用的会话跟踪技术是Cookie与Session</strong>：</p>
 <ul>
-<li>DDL：<br>数据库模式定义语言 DDL(Data Definition Language)，是用于描述数据库中要存储的现实世界实体的语言。主要由 create（添加）、alter（修改）、drop（删除）和 truncate（删除）  四个关键字完成。</li>
-<li>DML(Data Manipulation Language)数据操纵语言命令使用户能够查询数据库以及操作已有数据库中的数据。　　如 insert,delete,update,select(插入、删除、修改、检索)等都是 DML.</li>
+<li>Cookie通过在客户端记录信息确定用户身份。</li>
+<li>Session通过在服务器端记录信息确定用户身份。</li>
+<li>什么时候不能用Cookie，什么时候不能用Session。<h2 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h2><h3 id="为什么使用cookie"><a href="#为什么使用cookie" class="headerlink" title="为什么使用cookie"></a>为什么使用cookie</h3></li>
+<li>HTTP协议是<strong>无状态</strong>的协议。一旦数据交换完毕，客户端与服务器端的连接就会关闭，再次交换数据需要建立新的连接。这就意味着服务器无法从连接上跟踪会话。<h3 id="什么是cookie"><a href="#什么是cookie" class="headerlink" title="什么是cookie"></a>什么是cookie</h3></li>
+<li>cookie是一种记录客户状态的机制</li>
+<li>给客户端们颁发一个通行证吧，每人一个，无论谁访问都必须携带自己通行证。这样服务器就能从通行证上确认客户身份了。这就是Cookie的工作原理。</li>
+<li>Cookie实际上是一小段的文本信息。客户端请求服务器，如果服务器需要记录该用户状态，就使用response向客户端浏览器颁发一个Cookie。客户端浏览器会把Cookie保存起来。当浏览器再请求该网站时，浏览器把请求的网址连同该Cookie一同提交给服务器。服务器检查该Cookie，以此来辨认用户状态。服务器还可以根据需要修改Cookie的内容。<h3 id="cookie特性"><a href="#cookie特性" class="headerlink" title="cookie特性"></a>cookie特性</h3></li>
 </ul>
-<h2 id="事务四大特征-ACID"><a href="#事务四大特征-ACID" class="headerlink" title="事务四大特征(ACID)"></a>事务四大特征(ACID)</h2><p>它这里原子性和一致性讲错了，下面为更正过的：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuskyter/article/details/81948310">参考博客</a></p>
-<ul>
-<li><p><strong>原子性(A)</strong> ：<br>原子性是指事务包含的所有操作<strong>要么全部成功，要么全部失败回滚</strong>，这和前面两篇博客介绍事务的功能是一样的概念，因此事务的操作如果成功就必须要完全应用到数据库，如果操作失败则不能对数据库有任何影响。</p>
+<p>Cookie具有不可跨域名性<br>域名<br>路径<br>安全属性</p>
+<h3 id="cookie案例：永久登录"><a href="#cookie案例：永久登录" class="headerlink" title="cookie案例：永久登录"></a>cookie案例：永久登录</h3><h2 id="session"><a href="#session" class="headerlink" title="session"></a>session</h2><h3 id="什么是session"><a href="#什么是session" class="headerlink" title="什么是session"></a>什么是session</h3><ul>
+<li><p>Session是另一种记录客户状态的机制。</p>
 </li>
-<li><p><strong>一致性(C)</strong> ：<br>一致性是指事务必须使数据库从一个一致性状态变换到另一个一致性状态，也就是说一个事务<strong>执行之前和执行之后都必须处于一致性状态</strong>。</p>
-<blockquote>
-<p>拿 <strong>转账</strong> 来说，假设用户甲和用户乙两者的钱加起来一共是 5000，那么不管甲和乙之间如何转账，转几次账，事务结束后两个用户的钱相加起来应该还得是 5000，这就是事务的一致性。</p>
-</blockquote>
+<li><p>客户端浏览器访问服务器的时候，服务器把客户端信息以某种形式记录在服务器上，这就是Session。</p>
 </li>
-<li><p><strong>隔离性(I)</strong> ：事务 A 和事务 B 之间具有隔离性, <strong>隔离级别</strong> 有四个：</p>
-<ul>
-<li>读未提交：read uncommitted</li>
-<li>读已提交：read committed</li>
-<li>可重复读：repeatable read</li>
-<li>串行化：serializable<ul>
-<li>吞吐量太低，用户体验差，事务串行，而不是并发</li>
-</ul>
+<li><p>Session相当于程序在服务器上建立的一份客户档案，客户来访的时候只需要查询客户档案表就可以了。</p>
 </li>
-<li>看下面这两篇，讲的非常好</li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33591903/article/details/81672260">快速理解脏读、不可重复读、幻读</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33591903/article/details/82079302">事务隔离级别</a></li>
-</ul>
+<li><p>客户端浏览器再次访问时只需要从该Session中查找该客户的状态就可以了。</p>
+<h3 id="session如何判别是否为同一用户"><a href="#session如何判别是否为同一用户" class="headerlink" title="session如何判别是否为同一用户"></a>session如何判别是否为同一用户</h3></li>
+<li><p>虽然Session保存在服务器，对客户端是透明的，它的正常运行仍然<strong>需要客户端浏览器的支持</strong>。这是因为<strong>Session需要使用Cookie作为识别标志</strong>。</p>
 </li>
-<li><p><strong>持久性(D)</strong> ：是事务的保证，事务终结的标志(内存的数据持久到硬盘文件中)</p>
+<li><p><strong>HTTP协议是无状态的</strong>，Session不能依据HTTP连接来判断是否为同一客户</p>
 </li>
-<li><p><strong>在我的理解中，原子性、隔离性、持久性都是为了保障一致性而存在的，一致性也是最终的目的</strong></p>
+<li><p>因此服务器向客户端浏览器发送一个名为JSESSIONID的Cookie，它的值为该Session的id（也就是HttpSession.getId()的返回值）。Session依据该Cookie来识别是否为同一用户。</p>
+</li>
+<li><p>该Cookie为<strong>服务器自动生成</strong>的，它的maxAge属性一般为–1，表示<strong>仅当前浏览器内有效</strong>，并且<strong>各浏览器窗口间不共享</strong>，<strong>关闭浏览器就会失效</strong>。</p>
+</li>
+<li><p>因此同一机器的两个浏览器窗口访问服务器时，会生成两个不同的Session。但是由浏览器窗口内的链接、脚本等打开的新窗口（也就是说不是双击桌面浏览器图标等打开的窗口）除外。这类子窗口会共享父窗口的Cookie，因此会共享一个Session。</p>
 </li>
 </ul>
-<h2 id="事务与数据库底层数据"><a href="#事务与数据库底层数据" class="headerlink" title="事务与数据库底层数据"></a>事务与数据库底层数据</h2><p>在事物进行过程中，未结束之前，DML 语句是不会更改底层数据，<strong>只是将历史操作记录一下，在内存中完成记录</strong>。只有在事物结束的时候，而且是成功的结束的时候，才会修改底层硬盘文件中的数据</p>
-<h2 id="提交与回滚"><a href="#提交与回滚" class="headerlink" title="提交与回滚"></a>提交与回滚</h2><ul>
-<li>在 MySQL 中，默认情况下，事务是自动提交的，也就是说，只要执行一条 DML 语句就开启了事物，并且提交了事务</li>
+<p>注意：新开的浏览器窗口会生成新的Session，但子窗口除外。子窗口会共用父窗口的Session。例如，在链接上右击，在弹出的快捷菜单中选择“在新窗口中打开”时，子窗口便可以访问父窗口的Session。　　<br>如果客户端浏览器将Cookie功能禁用，或者不支持Cookie怎么办？例如，绝大多数的手机浏览器都不支持Cookie。Java Web提供了另一种解决方案：URL地址重写。</p>
+<h3 id="cookie与session不同点"><a href="#cookie与session不同点" class="headerlink" title="cookie与session不同点"></a>cookie与session不同点</h3><ul>
+<li>Cookie保存在客户端浏览器中。Cookie机制是通过检查客户身上的“通行证”来确定客户身份。</li>
+<li>Session保存在服务器上。Session机制就是通过检查服务器上的“客户明细表”来确认客户身份。</li>
 </ul>
-
+<h3 id="session特性"><a href="#session特性" class="headerlink" title="session特性"></a>session特性</h3><p>生命周期<br>有效期</p>
+<h3 id="session案例"><a href="#session案例" class="headerlink" title="session案例"></a>session案例</h3><h3 id="URL地址重写"><a href="#URL地址重写" class="headerlink" title="URL地址重写"></a>URL地址重写</h3>
                 
               </div>
             
@@ -387,12 +470,12 @@
     
       <span class="category-chain">
         
-  <a href="../../../../categories/web/" class="category-chain-item">web</a>
+  <a href="../" class="category-chain-item">web</a>
   
   
     <span>></span>
     
-  <a href="../../../../categories/web/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  <a href="" class="category-chain-item">web</a>
   
   
 
@@ -409,7 +492,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="../../../../tags/mysql/">#MySQL</a>
+        <a href="../../../tags/cookie/">#cookie</a>
+      
+        <a href="../../../tags/session/">#session</a>
       
     </div>
   
@@ -421,8 +506,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>MySQL事务</div>
-      <div>http://meloor.xyz/zh-cn/web/数据库/MySQL事务/</div>
+      <div>cookie/session机制(持续更新)</div>
+      <div>http://meloor.xyz/categories/web/web/cookie-session机制.html</div>
     </div>
     <div class="license-meta">
       
@@ -434,7 +519,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2020年11月14日</div>
+          <div>2020年12月3日</div>
         </div>
       
       
@@ -471,9 +556,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../../../%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/2020%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BF%9D%E7%A0%94%E4%B8%8A%E5%B2%B8%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" title="2020计算机保研上岸经验分享">
+                      <a href="http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE.html" title="http与https协议">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2020计算机保研上岸经验分享</span>
+                        <span class="hidden-mobile">http与https协议</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -481,8 +566,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="../../front-end/gitee+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="gitee+hexo搭建个人博客">
-                        <span class="hidden-mobile">gitee+hexo搭建个人博客</span>
+                      <a href="http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81.html" title="http请求返回状态码">
+                        <span class="hidden-mobile">http请求返回状态码</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -498,12 +583,12 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('../../../../css/gitalk.css')
+      Fluid.utils.createCssLink('../../../css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
-          {"clientID":"f758d3c1d38fb96ad7f4","clientSecret":"6780580605c416c988c57b7dc8c48cfa2da49311","repo":"BlogTalks","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {"clientID":"09b0c36adab009c91121","clientSecret":"64748b6ecbdef988d95c53e0b935ff2d988d1585","repo":"blog-talk-gh","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '4759fe45d710a2bc8670bed7840fbd7f'
+            id: 'ae850252f99dd650258ada5ec1660a9f'
           }
         )
         var gitalk = new Gitalk(options);
@@ -657,8 +742,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="../../../../js/events.js" ></script>
-<script  src="../../../../js/plugins.js" ></script>
+<script  src="../../../js/events.js" ></script>
+<script  src="../../../js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -680,7 +765,7 @@
 
 
   
-    <script  src="../../../../js/img-lazyload.js" ></script>
+    <script  src="../../../js/img-lazyload.js" ></script>
   
 
 
@@ -779,7 +864,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="../../../../js/local-search.js" ></script>
+  <script  src="../../../js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -789,7 +874,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="../../../../js/boot.js" ></script>
+<script  src="../../../js/boot.js" ></script>
 
 
   

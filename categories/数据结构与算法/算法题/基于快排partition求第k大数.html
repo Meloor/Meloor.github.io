@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN,en,default" data-default-color-scheme=auto>
 
 
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/fluid.png">
-  <link rel="icon" href="../../../../imgs/meloor-favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../img/fluid.png">
+  <link rel="icon" href="../../../imgs/meloor-favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -16,26 +16,24 @@
   <meta name="author" content="Meloor">
   <meta name="keywords" content="database,java,c++,python">
   
-    <meta name="description" content="参考博客：  HTTP请求返回状态码详解 常用的HTTP状态码(面试中常问到…)  首先，什么是状态码？状态码的职责是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 接着来，状态码有哪些种类？接下来我们详细说一说常用的状态码（背吧，别犹豫） 2XX 成功200 ok（请求成功）204 no content （请求成功，但是没有结">
+    <meta name="description" content="参考博客：面试题：从 n 个数中找出第 K 大的数 适合海量数据的 o(nlogk)的方法借助外部数据结构（最小堆），也可以不借助外部的数据结构，手动实现一个最小堆。堆中最多 k 个元素，扫描数组 O(n), 每次向堆中插入元素，删除元素，保持堆中元素是当前最大的 k 的数字。更新堆时间 logk, 总时间 nlogk 基于快速排序的 partion 方法，时间复杂度为 o(n)快排中 parti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="http请求返回状态码">
-<meta property="og:url" content="http://meloor.xyz/zh-cn/web/web/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/index.html">
+<meta property="og:title" content="基于快排partition求第k大数">
+<meta property="og:url" content="http://meloor.xyz/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%9F%BA%E4%BA%8E%E5%BF%AB%E6%8E%92partition%E6%B1%82%E7%AC%ACk%E5%A4%A7%E6%95%B0.html">
 <meta property="og:site_name" content="Meloor&#39;s Blog">
-<meta property="og:description" content="参考博客：  HTTP请求返回状态码详解 常用的HTTP状态码(面试中常问到…)  首先，什么是状态码？状态码的职责是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 接着来，状态码有哪些种类？接下来我们详细说一说常用的状态码（背吧，别犹豫） 2XX 成功200 ok（请求成功）204 no content （请求成功，但是没有结">
+<meta property="og:description" content="参考博客：面试题：从 n 个数中找出第 K 大的数 适合海量数据的 o(nlogk)的方法借助外部数据结构（最小堆），也可以不借助外部的数据结构，手动实现一个最小堆。堆中最多 k 个元素，扫描数组 O(n), 每次向堆中插入元素，删除元素，保持堆中元素是当前最大的 k 的数字。更新堆时间 logk, 总时间 nlogk 基于快速排序的 partion 方法，时间复杂度为 o(n)快排中 parti">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://meloor.xyz/zh-cn/web/web/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/1.png">
-<meta property="article:published_time" content="2020-12-03T14:07:49.000Z">
-<meta property="article:modified_time" content="2022-10-25T03:10:15.977Z">
+<meta property="article:published_time" content="2020-12-03T13:39:01.000Z">
+<meta property="article:modified_time" content="2022-10-25T03:10:15.967Z">
 <meta property="article:author" content="Meloor">
-<meta property="article:tag" content="http">
+<meta property="article:tag" content="快排">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://meloor.xyz/zh-cn/web/web/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>http请求返回状态码 - Meloor&#39;s Blog</title>
+  <title>基于快排partition求第k大数 - Meloor&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -59,14 +57,18 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="../../../../css/main.css" />
+<link  rel="stylesheet" href="../../../css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="../../../css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../css/highlight-dark.css" />
   
 
+
+
+  
+<link rel="stylesheet" href="../../../css/iconfont.css">
 
 
 
@@ -80,8 +82,8 @@
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="../../../../js/utils.js" ></script>
-  <script  src="../../../../js/color-schema.js" ></script>
+  <script  src="../../../js/utils.js" ></script>
+  <script  src="../../../js/color-schema.js" ></script>
   
 
 
@@ -98,7 +100,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
       <strong>美乐奥的回想旋律</strong>
     </a>
 
@@ -117,7 +119,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../index.html">
+              <a class="nav-link" href="../../../index.html">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -139,15 +141,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../archives/">
-                    <i class="iconfont icon-archive-fill"></i>
-                    归档
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="../../../../categories/">
+                  <a class="dropdown-item" href="../../../categories/">
                     <i class="iconfont icon-category-fill"></i>
                     分类
                   </a>
@@ -155,9 +149,121 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../tags/">
+                  <a class="dropdown-item" href="../../../tags/index.html">
                     <i class="iconfont icon-tags-fill"></i>
                     标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../archives/index.html">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-heartbeat"></i>
+                跳动
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../gallery/index.html">
+                    <i class="iconfont icon-images"></i>
+                    画廊
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../movie/index.html">
+                    <i class="iconfont icon-movie1"></i>
+                    电影
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-ic_explore_px"></i>
+                探索
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/vue-page/">
+                    <i class="iconfont icon-vue"></i>
+                    vue-page
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../static_pages/">
+                    <i class="iconfont icon-vue"></i>
+                    static_pages
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../links/index.html">
+                    <i class="iconfont icon-link-fill"></i>
+                    友链
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://xuwh.top/">
+                    <i class="iconfont icon-link-fill"></i>
+                    徐文昊的碎碎念
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/">
+                    <i class="iconfont icon-link-fill"></i>
+                    美乐奥的回想旋律
                   </a>
                 
               </div>
@@ -169,31 +275,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../gallery/">
-                <i class="iconfont icon-images"></i>
-                画廊
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../links/">
-                <i class="iconfont icon-link-fill"></i>
-                友链
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../about/">
+              <a class="nav-link" href="../../../about/index.html">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -228,7 +310,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="http请求返回状态码"></span>
+            <span id="subtitle" data-typed-text="基于快排partition求第k大数"></span>
           
         </div>
 
@@ -244,7 +326,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-12-03 22:07" pubdate>
+        <time datetime="2020-12-03 21:39" pubdate>
           2020年12月3日 晚上
         </time>
       </span>
@@ -256,7 +338,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          641 字
+          936 字
         
       </span>
     
@@ -267,7 +349,7 @@
         
         
         
-          6 分钟
+          8 分钟
         
       </span>
     
@@ -315,7 +397,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">http请求返回状态码</h1>
+            <h1 style="display: none">基于快排partition求第k大数</h1>
             
               <p class="note note-info">
                 
@@ -328,17 +410,46 @@
             
               <div class="markdown-body">
                 
-                <p>参考博客：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangsen2235068/article/details/8081274">HTTP请求返回状态码详解</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/beyond150/article/details/102128827">常用的HTTP状态码(面试中常问到…)</a></li>
+                <p>参考博客：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/orangefly0214/article/details/86527462">面试题：从 n 个数中找出第 K 大的数</a></p>
+<h2 id="适合海量数据的-o-nlogk-的方法"><a href="#适合海量数据的-o-nlogk-的方法" class="headerlink" title="适合海量数据的 o(nlogk)的方法"></a>适合海量数据的 o(nlogk)的方法</h2><p>借助外部数据结构（最小堆），也可以不借助外部的数据结构，手动实现一个最小堆。<br>堆中最多 k 个元素，扫描数组 O(n), 每次向堆中插入元素，删除元素，保持堆中元素是当前最大的 k 的数字。更新堆时间 logk, 总时间 nlogk</p>
+<h2 id="基于快速排序的-partion-方法，时间复杂度为-o-n"><a href="#基于快速排序的-partion-方法，时间复杂度为-o-n" class="headerlink" title="基于快速排序的 partion 方法，时间复杂度为 o(n)"></a>基于快速排序的 partion 方法，时间复杂度为 o(n)</h2><h3 id="快排中-partion"><a href="#快排中-partion" class="headerlink" title="快排中 partion"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/Meloor/article/details/88313735">快排</a>中 partion</h3><ul>
+<li>以从大到小排为例, 数组为 a[]</li>
+<li>首先选择一个基准数，这里以最右边的数为例。</li>
+<li>从最左边开始找，只要大于基准数就把它交换到前面。</li>
+<li>这样共<strong>比较了 n 次</strong>，假设这里交换到前面的数有 i 个，那么 a[i]就是基准数存放的位置。</li>
+<li>然后<strong>以基准数为分界线</strong>把需要排序的数组分为左右两部分。</li>
+<li>继续对子数组进行分割，直到其长度为 1。</li>
 </ul>
-<h2 id="首先，什么是状态码？"><a href="#首先，什么是状态码？" class="headerlink" title="首先，什么是状态码？"></a>首先，什么是状态码？</h2><p>状态码的职责是当客户端向服务器端发送请求时，描述返回的请求结<br>果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出<br>现了错误。</p>
-<h2 id="接着来，状态码有哪些种类？"><a href="#接着来，状态码有哪些种类？" class="headerlink" title="接着来，状态码有哪些种类？"></a>接着来，状态码有哪些种类？</h2><p><img src="http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/1.png" srcset="/img/loading.gif" lazyload alt="状态码"><br>接下来我们详细说一说常用的状态码（背吧，别犹豫）</p>
-<h2 id="2XX-成功"><a href="#2XX-成功" class="headerlink" title="2XX 成功"></a>2XX 成功</h2><p>200 ok（请求成功）<br>204 no content （请求成功，但是没有结果返回）<br>206 partial content （客户端请求一部分资源，服务端成功响应，返回一范围资源）?</p>
-<h2 id="3XX-重定向"><a href="#3XX-重定向" class="headerlink" title="3XX 重定向"></a>3XX 重定向</h2><p>301 move permanently （永久性重定向）<br>302 found （临时性重定向）<br>303 see other （示由于请求对应的资源存在着另一个 URI，应使用 GET<br>方法定向获取请求的资源）<br>304 not modified （表示在客户端采用带条件的访问某资源时，服务端找到了资源，但是这个请求的条件不符合。跟重定向无关）<br>307 temporary redirect （跟302一个意思）</p>
-<h2 id="4XX-客户端错误"><a href="#4XX-客户端错误" class="headerlink" title="4XX 客户端错误"></a>4XX 客户端错误</h2><p>400 bad request （请求报文存在语法错误）<br>401 unauthorized （需要认证（第一次返回）或者认证失败（第二次返回））<br>403 forbidden （请求被服务器拒绝了）<br>404 not found （服务器上无法找到请求的资源）</p>
-<h2 id="5XX-服务器错误"><a href="#5XX-服务器错误" class="headerlink" title="5XX 服务器错误"></a>5XX 服务器错误</h2><p>500 internal server error （服务端执行请求时发生了错误）<br>503 service unavailable （服务器正在超负载或者停机维护，无法处理请求）</p>
+<h3 id="paritition-求第-k-大"><a href="#paritition-求第-k-大" class="headerlink" title="paritition 求第 k 大"></a>paritition 求第 k 大</h3><p>part1:</p>
+<ul>
+<li>以从大到小排为例, 数组为 a[]</li>
+<li>首先选择一个基准数，这里以最右边的数为例。</li>
+<li>从最左边开始找，只要大于基准数就把它交换到前面。</li>
+<li>这样共<strong>比较了 O(n)次</strong>，假设这里交换到前面的数有 i 个，那么 a[i]就是基准数存放的位置。</li>
+<li>然后<strong>以基准数为分界线</strong>把需要排序的数组分为左右两部分。</li>
+</ul>
+<p>part2:</p>
+<ul>
+<li>如果 i==k-1 ,那么 a[i]就是数组的第 k 大数；</li>
+<li>否则, 通过判断下标，只计算包含了索引为 k-1 的那一半，再次 partition</li>
+</ul>
+<h3 id="例子：-6-7-4-5-2-1-3-求第-2-大数"><a href="#例子：-6-7-4-5-2-1-3-求第-2-大数" class="headerlink" title="例子：[6,7,4,5,2,1,3]求第 2 大数"></a>例子：[6,7,4,5,2,1,3]求第 2 大数</h3><p>目标位置：k-1=1</p>
+<ul>
+<li>初始数组 <strong>[6,7,4,5,2,1,3]</strong></li>
+<li>第一轮 partition, 以 3 为基准点，[6,7,4,5,3,1,2], i=4&gt;1, 继续 partition 包含索引为 1 的那一部分 <strong>[6,7,4,5]</strong></li>
+<li>第二轮 partition, 以 5 为基准点，[6,7,5,4], i=2&gt;1, 继续 partion <strong>[6,7]</strong></li>
+<li>第三轮 partition, 以 7 为基准点，[7,6], i=0&lt;1, 继续 partion <strong>[6]</strong></li>
+<li>6 即为所求的第 2 大数</li>
+</ul>
+<h3 id="时间复杂度为-O-n"><a href="#时间复杂度为-O-n" class="headerlink" title="时间复杂度为 O(n)"></a>时间复杂度为 O(n)</h3><ul>
+<li><p>快排，每次划分将数组一分为二，且花费 n 的时间（第二轮要 partition 两次，加起来为 n…），最多划分 logn 次, 总时间 O(nlogn)</p>
+</li>
+<li><p>partition 求第 k 大，第一次划分为 n，第二次划分为 n/2，…, 最多划分 logn 次，总和小于 2n</p>
+<ul>
+<li>如 n=8, s=8+4+2+1=15&lt;16</li>
+</ul>
+</li>
+</ul>
 
                 
               </div>
@@ -357,12 +468,12 @@
     
       <span class="category-chain">
         
-  <a href="../../../../categories/web/" class="category-chain-item">web</a>
+  <a href="../" class="category-chain-item">数据结构与算法</a>
   
   
     <span>></span>
     
-  <a href="../../../../categories/web/web/" class="category-chain-item">web</a>
+  <a href="" class="category-chain-item">算法题</a>
   
   
 
@@ -379,7 +490,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="../../../../tags/http/">#http</a>
+        <a href="../../../tags/%E5%BF%AB%E6%8E%92/">#快排</a>
       
     </div>
   
@@ -391,8 +502,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>http请求返回状态码</div>
-      <div>http://meloor.xyz/zh-cn/web/web/http请求返回状态码/</div>
+      <div>基于快排partition求第k大数</div>
+      <div>http://meloor.xyz/categories/数据结构与算法/算法题/基于快排partition求第k大数.html</div>
     </div>
     <div class="license-meta">
       
@@ -441,9 +552,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../cookie-session%E6%9C%BA%E5%88%B6/" title="cookie/session机制(持续更新)">
+                      <a href="../../web/web/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B.html" title="http请求类型">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">cookie/session机制(持续更新)</span>
+                        <span class="hidden-mobile">http请求类型</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -451,8 +562,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="../http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/" title="http请求类型">
-                        <span class="hidden-mobile">http请求类型</span>
+                      <a href="../../web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84.html" title="前后端分离架构">
+                        <span class="hidden-mobile">前后端分离架构</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -468,12 +579,12 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('../../../../css/gitalk.css')
+      Fluid.utils.createCssLink('../../../css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
-          {"clientID":"f758d3c1d38fb96ad7f4","clientSecret":"6780580605c416c988c57b7dc8c48cfa2da49311","repo":"BlogTalks","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {"clientID":"09b0c36adab009c91121","clientSecret":"64748b6ecbdef988d95c53e0b935ff2d988d1585","repo":"blog-talk-gh","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '6709c7f5a0ed69771547539fc73da2e2'
+            id: '4f3ea92926c579d6040e3135b7970c31'
           }
         )
         var gitalk = new Gitalk(options);
@@ -627,8 +738,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="../../../../js/events.js" ></script>
-<script  src="../../../../js/plugins.js" ></script>
+<script  src="../../../js/events.js" ></script>
+<script  src="../../../js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -650,7 +761,7 @@
 
 
   
-    <script  src="../../../../js/img-lazyload.js" ></script>
+    <script  src="../../../js/img-lazyload.js" ></script>
   
 
 
@@ -749,7 +860,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="../../../../js/local-search.js" ></script>
+  <script  src="../../../js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -759,7 +870,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="../../../../js/boot.js" ></script>
+<script  src="../../../js/boot.js" ></script>
 
 
   

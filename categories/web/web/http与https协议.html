@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN,en,default" data-default-color-scheme=auto>
 
 
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/fluid.png">
-  <link rel="icon" href="../../../../imgs/meloor-favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../img/fluid.png">
+  <link rel="icon" href="../../../imgs/meloor-favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -16,29 +16,28 @@
   <meta name="author" content="Meloor">
   <meta name="keywords" content="database,java,c++,python">
   
-    <meta name="description" content="参考：到底什么是前后端分离 1到底什么是前后端分离 2到底什么是前后端分离 3 前后端分离是个架构设计问题。所谓架构设计，实际上是如何合理的对现实的人力架构进行系统映射，以便最大限度的提高整个公司的运行效率。 前后端的定义前后端定义，不应该是以语言来定义，而是应该以它的运行环境  Html+CSS+JS，都是在浏览器端执行，统一称之为前端。(用户能看到) Java，C，Python，PHP 这些在">
+    <meta name="description" content="http&amp;https协议参考博客：  HTTP和HTTPS协议，看一篇就够了  什么是http超文本传输协议，是一个基于请求与响应，无状态的，应用层的协议，常基于TCP&#x2F;IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种发布和接收HTML页面的方法。  默认端口80， 如果 一台主机上有多个服务器呢?http报文格式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前后端分离架构">
-<meta property="og:url" content="http://meloor.xyz/zh-cn/web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/index.html">
+<meta property="og:title" content="http与https协议">
+<meta property="og:url" content="http://meloor.xyz/categories/web/web/http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE.html">
 <meta property="og:site_name" content="Meloor&#39;s Blog">
-<meta property="og:description" content="参考：到底什么是前后端分离 1到底什么是前后端分离 2到底什么是前后端分离 3 前后端分离是个架构设计问题。所谓架构设计，实际上是如何合理的对现实的人力架构进行系统映射，以便最大限度的提高整个公司的运行效率。 前后端的定义前后端定义，不应该是以语言来定义，而是应该以它的运行环境  Html+CSS+JS，都是在浏览器端执行，统一称之为前端。(用户能看到) Java，C，Python，PHP 这些在">
+<meta property="og:description" content="http&amp;https协议参考博客：  HTTP和HTTPS协议，看一篇就够了  什么是http超文本传输协议，是一个基于请求与响应，无状态的，应用层的协议，常基于TCP&#x2F;IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种发布和接收HTML页面的方法。  默认端口80， 如果 一台主机上有多个服务器呢?http报文格式">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://meloor.xyz/zh-cn/web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/1.png">
-<meta property="og:image" content="http://meloor.xyz/zh-cn/web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/3.png">
-<meta property="og:image" content="http://meloor.xyz/zh-cn/web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/2.png">
-<meta property="og:image" content="http://meloor.xyz/zh-cn/web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/4.png">
-<meta property="article:published_time" content="2020-11-28T14:57:07.000Z">
-<meta property="article:modified_time" content="2022-10-25T03:10:15.977Z">
+<meta property="og:image" content="http://meloor.xyz/categories/web/web/http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE/1.png">
+<meta property="og:image" content="http://meloor.xyz/categories/web/web/http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE/2.png">
+<meta property="article:published_time" content="2020-12-03T14:12:40.000Z">
+<meta property="article:modified_time" content="2022-10-25T10:07:49.450Z">
 <meta property="article:author" content="Meloor">
-<meta property="article:tag" content="前后端分离">
+<meta property="article:tag" content="http">
+<meta property="article:tag" content="https">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://meloor.xyz/zh-cn/web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/1.png">
+<meta name="twitter:image" content="http://meloor.xyz/categories/web/web/http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE/1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>前后端分离架构 - Meloor&#39;s Blog</title>
+  <title>http与https协议 - Meloor&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -62,14 +61,18 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="../../../../css/main.css" />
+<link  rel="stylesheet" href="../../../css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="../../../css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../css/highlight-dark.css" />
   
 
+
+
+  
+<link rel="stylesheet" href="../../../css/iconfont.css">
 
 
 
@@ -83,8 +86,8 @@
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="../../../../js/utils.js" ></script>
-  <script  src="../../../../js/color-schema.js" ></script>
+  <script  src="../../../js/utils.js" ></script>
+  <script  src="../../../js/color-schema.js" ></script>
   
 
 
@@ -101,7 +104,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
       <strong>美乐奥的回想旋律</strong>
     </a>
 
@@ -120,7 +123,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../index.html">
+              <a class="nav-link" href="../../../index.html">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -142,15 +145,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../archives/">
-                    <i class="iconfont icon-archive-fill"></i>
-                    归档
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="../../../../categories/">
+                  <a class="dropdown-item" href="../../../categories/">
                     <i class="iconfont icon-category-fill"></i>
                     分类
                   </a>
@@ -158,9 +153,121 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../tags/">
+                  <a class="dropdown-item" href="../../../tags/index.html">
                     <i class="iconfont icon-tags-fill"></i>
                     标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../archives/index.html">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-heartbeat"></i>
+                跳动
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../gallery/index.html">
+                    <i class="iconfont icon-images"></i>
+                    画廊
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../movie/index.html">
+                    <i class="iconfont icon-movie1"></i>
+                    电影
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-ic_explore_px"></i>
+                探索
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/vue-page/">
+                    <i class="iconfont icon-vue"></i>
+                    vue-page
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../static_pages/">
+                    <i class="iconfont icon-vue"></i>
+                    static_pages
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../links/index.html">
+                    <i class="iconfont icon-link-fill"></i>
+                    友链
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://xuwh.top/">
+                    <i class="iconfont icon-link-fill"></i>
+                    徐文昊的碎碎念
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/">
+                    <i class="iconfont icon-link-fill"></i>
+                    美乐奥的回想旋律
                   </a>
                 
               </div>
@@ -172,31 +279,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../gallery/">
-                <i class="iconfont icon-images"></i>
-                画廊
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../links/">
-                <i class="iconfont icon-link-fill"></i>
-                友链
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../about/">
+              <a class="nav-link" href="../../../about/index.html">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -231,7 +314,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="前后端分离架构"></span>
+            <span id="subtitle" data-typed-text="http与https协议"></span>
           
         </div>
 
@@ -247,8 +330,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-11-28 22:57" pubdate>
-          2020年11月28日 晚上
+        <time datetime="2020-12-03 22:12" pubdate>
+          2020年12月3日 晚上
         </time>
       </span>
     
@@ -259,7 +342,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          893 字
+          1k 字
         
       </span>
     
@@ -270,7 +353,7 @@
         
         
         
-          8 分钟
+          9 分钟
         
       </span>
     
@@ -318,12 +401,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">前后端分离架构</h1>
+            <h1 style="display: none">http与https协议</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年10月25日 上午
+                    本文最后更新于：2022年10月25日 晚上
                   
                 
               </p>
@@ -331,36 +414,34 @@
             
               <div class="markdown-body">
                 
-                <p>参考：<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/answer/547205270">到底什么是前后端分离 1</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/answer/557406666">到底什么是前后端分离 2</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/answer/542961677">到底什么是前后端分离 3</a></p>
-<p>前后端分离是个<strong>架构设计问题</strong>。所谓架构设计，实际上是如何合理的对现实的人力架构进行系统映射，以便最大限度的提高整个公司的运行效率。</p>
-<h2 id="前后端的定义"><a href="#前后端的定义" class="headerlink" title="前后端的定义"></a>前后端的定义</h2><p>前后端定义，不应该是以语言来定义，而是应该以它的<strong>运行环境</strong></p>
+                <h1 id="http-amp-https协议"><a href="#http-amp-https协议" class="headerlink" title="http&amp;https协议"></a>http&amp;https协议</h1><p>参考博客：</p>
 <ul>
-<li>Html+CSS+JS，都是<strong>在浏览器端执行，统一称之为前端</strong>。(用户能看到)</li>
-<li>Java，C，Python，PHP 这些<strong>在服务器端运行，统一称之为后端</strong>。(用户看不到）</li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/xiaoming100001/article/details/81109617">HTTP和HTTPS协议，看一篇就够了</a></li>
 </ul>
-<h2 id="前后端不分离"><a href="#前后端不分离" class="headerlink" title="前后端不分离"></a>前后端不分离</h2><h3 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h3><p><img src="/zh-cn/web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/1.png" srcset="/img/loading.gif" lazyload alt="图片"></p>
-<h3 id="交互方式"><a href="#交互方式" class="headerlink" title="交互方式"></a>交互方式</h3><p>浏览器发请求，服务器端给出一个完整的网页，浏览器再发请求，服务器端再给出一个完整的网页<br><img src="/zh-cn/web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/3.png" srcset="/img/loading.gif" lazyload alt="图片"></p>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>传输的重复数据比较多，网络又会有延迟。所以有没有办法，只传送必要的数据？这是 Ajax 的起源。</p>
-<h3 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h3><p>Ajax 就是只传递数据，不传递整个网页。这也是被用来在翻页，注册，发送验证码等场景，但也仅仅止布于此了。</p>
-<h2 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h2><h3 id="架构设计-1"><a href="#架构设计-1" class="headerlink" title="架构设计"></a>架构设计</h3><p><img src="/zh-cn/web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/2.png" srcset="/img/loading.gif" lazyload alt="图片"></p>
-<h3 id="交互方式-通过浏览器测试"><a href="#交互方式-通过浏览器测试" class="headerlink" title="交互方式(通过浏览器测试)"></a>交互方式(通过浏览器测试)</h3><ul>
-<li>页面跳转(浏览器地址栏 url 会变)时浏览器先发送请求给前端服务器</li>
-<li>浏览器得到响应数据前端代码(html+css+js, 响应数据)并渲染。(地址栏输入后端服务器的 url 会直接显示 json 格式数据, 是 html 就会渲染)</li>
-<li>渲染时会执行 js 代码，这时 js 代码向后端服务器发送请求得到数据并动态更新 html 元素得到最终页面。<br><img src="/zh-cn/web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/4.png" srcset="/img/loading.gif" lazyload alt="图片"></li>
+<h2 id="什么是http"><a href="#什么是http" class="headerlink" title="什么是http"></a>什么是http</h2><p>超文本传输协议，是一个基于请求与响应，<strong>无状态的</strong>，应用层的协议，常基于TCP/IP协议传输数据，互联网上应用最为广泛的一种网络协议,所有的WWW文件都必须遵守这个标准。设计HTTP的初衷是为了提供一种发布和接收HTML页面的方法。</p>
+<ul>
+<li><strong>默认端口80， 如果 一台主机上有多个服务器呢?</strong><h2 id="http报文格式"><a href="#http报文格式" class="headerlink" title="http报文格式"></a>http报文格式</h2></li>
 </ul>
-<h3 id="区分前后端的原因"><a href="#区分前后端的原因" class="headerlink" title="区分前后端的原因"></a>区分前后端的原因</h3><ul>
-<li><p>第一个，是可以并行开发。前后端的进度互不影响，在过去，前后端不分离的情况下，前端的工作量相对较少，一个前端可以对四个后端。</p>
-</li>
-<li><p>第二个，是成本问题。在过去，后端的成本还是比前端要高一些。同样的工作，如果能拆给两个人做，一个成本高一点，一个成本低一点，能接受。</p>
-</li>
-<li><p>第三个，CSS 太难了。JS 还好，和后端语言在对技能的训练上相差不大，可是。。CSS 是什么鬼？记住那么多的属性，和 Hash 算法有关系吗？</p>
-</li>
-</ul>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li>前端人员和后端人员只需约定好接口，大大降低了前后端耦合性</li>
-<li>前端人员彻底不用再关心业务处理是怎么回事，他只需要把界面做好就可以了</li>
-<li>后端人员也不用再关系前端界面是什么样的，他只需要做好业务逻辑处理即可。</li>
-<li>服务的切离，代码管理，服务部署也都独立出来分别管理，系统的灵活性也获得了极大的提升。</li>
+<p>http的请求报文由：请求行、首部、空行、主体四个部分组成。<br>其中请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔<br><img src="http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE/1.png" srcset="/img/loading.gif" lazyload alt="报文格式"></p>
+<h2 id="http通信流程"><a href="#http通信流程" class="headerlink" title="http通信流程"></a>http通信流程</h2><p>web客户端tcp连接到Web服务器-&gt;发送Http请求-&gt;服务器接受请求并返回HTTP响应-&gt;释放连接TCP连接-&gt;客户端浏览器解析HTML内容</p>
+<pre><code class=" mermaid">graph TD
+A(web客户端tcp连接到Web服务器) --&gt;B(发送Http请求)
+B --&gt;C(服务器接受请求并返回HTTP响应)
+C--&gt;D(释放连接TCP连接)
+D--&gt;E(客户端浏览器解析HTML内容)
+</code></pre>
+
+<p><img src="http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE/2.png" srcset="/img/loading.gif" lazyload alt="http通信流程"></p>
+<h2 id="什么是https"><a href="#什么是https" class="headerlink" title="什么是https"></a>什么是https</h2><blockquote>
+<p>图解HTTP》这本书中曾提过HTTPS是身披SSL外壳的HTTP。HTTPS是一种通过计算机网络进行安全通信的传输协议，<strong>经由HTTP进行通信，利用SSL/TLS建立全信道，加密数据包</strong>。<strong>HTTPS使用的主要目的是提供对网站服务器的身份认证，同时保护交换数据的隐私与完整性</strong>。PS:TLS是传输层加密协议，前身是SSL协议，由网景公司1995年发布，有时候两者不区分。</p>
+</blockquote>
+<h2 id="成本考虑"><a href="#成本考虑" class="headerlink" title="成本考虑"></a>成本考虑</h2><ul>
+<li>SSL证书需要购买申请，功能越强大的证书费用越高</li>
+<li>SSL证书通常需要绑定IP，不能在同一IP上绑定多个域名，IPv4资源不可能支撑这个消耗（SSL有扩展可以部分解决这个问题，但是比较麻烦，而且要求浏览器、操作系统支持，Windows XP就不支持这个扩展，考虑到XP的装机量，这个特性几乎没用）。</li>
+<li>根据ACM CoNEXT数据显示，使用HTTPS协议会使页面的加载时间延长近50%，增加10%到20%的耗电。</li>
+<li>HTTPS连接缓存不如HTTP高效，流量成本高。</li>
+<li>HTTPS连接服务器端资源占用高很多，支持访客多的网站需要投入更大的成本。</li>
+<li>HTTPS协议握手阶段比较费时，对网站的响应速度有影响，影响用户体验。比较好的方式是采用分而治之，类似12306网站的主页使用HTTP协议，有关于用户信息等方面使用HTTPS。</li>
 </ul>
 
                 
@@ -380,12 +461,12 @@
     
       <span class="category-chain">
         
-  <a href="../../../../categories/web/" class="category-chain-item">web</a>
+  <a href="../" class="category-chain-item">web</a>
   
   
     <span>></span>
     
-  <a href="../../../../categories/web/web/" class="category-chain-item">web</a>
+  <a href="" class="category-chain-item">web</a>
   
   
 
@@ -402,7 +483,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="../../../../tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/">#前后端分离</a>
+        <a href="../../../tags/http/">#http</a>
+      
+        <a href="../../../tags/https/">#https</a>
       
     </div>
   
@@ -414,8 +497,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>前后端分离架构</div>
-      <div>http://meloor.xyz/zh-cn/web/web/前后端分离架构/</div>
+      <div>http与https协议</div>
+      <div>http://meloor.xyz/categories/web/web/http与https协议.html</div>
     </div>
     <div class="license-meta">
       
@@ -427,7 +510,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2020年11月28日</div>
+          <div>2020年12月3日</div>
         </div>
       
       
@@ -464,9 +547,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%9F%BA%E4%BA%8E%E5%BF%AB%E6%8E%92partition%E6%B1%82%E7%AC%ACk%E5%A4%A7%E6%95%B0/" title="基于快排partition求第k大数">
+                      <a href="../java/Java%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%EF%BC%88%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3%EF%BC%89.html" title="Java访问权限（类、接口、内部类、内部接口）">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">基于快排partition求第k大数</span>
+                        <span class="hidden-mobile">Java访问权限（类、接口、内部类、内部接口）</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -474,8 +557,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="../../../%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/%E5%A4%A7%E5%9B%9B%E7%9A%84%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" title="大四的经验分享">
-                        <span class="hidden-mobile">大四的经验分享</span>
+                      <a href="cookie-session%E6%9C%BA%E5%88%B6.html" title="cookie/session机制(持续更新)">
+                        <span class="hidden-mobile">cookie/session机制(持续更新)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -491,12 +574,12 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('../../../../css/gitalk.css')
+      Fluid.utils.createCssLink('../../../css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
-          {"clientID":"f758d3c1d38fb96ad7f4","clientSecret":"6780580605c416c988c57b7dc8c48cfa2da49311","repo":"BlogTalks","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {"clientID":"09b0c36adab009c91121","clientSecret":"64748b6ecbdef988d95c53e0b935ff2d988d1585","repo":"blog-talk-gh","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '0d74eabcc94d7997c876d89a246a993f'
+            id: 'ded99397302f0b6ca8b973eab4ae50b3'
           }
         )
         var gitalk = new Gitalk(options);
@@ -650,8 +733,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="../../../../js/events.js" ></script>
-<script  src="../../../../js/plugins.js" ></script>
+<script  src="../../../js/events.js" ></script>
+<script  src="../../../js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -673,7 +756,7 @@
 
 
   
-    <script  src="../../../../js/img-lazyload.js" ></script>
+    <script  src="../../../js/img-lazyload.js" ></script>
   
 
 
@@ -772,7 +855,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="../../../../js/local-search.js" ></script>
+  <script  src="../../../js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -782,7 +865,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="../../../../js/boot.js" ></script>
+<script  src="../../../js/boot.js" ></script>
 
 
   

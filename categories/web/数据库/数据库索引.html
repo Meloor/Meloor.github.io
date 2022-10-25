@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN,en,default" data-default-color-scheme=auto>
 
 
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/fluid.png">
-  <link rel="icon" href="../../../../imgs/meloor-favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../img/fluid.png">
+  <link rel="icon" href="../../../imgs/meloor-favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -19,7 +19,7 @@
     <meta name="description" content="参考博客：  数据库索引原理 五种索引类型 什么是数据库索引，是怎么工作的 (好文推荐)  前面有看不懂的地方可以跳过先看原理。 索引是什么索引是一种数据结构。为了加速对表中数据行的检索而创建的。 作用(优点)使用索引的全部意义就是通过减少一张表中需要查询的记录&#x2F;行的数目来加快搜索的速度  大大加快数据的检索速度; 创建唯一性索引，保证数据库表中每一行数据的唯一性; 加速表和表之间的连接; (查询">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库索引">
-<meta property="og:url" content="http://meloor.xyz/zh-cn/web/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95/index.html">
+<meta property="og:url" content="http://meloor.xyz/categories/web/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95.html">
 <meta property="og:site_name" content="Meloor&#39;s Blog">
 <meta property="og:description" content="参考博客：  数据库索引原理 五种索引类型 什么是数据库索引，是怎么工作的 (好文推荐)  前面有看不懂的地方可以跳过先看原理。 索引是什么索引是一种数据结构。为了加速对表中数据行的检索而创建的。 作用(优点)使用索引的全部意义就是通过减少一张表中需要查询的记录&#x2F;行的数目来加快搜索的速度  大大加快数据的检索速度; 创建唯一性索引，保证数据库表中每一行数据的唯一性; 加速表和表之间的连接; (查询">
 <meta property="og:locale" content="zh_CN">
@@ -60,14 +60,18 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="../../../../css/main.css" />
+<link  rel="stylesheet" href="../../../css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="../../../css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../css/highlight-dark.css" />
   
 
+
+
+  
+<link rel="stylesheet" href="../../../css/iconfont.css">
 
 
 
@@ -81,8 +85,8 @@
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="../../../../js/utils.js" ></script>
-  <script  src="../../../../js/color-schema.js" ></script>
+  <script  src="../../../js/utils.js" ></script>
+  <script  src="../../../js/color-schema.js" ></script>
   
 
 
@@ -99,7 +103,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
       <strong>美乐奥的回想旋律</strong>
     </a>
 
@@ -118,7 +122,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../index.html">
+              <a class="nav-link" href="../../../index.html">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -140,15 +144,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../archives/">
-                    <i class="iconfont icon-archive-fill"></i>
-                    归档
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="../../../../categories/">
+                  <a class="dropdown-item" href="../../../categories/">
                     <i class="iconfont icon-category-fill"></i>
                     分类
                   </a>
@@ -156,9 +152,121 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../tags/">
+                  <a class="dropdown-item" href="../../../tags/index.html">
                     <i class="iconfont icon-tags-fill"></i>
                     标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../archives/index.html">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-heartbeat"></i>
+                跳动
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../gallery/index.html">
+                    <i class="iconfont icon-images"></i>
+                    画廊
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../movie/index.html">
+                    <i class="iconfont icon-movie1"></i>
+                    电影
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-ic_explore_px"></i>
+                探索
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/vue-page/">
+                    <i class="iconfont icon-vue"></i>
+                    vue-page
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../static_pages/">
+                    <i class="iconfont icon-vue"></i>
+                    static_pages
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../links/index.html">
+                    <i class="iconfont icon-link-fill"></i>
+                    友链
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://xuwh.top/">
+                    <i class="iconfont icon-link-fill"></i>
+                    徐文昊的碎碎念
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/">
+                    <i class="iconfont icon-link-fill"></i>
+                    美乐奥的回想旋律
                   </a>
                 
               </div>
@@ -170,31 +278,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../gallery/">
-                <i class="iconfont icon-images"></i>
-                画廊
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../links/">
-                <i class="iconfont icon-link-fill"></i>
-                友链
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../about/">
+              <a class="nav-link" href="../../../about/index.html">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -403,12 +487,12 @@
     
       <span class="category-chain">
         
-  <a href="../../../../categories/web/" class="category-chain-item">web</a>
+  <a href="../" class="category-chain-item">web</a>
   
   
     <span>></span>
     
-  <a href="../../../../categories/web/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  <a href="" class="category-chain-item">数据库</a>
   
   
 
@@ -425,9 +509,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="../../../../tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
+        <a href="../../../tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
       
-        <a href="../../../../tags/b-%E6%A0%91/">#B+树</a>
+        <a href="../../../tags/b-%E6%A0%91/">#B+树</a>
       
     </div>
   
@@ -440,7 +524,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>数据库索引</div>
-      <div>http://meloor.xyz/zh-cn/web/数据库/数据库索引/</div>
+      <div>http://meloor.xyz/categories/web/数据库/数据库索引.html</div>
     </div>
     <div class="license-meta">
       
@@ -489,7 +573,7 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../../../%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/%E5%A4%A7%E5%9B%9B%E7%9A%84%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" title="大四的经验分享">
+                      <a href="../../%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/%E5%A4%A7%E5%9B%9B%E7%9A%84%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB.html" title="大四的经验分享">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">大四的经验分享</span>
                         <span class="visible-mobile">上一篇</span>
@@ -499,7 +583,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="../../../%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/2020%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BF%9D%E7%A0%94%E4%B8%8A%E5%B2%B8%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" title="2020计算机保研上岸经验分享">
+                      <a href="../../%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/2020%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BF%9D%E7%A0%94%E4%B8%8A%E5%B2%B8%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB.html" title="2020计算机保研上岸经验分享">
                         <span class="hidden-mobile">2020计算机保研上岸经验分享</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -516,12 +600,12 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('../../../../css/gitalk.css')
+      Fluid.utils.createCssLink('../../../css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
-          {"clientID":"f758d3c1d38fb96ad7f4","clientSecret":"6780580605c416c988c57b7dc8c48cfa2da49311","repo":"BlogTalks","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {"clientID":"09b0c36adab009c91121","clientSecret":"64748b6ecbdef988d95c53e0b935ff2d988d1585","repo":"blog-talk-gh","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'd9d27233a16681ff236193de05f1951a'
+            id: '89b3119670d50f21618116fd93531e4d'
           }
         )
         var gitalk = new Gitalk(options);
@@ -675,8 +759,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="../../../../js/events.js" ></script>
-<script  src="../../../../js/plugins.js" ></script>
+<script  src="../../../js/events.js" ></script>
+<script  src="../../../js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -698,7 +782,7 @@
 
 
   
-    <script  src="../../../../js/img-lazyload.js" ></script>
+    <script  src="../../../js/img-lazyload.js" ></script>
   
 
 
@@ -797,7 +881,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="../../../../js/local-search.js" ></script>
+  <script  src="../../../js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -807,7 +891,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="../../../../js/boot.js" ></script>
+<script  src="../../../js/boot.js" ></script>
 
 
   

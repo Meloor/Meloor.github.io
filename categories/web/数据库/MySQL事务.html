@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN,en,default" data-default-color-scheme=auto>
 
 
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/fluid.png">
-  <link rel="icon" href="../../../../imgs/meloor-favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../img/fluid.png">
+  <link rel="icon" href="../../../imgs/meloor-favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -16,24 +16,24 @@
   <meta name="author" content="Meloor">
   <meta name="keywords" content="database,java,c++,python">
   
-    <meta name="description" content="参考博客：面试题：从 n 个数中找出第 K 大的数 适合海量数据的 o(nlogk)的方法借助外部数据结构（最小堆），也可以不借助外部的数据结构，手动实现一个最小堆。堆中最多 k 个元素，扫描数组 O(n), 每次向堆中插入元素，删除元素，保持堆中元素是当前最大的 k 的数字。更新堆时间 logk, 总时间 nlogk 基于快速排序的 partion 方法，时间复杂度为 o(n)快排中 parti">
+    <meta name="description" content="参考博客讲的非常清楚，下面是补充的笔记 事务定义事务(Transsction)  事务：一个最小的不可再分的工作单元；通常一个事务对应一个完整的业务(例如银行账户转账业务，该业务就是一个最小的工作单元) 一个完整的业务需要批量的 DML(insert、update、delete)语句共同联合完成 (也有说法包含 selecet?) 事务只和 DML 语句有关，或者说DML 语句才有事务。这个和业务">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于快排partition求第k大数">
-<meta property="og:url" content="http://meloor.xyz/zh-cn/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%9F%BA%E4%BA%8E%E5%BF%AB%E6%8E%92partition%E6%B1%82%E7%AC%ACk%E5%A4%A7%E6%95%B0/index.html">
+<meta property="og:title" content="MySQL事务">
+<meta property="og:url" content="http://meloor.xyz/categories/web/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E4%BA%8B%E5%8A%A1.html">
 <meta property="og:site_name" content="Meloor&#39;s Blog">
-<meta property="og:description" content="参考博客：面试题：从 n 个数中找出第 K 大的数 适合海量数据的 o(nlogk)的方法借助外部数据结构（最小堆），也可以不借助外部的数据结构，手动实现一个最小堆。堆中最多 k 个元素，扫描数组 O(n), 每次向堆中插入元素，删除元素，保持堆中元素是当前最大的 k 的数字。更新堆时间 logk, 总时间 nlogk 基于快速排序的 partion 方法，时间复杂度为 o(n)快排中 parti">
+<meta property="og:description" content="参考博客讲的非常清楚，下面是补充的笔记 事务定义事务(Transsction)  事务：一个最小的不可再分的工作单元；通常一个事务对应一个完整的业务(例如银行账户转账业务，该业务就是一个最小的工作单元) 一个完整的业务需要批量的 DML(insert、update、delete)语句共同联合完成 (也有说法包含 selecet?) 事务只和 DML 语句有关，或者说DML 语句才有事务。这个和业务">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-12-03T13:39:01.000Z">
-<meta property="article:modified_time" content="2022-10-25T03:10:15.967Z">
+<meta property="article:published_time" content="2020-11-14T14:16:35.000Z">
+<meta property="article:modified_time" content="2022-10-25T03:10:15.987Z">
 <meta property="article:author" content="Meloor">
-<meta property="article:tag" content="快排">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>基于快排partition求第k大数 - Meloor&#39;s Blog</title>
+  <title>MySQL事务 - Meloor&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -57,14 +57,18 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="../../../../css/main.css" />
+<link  rel="stylesheet" href="../../../css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="../../../css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../css/highlight-dark.css" />
   
 
+
+
+  
+<link rel="stylesheet" href="../../../css/iconfont.css">
 
 
 
@@ -78,8 +82,8 @@
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="../../../../js/utils.js" ></script>
-  <script  src="../../../../js/color-schema.js" ></script>
+  <script  src="../../../js/utils.js" ></script>
+  <script  src="../../../js/color-schema.js" ></script>
   
 
 
@@ -96,7 +100,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
       <strong>美乐奥的回想旋律</strong>
     </a>
 
@@ -115,7 +119,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../index.html">
+              <a class="nav-link" href="../../../index.html">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -137,15 +141,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../archives/">
-                    <i class="iconfont icon-archive-fill"></i>
-                    归档
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="../../../../categories/">
+                  <a class="dropdown-item" href="../../../categories/">
                     <i class="iconfont icon-category-fill"></i>
                     分类
                   </a>
@@ -153,9 +149,121 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../tags/">
+                  <a class="dropdown-item" href="../../../tags/index.html">
                     <i class="iconfont icon-tags-fill"></i>
                     标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../archives/index.html">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-heartbeat"></i>
+                跳动
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../gallery/index.html">
+                    <i class="iconfont icon-images"></i>
+                    画廊
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../movie/index.html">
+                    <i class="iconfont icon-movie1"></i>
+                    电影
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-ic_explore_px"></i>
+                探索
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/vue-page/">
+                    <i class="iconfont icon-vue"></i>
+                    vue-page
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../static_pages/">
+                    <i class="iconfont icon-vue"></i>
+                    static_pages
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../links/index.html">
+                    <i class="iconfont icon-link-fill"></i>
+                    友链
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://xuwh.top/">
+                    <i class="iconfont icon-link-fill"></i>
+                    徐文昊的碎碎念
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/">
+                    <i class="iconfont icon-link-fill"></i>
+                    美乐奥的回想旋律
                   </a>
                 
               </div>
@@ -167,31 +275,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../gallery/">
-                <i class="iconfont icon-images"></i>
-                画廊
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../links/">
-                <i class="iconfont icon-link-fill"></i>
-                友链
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../about/">
+              <a class="nav-link" href="../../../about/index.html">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -226,7 +310,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="基于快排partition求第k大数"></span>
+            <span id="subtitle" data-typed-text="MySQL事务"></span>
           
         </div>
 
@@ -242,8 +326,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-12-03 21:39" pubdate>
-          2020年12月3日 晚上
+        <time datetime="2020-11-14 22:16" pubdate>
+          2020年11月14日 晚上
         </time>
       </span>
     
@@ -254,7 +338,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          936 字
+          1.1k 字
         
       </span>
     
@@ -265,7 +349,7 @@
         
         
         
-          8 分钟
+          10 分钟
         
       </span>
     
@@ -313,7 +397,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">基于快排partition求第k大数</h1>
+            <h1 style="display: none">MySQL事务</h1>
             
               <p class="note note-info">
                 
@@ -326,45 +410,48 @@
             
               <div class="markdown-body">
                 
-                <p>参考博客：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/orangefly0214/article/details/86527462">面试题：从 n 个数中找出第 K 大的数</a></p>
-<h2 id="适合海量数据的-o-nlogk-的方法"><a href="#适合海量数据的-o-nlogk-的方法" class="headerlink" title="适合海量数据的 o(nlogk)的方法"></a>适合海量数据的 o(nlogk)的方法</h2><p>借助外部数据结构（最小堆），也可以不借助外部的数据结构，手动实现一个最小堆。<br>堆中最多 k 个元素，扫描数组 O(n), 每次向堆中插入元素，删除元素，保持堆中元素是当前最大的 k 的数字。更新堆时间 logk, 总时间 nlogk</p>
-<h2 id="基于快速排序的-partion-方法，时间复杂度为-o-n"><a href="#基于快速排序的-partion-方法，时间复杂度为-o-n" class="headerlink" title="基于快速排序的 partion 方法，时间复杂度为 o(n)"></a>基于快速排序的 partion 方法，时间复杂度为 o(n)</h2><h3 id="快排中-partion"><a href="#快排中-partion" class="headerlink" title="快排中 partion"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/Meloor/article/details/88313735">快排</a>中 partion</h3><ul>
-<li>以从大到小排为例, 数组为 a[]</li>
-<li>首先选择一个基准数，这里以最右边的数为例。</li>
-<li>从最左边开始找，只要大于基准数就把它交换到前面。</li>
-<li>这样共<strong>比较了 n 次</strong>，假设这里交换到前面的数有 i 个，那么 a[i]就是基准数存放的位置。</li>
-<li>然后<strong>以基准数为分界线</strong>把需要排序的数组分为左右两部分。</li>
-<li>继续对子数组进行分割，直到其长度为 1。</li>
-</ul>
-<h3 id="paritition-求第-k-大"><a href="#paritition-求第-k-大" class="headerlink" title="paritition 求第 k 大"></a>paritition 求第 k 大</h3><p>part1:</p>
+                <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/w_linux/article/details/79666086">参考博客</a>讲的非常清楚，下面是补充的笔记</p>
+<h2 id="事务定义"><a href="#事务定义" class="headerlink" title="事务定义"></a>事务定义</h2><p>事务(Transsction)</p>
 <ul>
-<li>以从大到小排为例, 数组为 a[]</li>
-<li>首先选择一个基准数，这里以最右边的数为例。</li>
-<li>从最左边开始找，只要大于基准数就把它交换到前面。</li>
-<li>这样共<strong>比较了 O(n)次</strong>，假设这里交换到前面的数有 i 个，那么 a[i]就是基准数存放的位置。</li>
-<li>然后<strong>以基准数为分界线</strong>把需要排序的数组分为左右两部分。</li>
+<li>事务：<strong>一个最小的不可再分的工作单元</strong>；通常一个事务对应一个完整的业务(例如银行账户转账业务，该业务就是一个最小的工作单元)</li>
+<li>一个完整的业务需要批量的 DML(insert、update、delete)语句共同联合完成 <strong>(也有说法包含 selecet?)</strong></li>
+<li>事务只和 DML 语句有关，或者说<strong>DML 语句才有事务</strong>。这个和业务逻辑有关，业务逻辑不同，DML 语句的个数不同</li>
 </ul>
-<p>part2:</p>
 <ul>
-<li>如果 i==k-1 ,那么 a[i]就是数组的第 k 大数；</li>
-<li>否则, 通过判断下标，只计算包含了索引为 k-1 的那一半，再次 partition</li>
+<li>DDL：<br>数据库模式定义语言 DDL(Data Definition Language)，是用于描述数据库中要存储的现实世界实体的语言。主要由 create（添加）、alter（修改）、drop（删除）和 truncate（删除）  四个关键字完成。</li>
+<li>DML(Data Manipulation Language)数据操纵语言命令使用户能够查询数据库以及操作已有数据库中的数据。　　如 insert,delete,update,select(插入、删除、修改、检索)等都是 DML.</li>
 </ul>
-<h3 id="例子：-6-7-4-5-2-1-3-求第-2-大数"><a href="#例子：-6-7-4-5-2-1-3-求第-2-大数" class="headerlink" title="例子：[6,7,4,5,2,1,3]求第 2 大数"></a>例子：[6,7,4,5,2,1,3]求第 2 大数</h3><p>目标位置：k-1=1</p>
+<h2 id="事务四大特征-ACID"><a href="#事务四大特征-ACID" class="headerlink" title="事务四大特征(ACID)"></a>事务四大特征(ACID)</h2><p>它这里原子性和一致性讲错了，下面为更正过的：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/liuskyter/article/details/81948310">参考博客</a></p>
 <ul>
-<li>初始数组 <strong>[6,7,4,5,2,1,3]</strong></li>
-<li>第一轮 partition, 以 3 为基准点，[6,7,4,5,3,1,2], i=4&gt;1, 继续 partition 包含索引为 1 的那一部分 <strong>[6,7,4,5]</strong></li>
-<li>第二轮 partition, 以 5 为基准点，[6,7,5,4], i=2&gt;1, 继续 partion <strong>[6,7]</strong></li>
-<li>第三轮 partition, 以 7 为基准点，[7,6], i=0&lt;1, 继续 partion <strong>[6]</strong></li>
-<li>6 即为所求的第 2 大数</li>
-</ul>
-<h3 id="时间复杂度为-O-n"><a href="#时间复杂度为-O-n" class="headerlink" title="时间复杂度为 O(n)"></a>时间复杂度为 O(n)</h3><ul>
-<li><p>快排，每次划分将数组一分为二，且花费 n 的时间（第二轮要 partition 两次，加起来为 n…），最多划分 logn 次, 总时间 O(nlogn)</p>
+<li><p><strong>原子性(A)</strong> ：<br>原子性是指事务包含的所有操作<strong>要么全部成功，要么全部失败回滚</strong>，这和前面两篇博客介绍事务的功能是一样的概念，因此事务的操作如果成功就必须要完全应用到数据库，如果操作失败则不能对数据库有任何影响。</p>
 </li>
-<li><p>partition 求第 k 大，第一次划分为 n，第二次划分为 n/2，…, 最多划分 logn 次，总和小于 2n</p>
+<li><p><strong>一致性(C)</strong> ：<br>一致性是指事务必须使数据库从一个一致性状态变换到另一个一致性状态，也就是说一个事务<strong>执行之前和执行之后都必须处于一致性状态</strong>。</p>
+<blockquote>
+<p>拿 <strong>转账</strong> 来说，假设用户甲和用户乙两者的钱加起来一共是 5000，那么不管甲和乙之间如何转账，转几次账，事务结束后两个用户的钱相加起来应该还得是 5000，这就是事务的一致性。</p>
+</blockquote>
+</li>
+<li><p><strong>隔离性(I)</strong> ：事务 A 和事务 B 之间具有隔离性, <strong>隔离级别</strong> 有四个：</p>
 <ul>
-<li>如 n=8, s=8+4+2+1=15&lt;16</li>
+<li>读未提交：read uncommitted</li>
+<li>读已提交：read committed</li>
+<li>可重复读：repeatable read</li>
+<li>串行化：serializable<ul>
+<li>吞吐量太低，用户体验差，事务串行，而不是并发</li>
 </ul>
 </li>
+<li>看下面这两篇，讲的非常好</li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33591903/article/details/81672260">快速理解脏读、不可重复读、幻读</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33591903/article/details/82079302">事务隔离级别</a></li>
+</ul>
+</li>
+<li><p><strong>持久性(D)</strong> ：是事务的保证，事务终结的标志(内存的数据持久到硬盘文件中)</p>
+</li>
+<li><p><strong>在我的理解中，原子性、隔离性、持久性都是为了保障一致性而存在的，一致性也是最终的目的</strong></p>
+</li>
+</ul>
+<h2 id="事务与数据库底层数据"><a href="#事务与数据库底层数据" class="headerlink" title="事务与数据库底层数据"></a>事务与数据库底层数据</h2><p>在事物进行过程中，未结束之前，DML 语句是不会更改底层数据，<strong>只是将历史操作记录一下，在内存中完成记录</strong>。只有在事物结束的时候，而且是成功的结束的时候，才会修改底层硬盘文件中的数据</p>
+<h2 id="提交与回滚"><a href="#提交与回滚" class="headerlink" title="提交与回滚"></a>提交与回滚</h2><ul>
+<li>在 MySQL 中，默认情况下，事务是自动提交的，也就是说，只要执行一条 DML 语句就开启了事物，并且提交了事务</li>
 </ul>
 
                 
@@ -384,12 +471,12 @@
     
       <span class="category-chain">
         
-  <a href="../../../../categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="category-chain-item">数据结构与算法</a>
+  <a href="../" class="category-chain-item">web</a>
   
   
     <span>></span>
     
-  <a href="../../../../categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/" class="category-chain-item">算法题</a>
+  <a href="" class="category-chain-item">数据库</a>
   
   
 
@@ -406,7 +493,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="../../../../tags/%E5%BF%AB%E6%8E%92/">#快排</a>
+        <a href="../../../tags/mysql/">#MySQL</a>
       
     </div>
   
@@ -418,8 +505,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>基于快排partition求第k大数</div>
-      <div>http://meloor.xyz/zh-cn/数据结构与算法/算法题/基于快排partition求第k大数/</div>
+      <div>MySQL事务</div>
+      <div>http://meloor.xyz/categories/web/数据库/MySQL事务.html</div>
     </div>
     <div class="license-meta">
       
@@ -431,7 +518,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2020年12月3日</div>
+          <div>2020年11月14日</div>
         </div>
       
       
@@ -468,9 +555,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../../../web/web/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/" title="http请求类型">
+                      <a href="../../%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/2020%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BF%9D%E7%A0%94%E4%B8%8A%E5%B2%B8%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB.html" title="2020计算机保研上岸经验分享">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">http请求类型</span>
+                        <span class="hidden-mobile">2020计算机保研上岸经验分享</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -478,8 +565,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="../../../web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/" title="前后端分离架构">
-                        <span class="hidden-mobile">前后端分离架构</span>
+                      <a href="../front-end/gitee+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" title="gitee+hexo搭建个人博客">
+                        <span class="hidden-mobile">gitee+hexo搭建个人博客</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -495,12 +582,12 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('../../../../css/gitalk.css')
+      Fluid.utils.createCssLink('../../../css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
-          {"clientID":"f758d3c1d38fb96ad7f4","clientSecret":"6780580605c416c988c57b7dc8c48cfa2da49311","repo":"BlogTalks","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {"clientID":"09b0c36adab009c91121","clientSecret":"64748b6ecbdef988d95c53e0b935ff2d988d1585","repo":"blog-talk-gh","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'f5c21b4401bbdc634ba62091aa37bd1d'
+            id: '3c4eed266c01ac7201af55d7ae7a712b'
           }
         )
         var gitalk = new Gitalk(options);
@@ -654,8 +741,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="../../../../js/events.js" ></script>
-<script  src="../../../../js/plugins.js" ></script>
+<script  src="../../../js/events.js" ></script>
+<script  src="../../../js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -677,7 +764,7 @@
 
 
   
-    <script  src="../../../../js/img-lazyload.js" ></script>
+    <script  src="../../../js/img-lazyload.js" ></script>
   
 
 
@@ -776,7 +863,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="../../../../js/local-search.js" ></script>
+  <script  src="../../../js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -786,7 +873,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="../../../../js/boot.js" ></script>
+<script  src="../../../js/boot.js" ></script>
 
 
   

@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN,en,default" data-default-color-scheme=auto>
 
 
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/fluid.png">
-  <link rel="icon" href="../../../../imgs/meloor-favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../img/fluid.png">
+  <link rel="icon" href="../../../imgs/meloor-favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -16,24 +16,27 @@
   <meta name="author" content="Meloor">
   <meta name="keywords" content="database,java,c++,python">
   
-    <meta name="description" content="保研主要分为两部分，一个是拿到本校保研资格，另外一个是拿到外校保研 offer 拿到本校保研资格这一部分不同学校不同学院不同年份都不一样，建议研读学校往年的保研政策，针对性的准备。 拿外校保研 offer前期准备阶段我咨询过保研机构,申请外校时主要会从以下几方面查看学生素质：（实际申请时也没差，基本是这些）  绩点排名 非常重要，很多学校申请时直接要求绩点排名前5%，10%…,有些学校是网上填写报">
+    <meta name="description" content="Reference如何利用好Github pages   jekyll 的不足 gitee 上使用 jekyll 效果完全和 Github 上不同，必须要在本地环境编译再 push, 而 github 自带 jekyll 引擎，可以直接在 github 原码上直接修改 https:&#x2F;&#x2F;www.cnblogs.com&#x2F;FLY_DREAM&#x2F;p&#x2F;13669729.html  hexo 教程https:&#x2F;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2020计算机保研上岸经验分享">
-<meta property="og:url" content="http://meloor.xyz/zh-cn/%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/2020%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BF%9D%E7%A0%94%E4%B8%8A%E5%B2%B8%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/index.html">
+<meta property="og:title" content="gitee+hexo搭建个人博客">
+<meta property="og:url" content="http://meloor.xyz/categories/web/front-end/gitee+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html">
 <meta property="og:site_name" content="Meloor&#39;s Blog">
-<meta property="og:description" content="保研主要分为两部分，一个是拿到本校保研资格，另外一个是拿到外校保研 offer 拿到本校保研资格这一部分不同学校不同学院不同年份都不一样，建议研读学校往年的保研政策，针对性的准备。 拿外校保研 offer前期准备阶段我咨询过保研机构,申请外校时主要会从以下几方面查看学生素质：（实际申请时也没差，基本是这些）  绩点排名 非常重要，很多学校申请时直接要求绩点排名前5%，10%…,有些学校是网上填写报">
+<meta property="og:description" content="Reference如何利用好Github pages   jekyll 的不足 gitee 上使用 jekyll 效果完全和 Github 上不同，必须要在本地环境编译再 push, 而 github 自带 jekyll 引擎，可以直接在 github 原码上直接修改 https:&#x2F;&#x2F;www.cnblogs.com&#x2F;FLY_DREAM&#x2F;p&#x2F;13669729.html  hexo 教程https:&#x2F;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-16T14:52:23.000Z">
-<meta property="article:modified_time" content="2022-10-25T03:10:15.997Z">
+<meta property="og:image" content="http://meloor.xyz/categories/web/front-end/1.png">
+<meta property="article:published_time" content="2020-11-11T09:59:15.000Z">
+<meta property="article:modified_time" content="2022-10-25T03:10:15.987Z">
 <meta property="article:author" content="Meloor">
-<meta property="article:tag" content="保研">
+<meta property="article:tag" content="gitee">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://meloor.xyz/categories/web/front-end/1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>2020计算机保研上岸经验分享 - Meloor&#39;s Blog</title>
+  <title>gitee+hexo搭建个人博客 - Meloor&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -57,14 +60,18 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="../../../../css/main.css" />
+<link  rel="stylesheet" href="../../../css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="../../../css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../css/highlight-dark.css" />
   
 
+
+
+  
+<link rel="stylesheet" href="../../../css/iconfont.css">
 
 
 
@@ -78,8 +85,8 @@
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="../../../../js/utils.js" ></script>
-  <script  src="../../../../js/color-schema.js" ></script>
+  <script  src="../../../js/utils.js" ></script>
+  <script  src="../../../js/color-schema.js" ></script>
   
 
 
@@ -96,7 +103,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
       <strong>美乐奥的回想旋律</strong>
     </a>
 
@@ -115,7 +122,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../index.html">
+              <a class="nav-link" href="../../../index.html">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -137,15 +144,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../archives/">
-                    <i class="iconfont icon-archive-fill"></i>
-                    归档
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="../../../../categories/">
+                  <a class="dropdown-item" href="../../../categories/">
                     <i class="iconfont icon-category-fill"></i>
                     分类
                   </a>
@@ -153,9 +152,121 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../tags/">
+                  <a class="dropdown-item" href="../../../tags/index.html">
                     <i class="iconfont icon-tags-fill"></i>
                     标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../archives/index.html">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-heartbeat"></i>
+                跳动
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../gallery/index.html">
+                    <i class="iconfont icon-images"></i>
+                    画廊
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../movie/index.html">
+                    <i class="iconfont icon-movie1"></i>
+                    电影
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-ic_explore_px"></i>
+                探索
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/vue-page/">
+                    <i class="iconfont icon-vue"></i>
+                    vue-page
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../static_pages/">
+                    <i class="iconfont icon-vue"></i>
+                    static_pages
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../links/index.html">
+                    <i class="iconfont icon-link-fill"></i>
+                    友链
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://xuwh.top/">
+                    <i class="iconfont icon-link-fill"></i>
+                    徐文昊的碎碎念
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/">
+                    <i class="iconfont icon-link-fill"></i>
+                    美乐奥的回想旋律
                   </a>
                 
               </div>
@@ -167,31 +278,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../gallery/">
-                <i class="iconfont icon-images"></i>
-                画廊
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../links/">
-                <i class="iconfont icon-link-fill"></i>
-                友链
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../about/">
+              <a class="nav-link" href="../../../about/index.html">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -226,7 +313,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="2020计算机保研上岸经验分享"></span>
+            <span id="subtitle" data-typed-text="gitee+hexo搭建个人博客"></span>
           
         </div>
 
@@ -242,8 +329,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-11-16 22:52" pubdate>
-          2020年11月16日 晚上
+        <time datetime="2020-11-11 17:59" pubdate>
+          2020年11月11日 下午
         </time>
       </span>
     
@@ -254,7 +341,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          1.7k 字
         
       </span>
     
@@ -265,7 +352,7 @@
         
         
         
-          15 分钟
+          14 分钟
         
       </span>
     
@@ -313,7 +400,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">2020计算机保研上岸经验分享</h1>
+            <h1 style="display: none">gitee+hexo搭建个人博客</h1>
             
               <p class="note note-info">
                 
@@ -326,93 +413,39 @@
             
               <div class="markdown-body">
                 
-                <p>保研主要分为两部分，一个是拿到本校保研资格，另外一个是拿到外校保研 offer</p>
-<h2 id="拿到本校保研资格"><a href="#拿到本校保研资格" class="headerlink" title="拿到本校保研资格"></a>拿到本校保研资格</h2><p>这一部分不同学校不同学院不同年份都不一样，建议研读学校往年的保研政策，针对性的准备。</p>
-<h2 id="拿外校保研-offer"><a href="#拿外校保研-offer" class="headerlink" title="拿外校保研 offer"></a>拿外校保研 offer</h2><h3 id="前期准备阶段"><a href="#前期准备阶段" class="headerlink" title="前期准备阶段"></a>前期准备阶段</h3><p>我咨询过保研机构,申请外校时主要会从以下几方面查看学生素质：（实际申请时也没差，基本是这些）</p>
-<ul>
-<li>绩点排名<ul>
-<li>非常重要，很多学校申请时直接要求绩点排名<strong>前5%，10%</strong>…,有些学校是网上填写报名信息，如果不占优势，很有可能被程序自动筛选掉。</li>
+                <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7c013faaaba1">如何利用好Github pages</a>  </p>
+<h2 id="jekyll-的不足"><a href="#jekyll-的不足" class="headerlink" title="jekyll 的不足"></a>jekyll 的不足</h2><ul>
+<li>gitee 上使用 jekyll 效果完全和 Github 上不同，必须要在本地环境编译再 push, 而 github 自带 jekyll 引擎，可以直接在 github 原码上直接修改</li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/FLY_DREAM/p/13669729.html">https://www.cnblogs.com/FLY_DREAM/p/13669729.html</a></li>
 </ul>
-</li>
-<li>英语<ul>
-<li>同绩点，非常重要，自动筛选的条件之一，如果申请985高校，基本都要求通过<strong>英语六级</strong>，如果没有通过甚至申请机会都没有。</li>
-<li>而且英语在科研中的重要性也很大，学术交流读英文paper是常事，此外写论文也要求英文写作能力。</li>
+<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><ul>
+<li>教程<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yizhixue-hx/p/12638361.html">https://www.cnblogs.com/yizhixue-hx/p/12638361.html</a></li>
 </ul>
-</li>
-<li>竞赛<ul>
-<li>加分项目，最好有几个含金量比较高的奖，根据我今年申请的经验，列几个认可度较高的奖项：<ul>
-<li>ACM ICPC/CCPC<ul>
-<li>重量级奖项，在全国的名校中都很认可。此外有些高校的复试中有机试，<strong>算法</strong>学好会很有优势，参考谢dalao去的浙大。名校的面试基本都会问到<strong>算法</strong>。<strong>区域赛铜牌以上</strong>会比较有含金量。</li>
-</ul>
-</li>
-<li>CCF-CSP认证<ul>
-<li>中国计算机协会组织的认证，全国知名，会有一个分数和认证排名。拿到<strong>300分以上, 或者排名在前5%，10%之前</strong>会比较有含金量。</li>
-</ul>
-</li>
-<li>数学建模<ul>
-<li>建模，编程，写作，最后出一篇论文。计算机专业很看重数学和算法，展开描述也可以稍微弥补科研经历的空白, 拿到<strong>国二以上</strong> 含金量较高。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>基础知识<ul>
-<li>名校一般都会在复试中考察，<strong>计算机四大基本原理</strong>好好学，最好上课的时候就做整理：<ul>
-<li>算法与数据结构</li>
-<li>操作系统</li>
-<li>计算机组成与机构</li>
-<li>计算机网络</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>项目经历<ul>
-<li>主要展现你的<strong>专业素养</strong>，最好有2到3个比较完整的项目，可以对<strong>课设</strong>进行整理和完善，如果一个比较完整的游戏，一个比较完整的app。</li>
-<li>自己的<strong>github/gitee</strong>上有项目也会很加分</li>
-<li>写<strong>博客</strong>，加分。体现对知识的总结与整理能力。</li>
-</ul>
-</li>
-<li>科研经历<ul>
-<li>重中之重，研究生阶段主要就是进行科研，如果在本科就有科研经历会非常加分，能出一篇论文成果就最好了，<strong>申请时填信息基本都有这一栏</strong>。</li>
-</ul>
-</li>
-</ul>
-<h3 id="申请阶段"><a href="#申请阶段" class="headerlink" title="申请阶段"></a>申请阶段</h3><p>2020 年是特殊的一年，今年几乎所有的复试都是线上进行的，导致出现大量的“海王”。当dalao一海投就没有我这样的菜鸡什么事了（/捂脸哭）。根据马太效应，强者越强，弱者越弱， 最后80%的offer都掌握在少数人手里。</p>
-<p>高校招收推免生主要分为三个阶段, 有些学校可能只有<code>夏令营+正式推免</code>或<code>预推免+正式推免</code>。</p>
-<ul>
-<li>夏令营<ul>
-<li>6-7月</li>
-<li><strong>难度较大</strong>，且入营的名额较少，这一阶段可以分层级针对性的投递梦校，次校，保底院校。最好拿到一个<strong>保底offer</strong>, 后面预推免就有底气冲击更好的学校。<strong>（dalao除外）</strong>。</li>
-</ul>
-</li>
-<li>预推免<ul>
-<li>8-9月</li>
-<li><strong>本科院校的推免考核也在9月份</strong>，这时要盯好目标院校，保证拿到本校保研资格的同时也<strong>及时参加目标院校的复试</strong>。</li>
-<li><strong>预推免进复试会比夏令营容易些</strong>。</li>
-</ul>
-</li>
-<li>正式推免（往年是九推，今年是十推）<ul>
-<li>往年是9.28号开启推免系统，几年是10.12号, 一般到正式推免，大部分名校有已经面试完发放完了offer，存在少量的<strong>捡漏机会</strong>(dalao只能被一个学校录取手中的offer就放出来了)但风险较大。</li>
-<li>很多学校都要求推免系统一开放就填报其志愿，如果这时冲击更好的学校，可能会丧失已有的offer。</li>
-</ul>
-</li>
-</ul>
-<h2 id="复试（面试）阶段"><a href="#复试（面试）阶段" class="headerlink" title="复试（面试）阶段"></a>复试（面试）阶段</h2><ul>
-<li>一般要准备一个3分钟内的自我介绍：基本信息、获奖、项目、社会实践等。后面就是面试官的提问环节了，考核内容请查看<code>2.1前期准备阶段</code>。</li>
-<li>此外还可以去csdn上去找相关院校的<strong>面经</strong>，也可以向保研到目标院校的学长学姐请教。</li>
-</ul>
-<h2 id="关于联系导师"><a href="#关于联系导师" class="headerlink" title="关于联系导师"></a>关于联系导师</h2><p>非常重要，<strong>建议申请夏令营时就开始联系</strong>，因为每个导师手中都是有名额的，越到后面导师名额越少，甚至当老师名额满了后连邮件都不会看。</p>
-<ul>
-<li>无论有没有入营，保持联系，如果导师很欣赏你，会<strong>增加你的入营几率以及被录取的几率</strong>，不同学校不一样，有些学校的导师是很有话语权的甚至直接是导师要你就能被录取。</li>
-<li>另外一点就是，选择的<strong>导师直接决定你以后的研究方向</strong>，如果没有提前联系导师，很可能你后面想学的方向的导师名额已经满了，尤其是<strong>人工智能方向的导师</strong>，竞争很激烈。</li>
-</ul>
-<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>以上就是我2020年保研的经验分享，希望能有帮助。最后送大家一句我很喜欢的话：</p>
-<blockquote>
-<p>没有坚持到最后，所做的一切都是零。</p>
-</blockquote>
-<p>世界上没有容易的事，无论是保研还是考研都要付出巨大的努力。</p>
-<p><strong>best regards! 共勉！</strong></p>
+<h3 id="hexo-init-卡住"><a href="#hexo-init-卡住" class="headerlink" title="hexo init 卡住"></a>hexo init 卡住</h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a409601734f1">https://www.jianshu.com/p/a409601734f1</a></p>
+<!-- ![图片](gitee-hexo搭建个人博客/1.png) -->
+<p><img src="/categories/web/front-end/1.png" srcset="/img/loading.gif" lazyload alt="图片"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs csharp">hexo <span class="hljs-keyword">init</span> blog<br></code></pre></td></tr></table></figure>
+
+<p>换成, (下面 npm 换成 cnpm 更快)</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone --depth <span class="hljs-number">1</span> https:<span class="hljs-regexp">//gi</span>tee.com<span class="hljs-regexp">/weilining/</span>hexo-starter.git blog<br>cd blog<br>git submodule init<br>git submodule update<br>cnpm config set registry http:<span class="hljs-regexp">//</span>registry.npm.taobao.org<br>cnpm i<br></code></pre></td></tr></table></figure>
+
+<h3 id="hexo-插入图片"><a href="#hexo-插入图片" class="headerlink" title="hexo 插入图片"></a>hexo 插入图片</h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f72aaad7b852">https://www.jianshu.com/p/f72aaad7b852</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/xjm850552586/article/details/84101345">https://blog.csdn.net/xjm850552586/article/details/84101345</a></p>
+<p>修改后记得重新生成静态网页</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs verilog">hexo clean<br>hexo <span class="hljs-keyword">generate</span><br>hexo server<br></code></pre></td></tr></table></figure>
+
+<h3 id="生成-ssh-密钥"><a href="#生成-ssh-密钥" class="headerlink" title="生成 ssh 密钥"></a>生成 ssh 密钥</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/everything1209/article/details/53100263">https://blog.csdn.net/everything1209/article/details/53100263</a> *无法识别 ssh-keygen<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/l508742729/article/details/97510883">https://blog.csdn.net/l508742729/article/details/97510883</a></p>
+<h3 id="添加公钥位置"><a href="#添加公钥位置" class="headerlink" title="添加公钥位置"></a>添加公钥位置</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/soulwyb/article/details/90680676">https://blog.csdn.net/soulwyb/article/details/90680676</a></p>
+<h3 id="自动更新"><a href="#自动更新" class="headerlink" title="自动更新"></a>自动更新</h3><p>码云 gitee 搭建 hexo 博客，push 上去之后，page 为什么不能自动更新，得手动更新 page？<br>gitee pages pro 才支持自动更新</p>
+<h3 id="解决-hexo-本地与部署不一致问题"><a href="#解决-hexo-本地与部署不一致问题" class="headerlink" title="解决 hexo 本地与部署不一致问题"></a>解决 hexo 本地与部署不一致问题</h3><p>更新后如果除臭，一定要清楚浏览器缓存, 可能受之前 url 影响<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/GAI159/article/details/105128186">https://blog.csdn.net/GAI159/article/details/105128186</a></p>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>说明：<a target="_blank" rel="noopener" href="https://www.baidu.com/link?url=0CwgUjWRuzWKaRnSvEuNEW2mvpwEWyS6ExNWIB2mWJkbk4pnyuEy4MMtbW2C-lP8&amp;wd=&amp;eqid=a5c7c3b7000e164e000000035fad28b7">https://www.baidu.com/link?url=0CwgUjWRuzWKaRnSvEuNEW2mvpwEWyS6ExNWIB2mWJkbk4pnyuEy4MMtbW2C-lP8&amp;wd=&amp;eqid=a5c7c3b7000e164e000000035fad28b7</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/24422335">主题推荐</a></p>
+<p>知乎回答：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/24422335/answer/336448834">https://www.zhihu.com/question/24422335/answer/336448834</a><br>主题：<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody">https://github.com/Molunerfinn/hexo-theme-melody</a><br>文档：<a target="_blank" rel="noopener" href="https://molunerfinn.com/hexo-theme-melody-doc/zh-Hans/#%E7%89%B9%E6%80%A7">https://molunerfinn.com/hexo-theme-melody-doc/zh-Hans/#%E7%89%B9%E6%80%A7</a></p>
+<p>部署教程：<a target="_blank" rel="noopener" href="https://molunerfinn.com/hexo-theme-melody-doc/zh-Hans/quick-start.html#%E5%AE%89%E8%A3%85">https://molunerfinn.com/hexo-theme-melody-doc/zh-Hans/quick-start.html#%E5%AE%89%E8%A3%85</a></p>
+<p>更新内容后，直接刷新浏览器，不行的话重新启动服务器再刷新浏览器</p>
+<h3 id="改个人信息"><a href="#改个人信息" class="headerlink" title="改个人信息"></a>改个人信息</h3><p>Author, title<br>_config.yml 文件</p>
+<h3 id="categories-怎么用"><a href="#categories-怎么用" class="headerlink" title="categories 怎么用"></a>categories 怎么用</h3><p>多级分类</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/seayxu/archive/2016/01/25/5156669.html">https://www.cnblogs.com/seayxu/archive/2016/01/25/5156669.html</a></p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs subunit">title: gitee+hexo<br>top_img: /imgs/bg1.jpg<br>date: 2020<span class="hljs-string">-11</span><span class="hljs-string">-11</span> 17:59:15<br><span class="hljs-keyword">tags:</span> [gitee, hexo]<br>categories: <br>- web<br>- front-end<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -431,12 +464,12 @@
     
       <span class="category-chain">
         
-  <a href="../../../../categories/%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/" class="category-chain-item">经验|总结|感悟</a>
+  <a href="../" class="category-chain-item">web</a>
   
   
     <span>></span>
     
-  <a href="../../../../categories/%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/" class="category-chain-item">其他</a>
+  <a href="" class="category-chain-item">front-end</a>
   
   
 
@@ -453,7 +486,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="../../../../tags/%E4%BF%9D%E7%A0%94/">#保研</a>
+        <a href="../../../tags/gitee/">#gitee</a>
+      
+        <a href="../../../tags/hexo/">#hexo</a>
       
     </div>
   
@@ -465,8 +500,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>2020计算机保研上岸经验分享</div>
-      <div>http://meloor.xyz/zh-cn/经验-总结-感悟/其他/2020计算机保研上岸经验分享/</div>
+      <div>gitee+hexo搭建个人博客</div>
+      <div>http://meloor.xyz/categories/web/front-end/gitee+hexo搭建个人博客.html</div>
     </div>
     <div class="license-meta">
       
@@ -478,7 +513,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2020年11月16日</div>
+          <div>2020年11月11日</div>
         </div>
       
       
@@ -515,21 +550,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../../../web/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95/" title="数据库索引">
+                      <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E4%BA%8B%E5%8A%A1.html" title="MySQL事务">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数据库索引</span>
+                        <span class="hidden-mobile">MySQL事务</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="../../../web/%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E4%BA%8B%E5%8A%A1/" title="MySQL事务">
-                        <span class="hidden-mobile">MySQL事务</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
@@ -542,12 +571,12 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('../../../../css/gitalk.css')
+      Fluid.utils.createCssLink('../../../css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
-          {"clientID":"f758d3c1d38fb96ad7f4","clientSecret":"6780580605c416c988c57b7dc8c48cfa2da49311","repo":"BlogTalks","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {"clientID":"09b0c36adab009c91121","clientSecret":"64748b6ecbdef988d95c53e0b935ff2d988d1585","repo":"blog-talk-gh","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '9fb567a1c76951b2df1993d323af792b'
+            id: '315a96c421cea2e670c5442e1a9915c7'
           }
         )
         var gitalk = new Gitalk(options);
@@ -701,8 +730,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="../../../../js/events.js" ></script>
-<script  src="../../../../js/plugins.js" ></script>
+<script  src="../../../js/events.js" ></script>
+<script  src="../../../js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -724,7 +753,7 @@
 
 
   
-    <script  src="../../../../js/img-lazyload.js" ></script>
+    <script  src="../../../js/img-lazyload.js" ></script>
   
 
 
@@ -823,7 +852,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="../../../../js/local-search.js" ></script>
+  <script  src="../../../js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -833,7 +862,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="../../../../js/boot.js" ></script>
+<script  src="../../../js/boot.js" ></script>
 
 
   

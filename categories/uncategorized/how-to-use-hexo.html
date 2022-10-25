@@ -1,14 +1,14 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN,en,default" data-default-color-scheme=auto>
 
 
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/fluid.png">
-  <link rel="icon" href="../../../../imgs/meloor-favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../img/fluid.png">
+  <link rel="icon" href="../../imgs/meloor-favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -16,15 +16,15 @@
   <meta name="author" content="Meloor">
   <meta name="keywords" content="database,java,c++,python">
   
-    <meta name="description" content="前言 亲爱的学弟学妹们好，我是 17 级的王智慧，现在大四，已经推免到了东北大学计算机科学与工程学院。我也是很高兴能见到这么多数媒的新鲜面孔，你们很多学长都出去实习去了或者还在考研，其实他们挺想见你们的。 我作为一个大四的老老学长，就给大家分享一下我大学四年的经验总结吧。我讲的内容主要有三部分，目标，学习，生活。  目标 目标，四年后干嘛，求职或者升学考研。如果你来问我们大四的学长学姐，很多人都会">
+    <meta name="description" content="how to use hexowait for writting… plugins研究中… 1. hexo-sererHexo 3.0 把服务器独立成了个别模块，您必须先安装 hexo-server 才能使用。  npm install hexo-server –save  confighexo配置 writtinghexo写作new, layout&#x3D;[post,page,draft]分别生成到不">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大四的经验分享">
-<meta property="og:url" content="http://meloor.xyz/zh-cn/%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/%E5%A4%A7%E5%9B%9B%E7%9A%84%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/index.html">
+<meta property="og:title" content="how to use hexo">
+<meta property="og:url" content="http://meloor.xyz/categories/uncategorized/how-to-use-hexo.html">
 <meta property="og:site_name" content="Meloor&#39;s Blog">
-<meta property="og:description" content="前言 亲爱的学弟学妹们好，我是 17 级的王智慧，现在大四，已经推免到了东北大学计算机科学与工程学院。我也是很高兴能见到这么多数媒的新鲜面孔，你们很多学长都出去实习去了或者还在考研，其实他们挺想见你们的。 我作为一个大四的老老学长，就给大家分享一下我大学四年的经验总结吧。我讲的内容主要有三部分，目标，学习，生活。  目标 目标，四年后干嘛，求职或者升学考研。如果你来问我们大四的学长学姐，很多人都会">
+<meta property="og:description" content="how to use hexowait for writting… plugins研究中… 1. hexo-sererHexo 3.0 把服务器独立成了个别模块，您必须先安装 hexo-server 才能使用。  npm install hexo-server –save  confighexo配置 writtinghexo写作new, layout&#x3D;[post,page,draft]分别生成到不">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-25T08:40:29.000Z">
-<meta property="article:modified_time" content="2022-10-25T03:10:15.967Z">
+<meta property="article:published_time" content="2022-10-24T14:02:36.000Z">
+<meta property="article:modified_time" content="2022-10-25T03:10:15.977Z">
 <meta property="article:author" content="Meloor">
 <meta property="article:tag" content="database,java,c++,python">
 <meta name="twitter:card" content="summary_large_image">
@@ -33,7 +33,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>大四的经验分享 - Meloor&#39;s Blog</title>
+  <title>how to use hexo - Meloor&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -57,14 +57,18 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="../../../../css/main.css" />
+<link  rel="stylesheet" href="../../css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="../../css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="../../css/highlight-dark.css" />
   
 
+
+
+  
+<link rel="stylesheet" href="../../css/iconfont.css">
 
 
 
@@ -78,8 +82,8 @@
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="../../../../js/utils.js" ></script>
-  <script  src="../../../../js/color-schema.js" ></script>
+  <script  src="../../js/utils.js" ></script>
+  <script  src="../../js/color-schema.js" ></script>
   
 
 
@@ -96,7 +100,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="../../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
       <strong>美乐奥的回想旋律</strong>
     </a>
 
@@ -115,7 +119,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../index.html">
+              <a class="nav-link" href="../../index.html">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -137,15 +141,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../archives/">
-                    <i class="iconfont icon-archive-fill"></i>
-                    归档
-                  </a>
-                
-                  
-                  
-                  
-                  <a class="dropdown-item" href="../../../../categories/">
+                  <a class="dropdown-item" href="../../categories/">
                     <i class="iconfont icon-category-fill"></i>
                     分类
                   </a>
@@ -153,9 +149,121 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../../../tags/">
+                  <a class="dropdown-item" href="../../tags/index.html">
                     <i class="iconfont icon-tags-fill"></i>
                     标签
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../archives/index.html">
+                    <i class="iconfont icon-archive-fill"></i>
+                    归档
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-heartbeat"></i>
+                跳动
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../gallery/index.html">
+                    <i class="iconfont icon-images"></i>
+                    画廊
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../movie/index.html">
+                    <i class="iconfont icon-movie1"></i>
+                    电影
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-ic_explore_px"></i>
+                探索
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/vue-page/">
+                    <i class="iconfont icon-vue"></i>
+                    vue-page
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../static_pages/">
+                    <i class="iconfont icon-vue"></i>
+                    static_pages
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../links/index.html">
+                    <i class="iconfont icon-link-fill"></i>
+                    友链
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" target="_blank" rel="noopener" href="https://xuwh.top/">
+                    <i class="iconfont icon-link-fill"></i>
+                    徐文昊的碎碎念
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://meloor.xyz/">
+                    <i class="iconfont icon-link-fill"></i>
+                    美乐奥的回想旋律
                   </a>
                 
               </div>
@@ -167,31 +275,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../../../gallery/">
-                <i class="iconfont icon-images"></i>
-                画廊
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../links/">
-                <i class="iconfont icon-link-fill"></i>
-                友链
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="../../../../about/">
+              <a class="nav-link" href="../../about/index.html">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -226,7 +310,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="写给大一的学弟学妹们"></span>
+            <span id="subtitle" data-typed-text="how to use hexo"></span>
           
         </div>
 
@@ -242,8 +326,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-11-25 16:40" pubdate>
-          2020年11月25日 下午
+        <time datetime="2022-10-24 22:02" pubdate>
+          2022年10月24日 晚上
         </time>
       </span>
     
@@ -254,7 +338,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          505 字
         
       </span>
     
@@ -265,7 +349,7 @@
         
         
         
-          10 分钟
+          5 分钟
         
       </span>
     
@@ -313,7 +397,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">写给大一的学弟学妹们</h1>
+            <h1 style="display: none">how to use hexo</h1>
             
               <p class="note note-info">
                 
@@ -326,36 +410,25 @@
             
               <div class="markdown-body">
                 
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
-<li>亲爱的学弟学妹们好，我是 17 级的王智慧，现在大四，已经推免到了东北大学计算机科学与工程学院。我也是很高兴能见到这么多数媒的新鲜面孔，你们很多学长都出去实习去了或者还在考研，其实他们挺想见你们的。</li>
-<li>我作为一个大四的老老学长，就给大家分享一下我大学四年的经验总结吧。我讲的内容主要有三部分，目标，学习，生活。</li>
-</ul>
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
-<li>目标，四年后干嘛，求职或者升学考研。如果你来问我们大四的学长学姐，很多人都会告诉你<strong>后悔三年前没有明确自己要做什么</strong>，浪费了很多的时间。</li>
-<li>因为<strong>没有规划</strong>而陷入未来出路的<strong>困境</strong>,发现工作没那么好找，考研考公也不是那么容易，留给你的时间也比较紧;相反，如果大一就制定了<strong>清晰的目标</strong>，大四就会相对<strong>轻松</strong>很多，轻松的升学或者轻松的拿到一个大厂的 offer。</li>
-<li>举几个<strong>例子</strong><ul>
-<li>升学的话，选择走考研路线 or 保研路线，</li>
-<li>就业的话也有很多方向</li>
-<li>如编程类的游戏开发工程师、java 工程师、大数据开发工程师、前端开发工程师等</li>
-<li>此外还有 UI 设计、建模、动画、特效、摄影剪辑等。</li>
-</ul>
-</li>
-<li>还有一点要告诉大家的是一定<strong>不要放弃编程</strong>，有个同学做了一两年摄影，找工作受挫现在大四转编程去了。</li>
-<li>有人问我，学长，如果没有规划，很迷茫，现在不知道以后适合做啥那该咋办，我告诉你如果<strong>不知道该干啥就好好学习</strong>。</li>
-</ul>
-<h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2><ul>
-<li>基础，<strong>计算机四大原理</strong>一定得学好，<strong>无论是保研、考研、就业都是重点考核内容</strong>，这是计算机的基础知识, 而算法是其他知识的基础，这里给 acm 集训队打波广告，在集训队训练两年，我收获了国奖，也让我在各种机试笔试面试中不被刷,最终收获 offer，有的同学可能已经加入了，没有加入的明年还有机会。</li>
-<li>此外，还有数学和英语，高级的计算机技术多少都会和数学有关，<strong>高等数学、线性代数、概率与统计</strong>，考研中也是要考的。</li>
-<li>英语就更不用说了,学长再啰嗦一句，英语英语英语，重要的事说三遍。 阅读英文网站，科研中英文 paper, 还有生活中的日常对话。</li>
-</ul>
-<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul>
-<li>最后一个就是生活了，好不容易熬过了高中三年嘛，是不是得在大一好好放松一下。当然可以，大一是大学最轻松的一年，没有大四升学求职的压力，也没有大二大三繁重的课业。有的人或许已经加入了学生会或者社团组织,辩论赛，这些都是锻炼自己的机会。<strong>多与人接触，打交道，大学给你这个平台，只要你想，你会成长的很快</strong>。</li>
-<li>有人问我，我不要这么累行不行，我就想轻轻松松的度过大学四年？答案是行，除非家里有矿，不然毕业后找工作会很辛苦，或者找的工作很辛苦，<strong>既然都是辛苦，那何不选一个能让结果更好的辛苦呢</strong>。</li>
-<li>有一点关于做<strong>兼职</strong>，因为一些原因我是做了不少兼职的，包括发传单、做家教、去餐厅兼职等等。如果想挣点零花钱的话，其实更建议大家争取<strong>奖学金</strong>，家里困难的可以申请<strong>助学金</strong>，<strong>一方面是真的香啊，比兼职挣的更多，另一方面是学习也没落下啊，两全其美啊。</strong></li>
-</ul>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><ul>
-<li>以上就是大四老学长的经验分享，希望能帮助到大家，祝学弟学妹们四年后都学有所成,有一个光明的未来。谢谢大家</li>
-</ul>
+                <h1 id="how-to-use-hexo"><a href="#how-to-use-hexo" class="headerlink" title="how to use hexo"></a>how to use hexo</h1><p>wait for writting…</p>
+<h2 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h2><p>研究中…</p>
+<h3 id="1-hexo-serer"><a href="#1-hexo-serer" class="headerlink" title="1. hexo-serer"></a>1. hexo-serer</h3><p>Hexo 3.0 把服务器独立成了个别模块，您必须先安装 hexo-server 才能使用。</p>
+<blockquote>
+<p>npm install hexo-server –save</p>
+</blockquote>
+<h2 id="config"><a href="#config" class="headerlink" title="config"></a>config</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">hexo配置</a></p>
+<h2 id="writting"><a href="#writting" class="headerlink" title="writting"></a>writting</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/writing">hexo写作</a><br>new, layout=[post,page,draft]分别生成到不同目录,page与about,categories页面同级</p>
+<blockquote>
+<p>hexo new [layout] [title]</p>
+</blockquote>
+<p>通过 publish 命令将草稿移动到 source/_posts 文件夹,该命令的使用方式与 new 十分类似，相当于new之后进行modify(layout)</p>
+<blockquote>
+<p>hexo publish [layout]  [title]<br>hexo publish post “draft_post”<br>hexo publish page “draft_page”</p>
+</blockquote>
+<p>在新建文章时，Hexo 会根据 scaffolds 文件夹内相对应的文件来建立文件，(scaffolds文件夹默认有[post.md,page.md,draft.md]三个layout的模板),例如：</p>
+<blockquote>
+<p>hexo new photo “My Gallery”</p>
+</blockquote>
 
                 
               </div>
@@ -363,34 +436,6 @@
             <hr/>
             <div>
               <div class="post-metas my-3">
-  
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="../../../../categories/%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/" class="category-chain-item">经验|总结|感悟</a>
-  
-  
-    <span>></span>
-    
-  <a href="../../../../categories/%E7%BB%8F%E9%AA%8C-%E6%80%BB%E7%BB%93-%E6%84%9F%E6%82%9F/%E5%85%B6%E4%BB%96/" class="category-chain-item">其他</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
   
   
 </div>
@@ -401,8 +446,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>大四的经验分享</div>
-      <div>http://meloor.xyz/zh-cn/经验-总结-感悟/其他/大四的经验分享/</div>
+      <div>how to use hexo</div>
+      <div>http://meloor.xyz/categories/uncategorized/how-to-use-hexo.html</div>
     </div>
     <div class="license-meta">
       
@@ -414,7 +459,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2020年11月25日</div>
+          <div>2022年10月24日</div>
         </div>
       
       
@@ -451,18 +496,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="../../../web/web/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84/" title="前后端分离架构">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">前后端分离架构</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="../../../web/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95/" title="数据库索引">
-                        <span class="hidden-mobile">数据库索引</span>
+                      <a href="../web/java/Java%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%EF%BC%88%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3%EF%BC%89.html" title="Java访问权限（类、接口、内部类、内部接口）">
+                        <span class="hidden-mobile">Java访问权限（类、接口、内部类、内部接口）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -478,12 +517,12 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('../../../../css/gitalk.css')
+      Fluid.utils.createCssLink('../../css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
-          {"clientID":"f758d3c1d38fb96ad7f4","clientSecret":"6780580605c416c988c57b7dc8c48cfa2da49311","repo":"BlogTalks","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
+          {"clientID":"09b0c36adab009c91121","clientSecret":"64748b6ecbdef988d95c53e0b935ff2d988d1585","repo":"blog-talk-gh","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: 'c623f29788b378e8935ce62819537b53'
+            id: '82d8ba14f6ceb7d2c9f2c80bf4a64d19'
           }
         )
         var gitalk = new Gitalk(options);
@@ -637,8 +676,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="../../../../js/events.js" ></script>
-<script  src="../../../../js/plugins.js" ></script>
+<script  src="../../js/events.js" ></script>
+<script  src="../../js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -660,7 +699,7 @@
 
 
   
-    <script  src="../../../../js/img-lazyload.js" ></script>
+    <script  src="../../js/img-lazyload.js" ></script>
   
 
 
@@ -759,7 +798,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="../../../../js/local-search.js" ></script>
+  <script  src="../../js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -769,7 +808,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="../../../../js/boot.js" ></script>
+<script  src="../../js/boot.js" ></script>
 
 
   
