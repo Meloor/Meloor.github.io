@@ -9,28 +9,36 @@ description: '回想旋律·美乐奥尔的博客;database,java,c++,python;数�
 keywords: 'database,java,c++,python'
 author: Meloor
 # language: zh-cn #zh-cn #en #zh-CN
-language: zh-CN
-# language: #国际化
-# - zh-cn #zh-cn #en
-# - en
+# language: zh-CN
+language: #国际化
+- zh-CN #zh-cn #en
+- en
 # language: en #zh-cn #en
 timezone: 'Asia/Shanghai'
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
+## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'f
 # url: http://example.com
 # root: / 
 # url:  http://meloor.gitee.io/ #仓库名为Meloor(与账户名同名)
 # url:  http://meloor.gitee.io/blog/ #blog为gitee仓库名
 url:  http://meloor.xyz/ #自定义域名 relative_link: true #把链接改为与根目录的相对位址
 root: /  # 点击“home"跳转的目录
+
 # permalink: :year/:month/:day/:title/
-permalink: :lang/:category/:title/
+# permalink: :lang/:category/:title/  
+# 暂时去掉:lang, 因为多了一个:lang会导致url link和public图片路径对不上，导致图片无法显示。
+# permalink: :category/:title/
+# permalink: :category/:title-:hash.html
+# permalink: :category/:title.html
+permalink: categories/:category/:title.html #加上使categories url与分类路径一致
 permalink_defaults:
   lang: zh-cn
+  # lang: zh-cn
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
 
 # Directory
 source_dir: source

@@ -347,23 +347,24 @@ navbar:
 
   # 导航栏菜单，可自行增减，key 用来关联 languages/*.yml，如不存在关联则显示 key 本身的值；icon 是 css class，可以省略；增加 name 可以强制显示指定名称
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
-  menu:
+  menu: #note 
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
     - {
       key: 'catalogue',
+      # link: '/:lang/', #测试一下
       icon: 'iconfont icon-books',
       submenu: [
-        { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" },
-        { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" },
-        { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" },
+        { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" },  
+        { key: "tag", link: "/tags/index.html", icon: "iconfont icon-tags-fill" },
+        { key: "archive", link: "/archives/index.html", icon: "iconfont icon-archive-fill" },
       ]
     }
     # - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
     # - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     # - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    - { key: "gallery", link: "/gallery/", icon: "iconfont icon-images" }
-    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
+    - { key: "gallery", link: "/gallery/index.html", icon: "iconfont icon-images" }
+    - { key: "links", link: "/links/index.html", icon: "iconfont icon-link-fill" }
+    - { key: "about", link: "/about/index.html", icon: "iconfont icon-user-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
@@ -791,18 +792,18 @@ disqus:
 # 基于 GitHub Issues
 # Based on GitHub Issues
 # See: https://github.com/gitalk/gitalk#options
-gitalk:
-  clientID: f758d3c1d38fb96ad7f4
-  clientSecret: 6780580605c416c988c57b7dc8c48cfa2da49311
-  repo: BlogTalks
+gitalk: #note 
+  clientID: 09b0c36adab009c91121
+  clientSecret: 64748b6ecbdef988d95c53e0b935ff2d988d1585
+  repo: blog-talk-gh
   owner: Meloor
   admin: ['Meloor']
   language: zh-CN
   labels: ['Gitalk']
   perPage: 10
   pagerDirection: last
-  distractionFreeMode: false
-  createIssueManually: true
+  distractionFreeMode: false 
+  createIssueManually: false #默认false情况下，当登录用户属于用户时，Gitalk 会自动为您的每个页面创建相应的 github issue admin
   # 默认 proxy 可能会失效，解决方法请见下方链接
   # The default proxy may be invalid, refer to the links for solutions
   # https://github.com/gitalk/gitalk/issues/429
