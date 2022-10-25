@@ -551,7 +551,7 @@ index:
 # 文章页
 # Post Page
 #---------------------------
-post:
+post: #note 
   # banner_img: /img/default.png
   banner_img: https://w.wallhaven.cc/full/l3/wallhaven-l3lkxq.png
   banner_img_height: 70
@@ -609,7 +609,7 @@ post:
   # 在文章开头显示文章更新时间，该时间默认是 md 文件更新时间，可通过 front-matter 中 `updated` 手动指定（和 date 一样格式）
   # Update date is displayed at the beginning of the post. The default date is the update date of the md file, which can be manually specified by `updated` in front-matter (same format as date)
   updated:
-    enable: false
+    enable: true
 
     # 格式参照 ISO-8601 日期格式化
     # ISO-8601 date format
@@ -656,7 +656,7 @@ post:
     # 置于板块的左侧或右侧
     # place in the board
     # Options: left | right
-    placement: right
+    placement: left
 
     # 目录会选择这些节点作为标题
     # TOC will select these nodes as headings
@@ -664,7 +664,7 @@ post:
 
     # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在下级标题则默认展开
     # Collapse depth. If 0, all headings collapsed. If greater than 0, it will be expanded by default if there are sub headings
-    collapseDepth: 0
+    collapseDepth: 2
 
   # 版权声明，会显示在每篇文章的结尾
   # Copyright, will be displayed at the end of each post
@@ -688,7 +688,7 @@ post:
     # 显示更新日期
     # Show update date
     update_date:
-      enable: false
+      enable: true
       format: "LL"
 
   # 文章底部上一篇下一篇功能
@@ -748,11 +748,12 @@ post:
   # 评论插件
   # Comment plugin
   comments:
-    enable: false
+    enable: true
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus
-    type: disqus
+    # type: disqus
+    type: gitalk
 
 
 #---------------------------
@@ -791,11 +792,11 @@ disqus:
 # Based on GitHub Issues
 # See: https://github.com/gitalk/gitalk#options
 gitalk:
-  clientID:
-  clientSecret:
-  repo:
-  owner:
-  admin: ['name']
+  clientID: f758d3c1d38fb96ad7f4
+  clientSecret: 6780580605c416c988c57b7dc8c48cfa2da49311
+  repo: BlogTalks
+  owner: Meloor
+  admin: ['Meloor']
   language: zh-CN
   labels: ['Gitalk']
   perPage: 10
