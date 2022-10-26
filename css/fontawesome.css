@@ -1,0 +1,38 @@
+/* @font-face {
+    font-family: "FontAwesome";
+    src: url('https://use.fontawesome.com/releases/v5.15.4/css/all.css');
+} */
+@font-face {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url('https://use.fontawesome.com/releases/v5.15.4/css/all.css');
+   }
+
+.fa,
+.far,
+.fas {
+    font-family: "Font Awesome 5 Free"
+}
+
+
+/* .fa-angle-down:before {
+    content: "\f107"
+}
+
+.fa-angle-left:before {
+    content: "\f104"
+}
+
+.fa-angle-right:before {
+    content: "\f105"
+}
+
+.fa-angle-up:before {
+    content: "\f106"
+}
+*/
+.me{
+    color:blue;
+} 
