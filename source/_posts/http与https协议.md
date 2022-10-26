@@ -4,7 +4,6 @@ date: 2020-12-03 22:12:40
 tags: [http,https]
 categories:
     - web 
-    - web
 ---
 
 # http&https协议

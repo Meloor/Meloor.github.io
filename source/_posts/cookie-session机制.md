@@ -4,7 +4,6 @@ date: 2020-12-03 22:09:35
 tags: [cookie,session]
 categories:
     - web
-    - web
 ---
 参考博客：
 * [cookie和session的详解与区别 ](https://www.cnblogs.com/l199616j/p/11195667.html)
