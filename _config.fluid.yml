@@ -832,8 +832,8 @@ gitalk: #note
   labels: ['Gitalk']
   perPage: 10
   pagerDirection: last
-  distractionFreeMode: false 
-  createIssueManually: false #默认false情况下，当登录用户属于用户时，Gitalk 会自动为您的每个页面创建相应的 github issue admin
+  distractionFreeMode: true  #类似Facebook评论框的全屏遮罩效果. 除了评论框，其他的区域都会变暗。
+  createIssueManually: false #默如果当前页面没有相应的 isssue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
   # 默认 proxy 可能会失效，解决方法请见下方链接
   # The default proxy may be invalid, refer to the links for solutions
   # https://github.com/gitalk/gitalk/issues/429
