@@ -25,8 +25,8 @@ hexo.extend.filter.register(
       const collapseId = `collapse-${getUuid()}`;
       //                             ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 设置折叠按钮图标，此处使用 GitHub 图标
       // const collapseBtn = `<i class="iconfont icon-github-fill" type="button" data-toggle="collapse" data-target="#${collapseId}"></i>`;
-      const collapseBtn = `<i class="iconfont icon-code" type="button" data-toggle="collapse" data-target="#${collapseId}"></i>`;
-      // const collapseBtn = `<i class="iconfont icon-xialajiantou" type="button" data-toggle="collapse" data-target="#${collapseId}"></i>`;
+      // const collapseBtn = `<i class="iconfont icon-code" type="button" data-toggle="collapse" data-target="#${collapseId}"></i>`;
+      const collapseBtn = `<i class="fas fa-angle-down" type="button" data-toggle="collapse" data-target="#${collapseId}"></i>`;
       // const collapseDiv = `<div class="collapse show" id="${collapseId}">${inner}</div>`; // 默认不折叠
       // const collapseDiv = `<div class="collapse show" id="${collapseId}">${inner}</div>`;
       const collapseDiv = `<div class="collapse" id="${collapseId}">${inner}</div>`; // 默认折叠
