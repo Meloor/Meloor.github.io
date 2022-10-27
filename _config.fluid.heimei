@@ -382,7 +382,7 @@ navbar:
       # link: '/:lang/', #测试一下
       icon: "iconfont icon-ic_explore_px", #ic_explore_px,explore1,explore2,explore3,explore4,explore
       submenu: [
-        { key: "vue-page", link: "https://meloor.xyz/vue-page/index.html", icon: "iconfont icon-vue" }, # github的vue-page仓库建立的pages
+        { key: "vue-page", link: "https://meloor.xyz/vue-page/", icon: "iconfont icon-vue" }, # github的vue-page仓库建立的pages
         { key: "vite", link: "/static_pages/index.html", icon: "iconfont icon-vue" }, #当前hexo项目的嵌套的vue静态page note 
         { key: "bootstrap", link: "/bootstrap/index.html", icon: "iconfont icon-bootstrap" }, #当前bootstrap demo
       ]
@@ -1011,15 +1011,16 @@ about:
   # banner_img_height: 60
   banner_img_height: 75
   banner_mask_alpha: 0.3
-  avatar: /img/avatar.png
+  # avatar: /img/avatar.png
+  avatar: "imgs/avatars/heimei_avatar.png"
   # avatar: "imgs/avatars/meloor_avatar.jpg"
-  name: "Meloor"
-  intro: "DataBase learning"
+  name: "小黑妹"
+  intro: "小学二年生"
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, The icon is no longer a link, but a hovering QR code
   icons:
-    - { class: "iconfont icon-github-fill", link: "https://github.com/Meloor", tip: "GitHub" }
-    - { class: "iconfont icon-gitee-fill", link: "https://gitee.com/Meloor", tip: "Gitee" }
+    # - { class: "iconfont icon-github-fill", link: "https://github.com/Meloor", tip: "GitHub" }
+    # - { class: "iconfont icon-gitee-fill", link: "https://gitee.com/Meloor", tip: "Gitee" }
     # - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
     # - { class: "iconfont icon-wechat-fill", qrcode: "/img/favicon.png" }
 
@@ -1094,7 +1095,7 @@ links:
       # avatar: "imgs/avatars/meloor_avatar.jpg"
     }
     - {
-      title: "小黑妹的作业墙",
+      title: "黑妹的作业",
       intro: "洪斯颖的作业墙",
       link: "about/heimei-index.html",
       avatar: "imgs/avatars/heimei_avatar.png"
