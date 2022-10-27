@@ -1,0 +1,53 @@
+body{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.collapse-test{
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-around;
+  height:30rem;
+  width:20rem;
+  background-color: antiquewhite;
+  color:cornflowerblue;
+  margin-top:5rem;
+}
+
+.me {
+  color:crimson;
+}
+figure{
+  /* height:10rem; */
+  width:10rem;
+  background-color: cadetblue;
+}
+figure>div {
+  background-color: cadetblue;
+}
+
+figure>i {
+  /* figure>i.fas.fa-angle-down{ */
+  color: #777;
+  /* color:blue; */
+  background-color: aqua;
+  /* margin-left: 10px; */
+  line-height: 2rem;
+  transform: none; /*全局效果，无论折叠还是展开都会使用*/
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* 折叠时效果:> 应用于折叠按钮<i>标签*/
+figure>i.collapsed { /*.collapsed bootstrap4.6.x中的class*/
+/* figure>i.fas.fa-angle-down.collapsed { */
+  transform: rotate(-90deg);
+}
+
+/* 展开时效果:V */
+figure>i.show {/*.show bootstrap4.6.x中的class*/
+/* figure>i.fas.fa-angle-down.show { */
+  transform: none;
+}

@@ -1,0 +1,33 @@
+.markdown-body > figure > div > table {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.markdown-body > figure {
+  background-color: #e6ebf1;
+  border-radius: 0.625rem;
+}
+.markdown-body > figure > i {
+  color: #777;
+  margin-left: 10px;
+  line-height: 2rem;
+  transform: none;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.markdown-body > figure > i.collapsed {
+  transform: rotate(-90deg);
+}
+.markdown-body > figure > span {
+  color: #777;
+  margin-left: 10px;
+  font-weight: bold;
+}
+[data-user-color-scheme='dark'] .markdown-body > figure {
+  background-color: #696969;
+  transition: background-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .markdown-body > figure > i {
+  color: #c4c6c9;
+}
+[data-user-color-scheme='dark'] .markdown-body > figure > span {
+  color: #c4c6c9;
+  transition: color 0.2s ease-in-out;
+}

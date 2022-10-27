@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="../../img/fluid.png">
-  <link rel="icon" href="../../imgs/meloor-favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../img/fluid.png">
+  <link rel="icon" href="../../../imgs/meloor-favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -16,26 +16,27 @@
   <meta name="author" content="Meloor">
   <meta name="keywords" content="database,java,c++,python">
   
-    <meta name="description" content="参考博客：  HTTP请求返回状态码详解 常用的HTTP状态码(面试中常问到…)  首先，什么是状态码？状态码的职责是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 接着来，状态码有哪些种类？接下来我们详细说一说常用的状态码（背吧，别犹豫） 2XX 成功200 ok（请求成功）204 no content （请求成功，但是没有结">
+    <meta name="description" content="参考博客:  HTTP请求的几种类型  HTTP请求方式中8种请求方法（简单介绍) http报文格式(重要) http的请求报文由：请求行、首部、空行、主体(请求数据)四个部分组成。其中请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔  一个响应由状态行、响应头部、空行和响应数据4部分组成。   请求头和响应头 HTTP请求头详解  首部，消息报头，用来说明客户端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="http请求返回状态码">
-<meta property="og:url" content="http://meloor.xyz/categories/web/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81.html">
+<meta property="og:title" content="http请求类型">
+<meta property="og:url" content="http://meloor.xyz/categories/web/default/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B.html">
 <meta property="og:site_name" content="Meloor&#39;s Blog">
-<meta property="og:description" content="参考博客：  HTTP请求返回状态码详解 常用的HTTP状态码(面试中常问到…)  首先，什么是状态码？状态码的职责是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出现了错误。 接着来，状态码有哪些种类？接下来我们详细说一说常用的状态码（背吧，别犹豫） 2XX 成功200 ok（请求成功）204 no content （请求成功，但是没有结">
+<meta property="og:description" content="参考博客:  HTTP请求的几种类型  HTTP请求方式中8种请求方法（简单介绍) http报文格式(重要) http的请求报文由：请求行、首部、空行、主体(请求数据)四个部分组成。其中请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔  一个响应由状态行、响应头部、空行和响应数据4部分组成。   请求头和响应头 HTTP请求头详解  首部，消息报头，用来说明客户端">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://meloor.xyz/categories/web/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/1.png">
-<meta property="article:published_time" content="2020-12-03T14:07:49.000Z">
-<meta property="article:modified_time" content="2022-10-26T21:42:02.158Z">
+<meta property="og:image" content="http://meloor.xyz/categories/web/default/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/1.png">
+<meta property="og:image" content="http://meloor.xyz/categories/web/default/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/2.png">
+<meta property="article:published_time" content="2020-12-03T14:03:37.000Z">
+<meta property="article:modified_time" content="2022-10-27T09:31:17.133Z">
 <meta property="article:author" content="Meloor">
 <meta property="article:tag" content="http">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://meloor.xyz/categories/web/http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/1.png">
+<meta name="twitter:image" content="http://meloor.xyz/categories/web/default/http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>http请求返回状态码 - Meloor&#39;s Blog</title>
+  <title>http请求类型 - Meloor&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -59,18 +60,20 @@
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
-<link  rel="stylesheet" href="../../css/main.css" />
+<link  rel="stylesheet" href="../../../css/main.css" />
 
 
-  <link id="highlight-css" rel="stylesheet" href="../../css/highlight.css" />
+  <link id="highlight-css" rel="stylesheet" href="../../../css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="../../css/highlight-dark.css" />
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../css/highlight-dark.css" />
   
 
 
 
   
-<link rel="stylesheet" href="../../css/iconfont.css">
+<link rel="stylesheet" href="../../../css/iconfont.css">
+<link rel="stylesheet" href="https://lib.baomitu.com/font-awesome/6.1.2/css/all.min.css">
+<link rel="stylesheet" href="../../../css/code-folding.css">
 
 
 
@@ -84,8 +87,8 @@
       Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
     }
   </script>
-  <script  src="../../js/utils.js" ></script>
-  <script  src="../../js/color-schema.js" ></script>
+  <script  src="../../../js/utils.js" ></script>
+  <script  src="../../../js/color-schema.js" ></script>
   
 
 
@@ -102,7 +105,7 @@
 <div class="header-inner" style="height: 70vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
       <strong>美乐奥的回想旋律</strong>
     </a>
 
@@ -121,7 +124,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../index.html">
+              <a class="nav-link" href="../../../index.html">
                 <i class="iconfont icon-home-fill"></i>
                 首页
               </a>
@@ -143,7 +146,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../categories/">
+                  <a class="dropdown-item" href="../../../categories/">
                     <i class="iconfont icon-category-fill"></i>
                     分类
                   </a>
@@ -151,7 +154,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../tags/index.html">
+                  <a class="dropdown-item" href="../../../tags/index.html">
                     <i class="iconfont icon-tags-fill"></i>
                     标签
                   </a>
@@ -159,7 +162,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../archives/index.html">
+                  <a class="dropdown-item" href="../../../archives/index.html">
                     <i class="iconfont icon-archive-fill"></i>
                     归档
                   </a>
@@ -183,7 +186,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../gallery/index.html">
+                  <a class="dropdown-item" href="../../../gallery/index.html">
                     <i class="iconfont icon-images"></i>
                     画廊
                   </a>
@@ -191,7 +194,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../movie/index.html">
+                  <a class="dropdown-item" href="../../../movie/index.html">
                     <i class="iconfont icon-movie1"></i>
                     电影
                   </a>
@@ -223,9 +226,17 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../static_pages/">
+                  <a class="dropdown-item" href="../../../static_pages/">
                     <i class="iconfont icon-vue"></i>
-                    static_pages
+                    vite
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="../../../bootstrap/">
+                    <i class="iconfont icon-bootstrap"></i>
+                    bootstrap
                   </a>
                 
               </div>
@@ -247,7 +258,7 @@
                   
                   
                   
-                  <a class="dropdown-item" href="../../links/index.html">
+                  <a class="dropdown-item" href="../../../links/index.html">
                     <i class="iconfont icon-link-fill"></i>
                     友链
                   </a>
@@ -277,7 +288,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="../../about/index.html">
+              <a class="nav-link" href="../../../about/index.html">
                 <i class="iconfont icon-user-fill"></i>
                 关于
               </a>
@@ -312,7 +323,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="http请求返回状态码"></span>
+            <span id="subtitle" data-typed-text="http请求类型"></span>
           
         </div>
 
@@ -328,7 +339,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-12-03 22:07" pubdate>
+        <time datetime="2020-12-03 22:03" pubdate>
           2020年12月3日 晚上
         </time>
       </span>
@@ -340,7 +351,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          641 字
+          4.4k 字
         
       </span>
     
@@ -351,7 +362,7 @@
         
         
         
-          6 分钟
+          37 分钟
         
       </span>
     
@@ -414,51 +425,6 @@
   <div class="category-post-list">
     
     
-      
-      
-        <a href="cookie-session%E6%9C%BA%E5%88%B6.html" title="cookie/session机制(持续更新)"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">cookie/session机制(持续更新)</span>
-        </a>
-      
-    
-      
-      
-        <a href="http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE.html" title="http与https协议"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">http与https协议</span>
-        </a>
-      
-    
-      
-      
-        <a href="http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B.html" title="http请求类型"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">http请求类型</span>
-        </a>
-      
-    
-      
-      
-        <a href="" title="http请求返回状态码"
-           class="list-group-item list-group-item-action
-           active">
-          <span class="category-post">http请求返回状态码</span>
-        </a>
-      
-    
-      
-      
-        <a href="%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84.html" title="前后端分离架构"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">前后端分离架构</span>
-        </a>
-      
-    
   </div>
 
           
@@ -487,10 +453,83 @@
     
       
       
-        <a href="java/Java%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%EF%BC%88%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3%EF%BC%89.html" title="Java访问权限（类、接口、内部类、内部接口）"
+        <a href="../java/Java%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%EF%BC%88%E7%B1%BB%E3%80%81%E6%8E%A5%E5%8F%A3%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E5%86%85%E9%83%A8%E6%8E%A5%E5%8F%A3%EF%BC%89.html" title="Java访问权限（类、接口、内部类、内部接口）"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Java访问权限（类、接口、内部类、内部接口）</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+    
+    
+    
+    <div class="category-sub row nomargin-x">
+      <a class="category-subitem 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="default"
+        id="heading-c21f969b5f03d33d43e04f8f136e7682" role="tab" data-toggle="collapse" href="#collapse-c21f969b5f03d33d43e04f8f136e7682"
+        aria-expanded="true"
+      >
+        default
+        <span class="list-group-count">(5)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-c21f969b5f03d33d43e04f8f136e7682"
+           role="tabpanel" aria-labelledby="heading-c21f969b5f03d33d43e04f8f136e7682">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="cookie-session%E6%9C%BA%E5%88%B6.html" title="cookie/session机制(持续更新)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">cookie/session机制(持续更新)</span>
+        </a>
+      
+    
+      
+      
+        <a href="http%E4%B8%8Ehttps%E5%8D%8F%E8%AE%AE.html" title="http与https协议"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">http与https协议</span>
+        </a>
+      
+    
+      
+      
+        <a href="" title="http请求类型"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">http请求类型</span>
+        </a>
+      
+    
+      
+      
+        <a href="http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81.html" title="http请求返回状态码"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">http请求返回状态码</span>
+        </a>
+      
+    
+      
+      
+        <a href="%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E6%9E%B6%E6%9E%84.html" title="前后端分离架构"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">前后端分离架构</span>
         </a>
       
     
@@ -524,7 +563,7 @@
     
       
       
-        <a href="front-end/gitee+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" title="gitee+hexo搭建个人博客"
+        <a href="../front-end/gitee+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html" title="gitee+hexo搭建个人博客"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">gitee+hexo搭建个人博客</span>
@@ -561,7 +600,7 @@
     
       
       
-        <a href="%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E4%BA%8B%E5%8A%A1.html" title="MySQL事务"
+        <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/MySQL%E4%BA%8B%E5%8A%A1.html" title="MySQL事务"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">MySQL事务</span>
@@ -570,7 +609,7 @@
     
       
       
-        <a href="%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95.html" title="数据库索引"
+        <a href="../%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B4%A2%E5%BC%95.html" title="数据库索引"
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">数据库索引</span>
@@ -600,12 +639,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">http请求返回状态码</h1>
+            <h1 style="display: none">http请求类型</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年10月27日 凌晨
+                    本文最后更新于：2022年10月27日 下午
                   
                 
               </p>
@@ -613,17 +652,88 @@
             
               <div class="markdown-body">
                 
-                <p>参考博客：</p>
+                <p>参考博客:</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangsen2235068/article/details/8081274">HTTP请求返回状态码详解</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/beyond150/article/details/102128827">常用的HTTP状态码(面试中常问到…)</a></li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012813201/article/details/70210812">HTTP请求的几种类型</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42981419/article/details/86162244">HTTP请求方式中8种请求方法（简单介绍)</a></p>
+<h2 id="http报文格式-重要"><a href="#http报文格式-重要" class="headerlink" title="http报文格式(重要)"></a>http报文格式(重要)</h2></li>
+<li><p>http的请求报文由：请求行、<strong>首部</strong>、空行、主体(请求数据)四个部分组成。其中请求行由请求方法字段、URL字段和HTTP协议版本字段3个字段组成，它们用空格分隔</p>
+</li>
+<li><p>一个响应由状态行、响应头部、空行和响应数据4部分组成。<br><img src="http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/1.png" srcset="/img/loading.gif" lazyload alt="报文格式"></p>
+</li>
 </ul>
-<h2 id="首先，什么是状态码？"><a href="#首先，什么是状态码？" class="headerlink" title="首先，什么是状态码？"></a>首先，什么是状态码？</h2><p>状态码的职责是当客户端向服务器端发送请求时，描述返回的请求结<br>果。借助状态码，用户可以知道服务器端是正常处理了请求，还是出<br>现了错误。</p>
-<h2 id="接着来，状态码有哪些种类？"><a href="#接着来，状态码有哪些种类？" class="headerlink" title="接着来，状态码有哪些种类？"></a>接着来，状态码有哪些种类？</h2><p><img src="http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81/1.png" srcset="/img/loading.gif" lazyload alt="状态码"><br>接下来我们详细说一说常用的状态码（背吧，别犹豫）</p>
-<h2 id="2XX-成功"><a href="#2XX-成功" class="headerlink" title="2XX 成功"></a>2XX 成功</h2><p>200 ok（请求成功）<br>204 no content （请求成功，但是没有结果返回）<br>206 partial content （客户端请求一部分资源，服务端成功响应，返回一范围资源）?</p>
-<h2 id="3XX-重定向"><a href="#3XX-重定向" class="headerlink" title="3XX 重定向"></a>3XX 重定向</h2><p>301 move permanently （永久性重定向）<br>302 found （临时性重定向）<br>303 see other （示由于请求对应的资源存在着另一个 URI，应使用 GET<br>方法定向获取请求的资源）<br>304 not modified （表示在客户端采用带条件的访问某资源时，服务端找到了资源，但是这个请求的条件不符合。跟重定向无关）<br>307 temporary redirect （跟302一个意思）</p>
-<h2 id="4XX-客户端错误"><a href="#4XX-客户端错误" class="headerlink" title="4XX 客户端错误"></a>4XX 客户端错误</h2><p>400 bad request （请求报文存在语法错误）<br>401 unauthorized （需要认证（第一次返回）或者认证失败（第二次返回））<br>403 forbidden （请求被服务器拒绝了）<br>404 not found （服务器上无法找到请求的资源）</p>
-<h2 id="5XX-服务器错误"><a href="#5XX-服务器错误" class="headerlink" title="5XX 服务器错误"></a>5XX 服务器错误</h2><p>500 internal server error （服务端执行请求时发生了错误）<br>503 service unavailable （服务器正在超负载或者停机维护，无法处理请求）</p>
+<h3 id="请求头和响应头"><a href="#请求头和响应头" class="headerlink" title="请求头和响应头"></a>请求头和响应头</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/kfanning/article/details/6062118">HTTP请求头详解</a></li>
+</ul>
+<p>首部，消息报头，用来<strong>说明客户端要使用的一些附加信息</strong></p>
+<h5 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h5><p>下面是一些最常见的请求头：   <br><strong>Accept：</strong> 浏览器可接受的MIME类型。</p>
+<blockquote>
+<p>MIME(Multipurpose Internet Mail Extensions)多用途互联网邮件扩展类型。MIME规定了用于表示各种各样的数据类型的符号化方法。 此外，在万维网中使用的HTTP协议中也使用了MIME的框架，标准被扩展为互联网媒体类型。</p>
+</blockquote>
+<p><strong>Accept - Charset：</strong> 浏览器可接受的字符集。<br><strong>Accept - Encoding：</strong> 浏览器能够进行解码的数据编码方式，比如gzip。Servlet能够向支持gzip的浏览器返回经gzip编码的HTML页面。许多情形下这可以减少5到10倍的下载时间。<br><strong>Accept - Language：</strong> 浏览器所希望的语言种类，当服务器能够提供一种以上的语言版本时要用到。<br><strong>Authorization：</strong> 授权信息，通常出现在对服务器发送的WWW - Authenticate头的应答中。<br><strong>Connection：</strong> 表示是否需要持久连接。如果Servlet看到这里的值为“Keep - Alive”，或者看到请求使用的是HTTP 1.1（HTTP 1.1默认进行持久连接），它就可以利用持久连接的优点，当页面包含多个元素时（例如Applet，图片），显著地减少下载所需要的时间。要实现这一点，Servlet需要在应答中发送一个Content - Length头，最简单的实现方法是：先把内容写入ByteArrayOutputStream，然后在正式写出内容之前计算它的大小。<br><strong>Content - Length：</strong> 表示请求消息正文的长度。<br><strong>Cookie：</strong> 这是最重要的请求头信息之一，参见后面《Cookie处理》一章中的讨论。<br><strong>From：</strong> 请求发送者的email地址，由一些特殊的Web客户程序使用，浏览器不会用到它。<br><strong>Host：</strong> 初始URL中的主机和端口。<br><strong>If - Modified - Since：</strong> 只有当所请求的内容在指定的日期之后又经过修改才返回它，否则返回304“Not Modified”应答。<br><strong>Pragma：</strong> 指定“no - cache”值表示服务器必须返回一个刷新后的文档，即使它是代理服务器而且已经有了页面的本地拷贝。<br><strong>Referer：</strong> 包含一个URL，用户从该URL代表的页面出发访问当前请求的页面。<br><strong>User - Agent：</strong> 浏览器类型，如果Servlet返回的内容与浏览器类型有关则该值非常有用。<br><strong>UA - Pixels，UA - Color，UA - OS，UA - CPU：</strong> 由某些版本的IE浏览器所发送的非标准的请求头，表示屏幕大小、颜色深度、操作系统和CPU类型。</p>
+<blockquote>
+<p><a href="http://www.baidu.com的GET请求如下所示：">www.baidu.com的GET请求如下所示：</a></p>
+<p>GET / HTTP/1.1<br>Host: <a target="_blank" rel="noopener" href="http://www.baidu.comuser-agent/">www.baidu.comUser-Agent</a>: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.6)<br>Gecko/20050225 Firefox/1.0.1<br>Connection: Keep-Alive</p>
+<ul>
+<li>请求行<ul>
+<li>第一部分说明了该请求是GET请求。</li>
+<li>该行的第二部分是一个斜杠（/），用来说明请求的是该域名的根目录。</li>
+<li>该行的最后一部分说明使用的是HTTP 1.1版本（另一个可选项是1.0）。</li>
+</ul>
+</li>
+<li>第2行是请求的第一个首部，HOST。首部HOST将指出请求的目的地。结合HOST和上一行中的斜杠（/），可以通知服务器请求的是<a target="_blank" rel="noopener" href="http://www.baidu.com/%EF%BC%88HTTP">www.baidu.com/（HTTP</a> 1.1才需要使用首部HOST，而原来的1.0版本则不需要使用）。</li>
+<li>第3行中包含的是首部User-Agent，服务器端和客户端脚本都能够访问它，它是浏览器类型检测逻辑的重要基础。该信息由你使用的浏览器来定义（在本例中是Firefox 1.0.1），并且在每个请求中将自动发送。</li>
+<li>最后一行是首部Connection，通常将浏览器操作设置为Keep-Alive（当然也可以设置为其他值）。</li>
+<li>注意，在最后一个首部之后有一个空行。即使不存在请求主体，这个空行也是必需的。</li>
+</ul>
+</blockquote>
+<h3 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a>请求报文</h3><p>例子：访问谷歌：<a target="_blank" rel="noopener" href="http://www.google.cn/search">www.google.cn/search</a></p>
+<figure class="highlight apache"><i class="fas fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-wcpefkl9qwoski"></i><span>apache</span><div class="collapse" id="collapse-wcpefkl9qwoski"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">POST</span> /search HTTP/<span class="hljs-number">1</span>.<span class="hljs-number">1</span>  <br><span class="hljs-attribute">Accept</span>: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, application/vnd.ms-excel, application/vnd.ms-powerpoint, <br><span class="hljs-attribute">application</span>/msword, application/x-silverlight, application/x-shockwave-flash, */*  <br><span class="hljs-attribute">Referer</span>: &lt;a href=<span class="hljs-string">&quot;http://www.google.cn/&quot;</span>&gt;http://www.google.cn/&lt;/a&gt;  <br><span class="hljs-attribute">Accept</span>-Language: zh-cn  <br><span class="hljs-attribute">Accept</span>-Encoding: gzip, deflate  <br><span class="hljs-attribute">User</span>-Agent: Mozilla/<span class="hljs-number">4</span>.<span class="hljs-number">0</span> (compatible; MSIE <span class="hljs-number">6</span>.<span class="hljs-number">0</span>; Windows NT <span class="hljs-number">5</span>.<span class="hljs-number">1</span>; SV1; .NET CLR <span class="hljs-number">2</span>.<span class="hljs-number">0</span>.<span class="hljs-number">50727</span>; TheWorld)  <br><span class="hljs-attribute">Host</span>: &lt;a href=<span class="hljs-string">&quot;http://www.google.cn&quot;</span>&gt;www.google.cn&lt;/a&gt;  <br><span class="hljs-attribute">Connection</span>: Keep-Alive  <br><span class="hljs-attribute">Cookie</span>: PREF=ID=<span class="hljs-number">80</span>a06da87be9ae3c:U=f7167333e2c3b714:NW=<span class="hljs-number">1</span>:TM=<span class="hljs-number">1261551909</span>:LM=<span class="hljs-number">1261551917</span>:S=ybYcq2wpfefs4V9g; <br><span class="hljs-attribute">NID</span>=<span class="hljs-number">31</span>=ojj8d-IygaEtSxLgaJmqSjVhCspkviJrB6omjamNrSm8lZhKy_yMfO2M4QMRKcH1g0iQv9u-<span class="hljs-number">2</span>hfBW7bUFwVh7pGaRUb0RnHcJU37y-<br><span class="hljs-attribute">FxlRugatx63JLv7CWMD6UB_O_r</span>  <br> <br><span class="hljs-attribute">hl</span>=zh-CN&amp;source=hp&amp;q=domety<br></code></pre></td></tr></table></div></figure>
+<h3 id="响应报文"><a href="#响应报文" class="headerlink" title="响应报文"></a>响应报文</h3><figure class="highlight xquery"><i class="fas fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-mrxqz4l9qwoski"></i><span>xquery</span><div class="collapse" id="collapse-mrxqz4l9qwoski"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xquery">HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">200</span> OK<br>Date: Fri, <span class="hljs-number">22</span> May <span class="hljs-number">2009</span> <span class="hljs-number">06</span>:<span class="hljs-number">07</span>:<span class="hljs-number">21</span> GMT<br>Content-Type: <span class="hljs-type">text</span>/html; charset=UTF-<span class="hljs-number">8</span><br> <br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span><br><span class="language-xml">      </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span><span class="language-xml"> </span><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span> <span class="hljs-comment">&lt;!--body goes here--&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><span class="language-xml"> </span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></code></pre></td></tr></table></div></figure>
+
+<h2 id="8种请求方法"><a href="#8种请求方法" class="headerlink" title="8种请求方法"></a>8种请求方法</h2><p><img src="http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B/2.png" srcset="/img/loading.gif" lazyload alt="8中请求"></p>
+<p>HTTP请求的方法：</p>
+<ul>
+<li>HTTP/1.1协议中共定义了八种方法（有时也叫“动作”），来表明Request-URL指定的资源不同的操作方式</li>
+<li>HTTP1.0定义了三种请求方法： GET, POST 和 HEAD方法。</li>
+<li>HTTP1.1新增了五种请求方法：OPTIONS, PUT, DELETE, TRACE 和 CONNECT 方法</li>
+</ul>
+<h3 id="1-GET"><a href="#1-GET" class="headerlink" title="1. GET"></a>1. GET</h3><p>向特定的资源发出请求。注意：GET方法不应当被用于产生“副作用”的操作中，例如在Web Application中，其中一个原因是GET可能会被网络蜘蛛等随意访问。</p>
+<h3 id="2-HEAD"><a href="#2-HEAD" class="headerlink" title="2. HEAD"></a>2. HEAD</h3><p>向服务器索与GET请求相一致的响应，只不过响应体将不会被返回。这一方法可以再不必传输整个响应内容的情况下，就可以获取包含在响应小消息头中的元信息。</p>
+<h3 id="3-POST"><a href="#3-POST" class="headerlink" title="3. POST"></a>3. POST</h3><p>向指定资源提交数据进行处理请求（例如提交表单或者上传文件）。数据被包含在请求体中。POST请求可能会导致新的资源的建立和/或已有资源的修改。 </p>
+<h4 id="get与post区别"><a href="#get与post区别" class="headerlink" title="get与post区别"></a>get与post区别</h4><p>POST方式请求行中不包含数据字符串，这些数据保存在”请求内容”部分，各数据之间也是使用”&amp;”符号隔开, POST方式大多用于页面的表单中。</p>
+<ul>
+<li><p>1.数据存放位置：</p>
+<ul>
+<li><p><strong>GET</strong>：请求的<strong>数据会附在URL之后</strong>（就是把数据放置在HTTP协议头＜request-line＞中），以?分割URL和传输数据，多个参数用&amp;连接;例如：login.action?name=hyddd&amp;password=idontknow&amp;verify=%E4%BD%A0 %E5%A5%BD。如果数据是英文字母/数字，原样发送，如果是空格，转换为+，如果是中文/其他字符，则直接把字符串用BASE64加密，得出如： %E4%BD%A0%E5%A5%BD，其中％XX中的XX为该符号以16进制表示的ASCII。  </p>
+</li>
+<li><p><strong>POST</strong>：把提交的<strong>数据放置在是HTTP包的包体</strong>＜request-body＞中。<strong>GET提交的数据会在地址栏中显示出来，而POST提交，地址栏不会改变。</strong></p>
+</li>
+</ul>
+</li>
+<li><p>2.传输数据的大小：  </p>
+<ul>
+<li> 首先声明,<strong>HTTP协议没有对传输的数据大小进行限制</strong>，HTTP协议规范也没有对URL长度进行限制。 而在实际开发中存在的限制主要有：   </li>
+<li><strong>GET</strong>: <strong>特定浏览器和服务器对URL长度有限制</strong>，例如IE对URL长度的限制是2083字节(2K+35)。对于其他浏览器，如Netscape、FireFox等，理论上没有长度限制，其限制取决于操作系统的支持。   因此对于GET提交时，传输数据就会受到URL长度的限制。   </li>
+<li><strong>POST</strong>: 由于不是通过URL传值，<strong>理论上数据不受限</strong>。但<strong>实际各个WEB服务器会规定对post提交数据大小进行限制</strong>，Apache、IIS6都有各自的配置。</li>
+</ul>
+</li>
+<li><p> 3.安全性：    </p>
+<ul>
+<li> POST的安全性要比GET的安全性高。</li>
+<li> 通过GET提交数据，用户名和密码将明文出现在URL上，(1)登录页面有可能被浏览器缓存， (2)其他人查看浏览器的历史纪录。<h3 id="4-PUT"><a href="#4-PUT" class="headerlink" title="4. PUT"></a>4. PUT</h3>向指定资源位置上传其最新内容<h3 id="5-DELETE"><a href="#5-DELETE" class="headerlink" title="5. DELETE"></a>5. DELETE</h3>请求服务器删除Request-URL所标识的资源</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-CONNECT"><a href="#6-CONNECT" class="headerlink" title="6. CONNECT"></a>6. CONNECT</h3><p>HTTP/1.1协议中预留给能够将连接改为管道方式的代理服务器。</p>
+<h3 id="7-OPTIONS"><a href="#7-OPTIONS" class="headerlink" title="7. OPTIONS"></a>7. OPTIONS</h3><p>返回服务器针对特定资源所支持的HTTP请求方法，也可以利用向web服务器发送‘*’的请求来测试服务器的功能性</p>
+<h3 id="8-TRACE"><a href="#8-TRACE" class="headerlink" title="8. TRACE"></a>8. TRACE</h3><p>回显服务器收到的请求，主要用于测试或诊断</p>
+<h2 id="URI-amp-RUL"><a href="#URI-amp-RUL" class="headerlink" title="URI&amp;RUL"></a>URI&amp;RUL</h2><p>HTTP使用统一资源标识符（Uniform Resource Identifiers, URI）来传输数据和建立连接。</p>
+<ul>
+<li>URI：Uniform Resource Identifier 统一资源标识符, 是用来标示 一个具体的资源的，我们可以通过 URI 知道一个资源是什么</li>
+<li>URL：Uniform Resource Location 统一资源定位符，是用来定位具体的资源的，标示了一个具体的资源位置。互联网上的每个文件都有一个唯一的URL。</li>
+</ul>
 
                 
               </div>
@@ -642,8 +752,15 @@
     
       <span class="category-chain">
         
-  <a href="" class="category-chain-item">web</a>
+  <a href="../" class="category-chain-item">web</a>
   
+  
+    <span>></span>
+    
+  <a href="" class="category-chain-item">default</a>
+  
+  
+
   
 
       </span>
@@ -657,7 +774,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="../../tags/http/">#http</a>
+        <a href="../../../tags/http/">#http</a>
       
     </div>
   
@@ -669,8 +786,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>http请求返回状态码</div>
-      <div>http://meloor.xyz/categories/web/http请求返回状态码.html</div>
+      <div>http请求类型</div>
+      <div>http://meloor.xyz/categories/web/default/http请求类型.html</div>
     </div>
     <div class="license-meta">
       
@@ -719,9 +836,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="cookie-session%E6%9C%BA%E5%88%B6.html" title="cookie/session机制(持续更新)">
+                      <a href="http%E8%AF%B7%E6%B1%82%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81%E7%A0%81.html" title="http请求返回状态码">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">cookie/session机制(持续更新)</span>
+                        <span class="hidden-mobile">http请求返回状态码</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -729,8 +846,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="http%E8%AF%B7%E6%B1%82%E7%B1%BB%E5%9E%8B.html" title="http请求类型">
-                        <span class="hidden-mobile">http请求类型</span>
+                      <a href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%9F%BA%E4%BA%8E%E5%BF%AB%E6%8E%92partition%E6%B1%82%E7%AC%ACk%E5%A4%A7%E6%95%B0.html" title="基于快排partition求第k大数">
+                        <span class="hidden-mobile">基于快排partition求第k大数</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -746,12 +863,12 @@
   <div id="gitalk-container"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('../../css/gitalk.css')
+      Fluid.utils.createCssLink('../../../css/gitalk.css')
       Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
         var options = Object.assign(
           {"clientID":"09b0c36adab009c91121","clientSecret":"64748b6ecbdef988d95c53e0b935ff2d988d1585","repo":"blog-talk-gh","owner":"Meloor","admin":["Meloor"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":false,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token"},
           {
-            id: '1980d68816ee481b79a11df847aa80a5'
+            id: 'c8c9d8618b26e1acf2f40894c24475b2'
           }
         )
         var gitalk = new Gitalk(options);
@@ -915,8 +1032,8 @@
 
 <script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="../../js/events.js" ></script>
-<script  src="../../js/plugins.js" ></script>
+<script  src="../../../js/events.js" ></script>
+<script  src="../../../js/plugins.js" ></script>
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -938,7 +1055,7 @@
 
 
   
-    <script  src="../../js/img-lazyload.js" ></script>
+    <script  src="../../../js/img-lazyload.js" ></script>
   
 
 
@@ -1037,7 +1154,7 @@
 
   <script>Fluid.plugins.imageCaption();</script>
 
-  <script  src="../../js/local-search.js" ></script>
+  <script  src="../../../js/local-search.js" ></script>
 
   <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
@@ -1047,7 +1164,7 @@
 
 <!-- 主题的启动项，将它保持在最底部 -->
 <!-- the boot of the theme, keep it at the bottom -->
-<script  src="../../js/boot.js" ></script>
+<script  src="../../../js/boot.js" ></script>
 
 
   
