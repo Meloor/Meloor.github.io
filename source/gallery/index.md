@@ -17,7 +17,7 @@ date: 2022-10-25 04:20:54
 {% img abc https://w.wallhaven.cc/full/dp/wallhaven-dp1dll.png 445 445 '"wallhaven" "dp1dll"' %}
 {% img abc https://w.wallhaven.cc/full/1k/wallhaven-1kzx39.jpg 445 445 '"wallhaven" "1kzx39"' %} 
 </div>
-
+<div style='display: none'>
 {% gi 9 2-3-4 %} 
   ![gpj5xq](https://w.wallhaven.cc/full/gp/wallhaven-gpj5xq.jpg)
   ![727zdy](https://w.wallhaven.cc/full/72/wallhaven-727zdy.jpg)
@@ -31,14 +31,39 @@ date: 2022-10-25 04:20:54
   ![dp1dll](https://w.wallhaven.cc/full/dp/wallhaven-dp1dll.png)
   ![1kzx39](https://w.wallhaven.cc/full/1k/wallhaven-1kzx39.jpg)
 {% endgi %}
-
-<div style='display: none'>
 // hexo标签，预览需要启动hexo server
 </div>
+{% gi 9 2-3-4 %} 
+
+  ![gpj5xq](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/wallhaven-gpj5xq.jpg) 
+  ![727zdy](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/wallhaven-727zdy.jpg)
+
+  ![rr3zvm](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/wallhaven-rr3zvm.png)
+  ![dp1drj](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/wallhaven-dp1drj.png)
+  ![l3lkxq](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/wallhaven-l3lkxq-small.png)
+
+  ![x8vxwo](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/wallhaven-x8vxwo.png)
+
+  ![28qzgy](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/wallhaven-28qzgy.png)
+
+  ![dp1dll](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/wallhaven-dp1dll.png)
+
+  ![1kzx39](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/wallhaven-1kzx39.jpg)
+
+{% endgi %}
+
 {% blockquote David Levithan, ——Wide Awake %}
 Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.
 {% endblockquote %}
 
 {% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html ——Welcome to Island Marketing %}
 Every interaction is both precious and an opportunity to delight.
+{% endblockquote %}
+
+{% blockquote John, ——Adams %}
+I must study politics and war that my sons may have liberty to study mathematics and philosophy. My sons ought to study mathematics and philosophy, geography, natural history, naval architecture, navigation, commerce and agriculture in order to give their children a right to study painting, poetry, music, architecture, statuary, tapestry, and porcelain
+{% endblockquote %}
+
+{% blockquote 约翰, ——亚当斯 %}
+我必须研究政治和战争,这样我的儿子们能够学习数学和哲学.我的儿子们应该学习数学、哲学、地理、博物、造船、航海、商业和农业使得他们的孩子们可以学习绘画、诗歌、音乐、建筑、雕塑、织物和瓷器.
 {% endblockquote %}
