@@ -382,7 +382,7 @@ navbar:
       # link: '/:lang/', #测试一下
       icon: "iconfont icon-ic_explore_px", #ic_explore_px,explore1,explore2,explore3,explore4,explore
       submenu: [
-        { key: "vue-page", link: "https://meloor.xyz/vue-page/index.html", icon: "iconfont icon-vue" }, # github的vue-page仓库建立的pages
+        { key: "vue-page", link: "https://blog.meloor.xyz/vue-page/index.html", icon: "iconfont icon-vue" }, # github的vue-page仓库建立的pages
         { key: "vite", link: "/static_pages/index.html", icon: "iconfont icon-vue" }, #当前hexo项目的嵌套的vue静态page note 
         { key: "bootstrap", link: "/bootstrap/index.html", icon: "iconfont icon-bootstrap" }, #当前bootstrap demo
       ]
