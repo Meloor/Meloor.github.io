@@ -353,28 +353,30 @@ navbar:
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
   menu: #note 
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
-    - {
-      key: 'catalogue',
-      # link: '/:lang/', #测试一下
-      icon: 'iconfont icon-books',
-      submenu: [
-        { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" },  
-        { key: "tag", link: "/tags/index.html", icon: "iconfont icon-tags-fill" },
-        { key: "archive", link: "/archives/index.html", icon: "iconfont icon-archive-fill" },
-      ]
-    }
-    # - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
-    # - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
-    # - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    - {
-      key: 'life',
-      # link: '/:lang/', #测试一下
-      icon: "iconfont icon-heartbeat", 
-      submenu: [
-        { key: "gallery", link: "/gallery/index.html", icon: "iconfont icon-images" },
-        { key: "movie", link: "/movie/index.html", icon: "iconfont icon-movie1" } # movie,movie-fill,movie1
-      ]
-    }
+    # - { #下拉菜单
+    #   key: 'catalogue',
+    #   # link: '/:lang/', #测试一下
+    #   icon: 'iconfont icon-books',
+    #   submenu: [
+    #     { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" },  
+    #     { key: "tag", link: "/tags/index.html", icon: "iconfont icon-tags-fill" },
+    #     { key: "archive", link: "/archives/index.html", icon: "iconfont icon-archive-fill" },
+    #   ]
+    # }
+    - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
+    - { key: "tag", link: "/tags/index.html", icon: "iconfont icon-tags-fill" }
+    - { key: "archive", link: "/archives/index.html", icon: "iconfont icon-archive-fill" }
+    # - { #下拉菜单
+    #   key: 'life',
+    #   # link: '/:lang/', #测试一下
+    #   icon: "iconfont icon-heartbeat", 
+    #   submenu: [
+    #     { key: "gallery", link: "/gallery/index.html", icon: "iconfont icon-images" },
+    #     { key: "movie", link: "/movie/index.html", icon: "iconfont icon-movie1" } # movie,movie-fill,movie1
+    #   ]
+    # }
+    - { key: "gallery", link: "/gallery/index.html", icon: "iconfont icon-images" }
+    - { key: "movie", link: "/movie/index.html", icon: "iconfont icon-movie1" } # movie,movie-fill,movie1
     # - { key: "gallery", link: "/gallery/index.html", icon: "iconfont icon-images" }
     # - { key: "links", link: "/links/index.html", icon: "iconfont icon-link-fill" }
     - {
@@ -392,11 +394,12 @@ navbar:
       link: "/links/index.html", #测试一下
       icon: "iconfont icon-link-fill",
       submenu: [
-        { key: "友链（更多）", link: "/links/index.html", icon: "iconfont icon-link-fill" },
+        # { key: "友链（更多）", link: "/links/index.html", icon: "iconfont icon-link-fill" },
         { key: "徐文昊的碎碎念", link: "https://xuwh.top/", icon: "iconfont icon-link-fill" },
         { key: "美乐奥的回想旋律", link: "https://meloor.xyz/", icon: "iconfont icon-link-fill" },
       ]
     }
+    - { key: "友链(更多)", link: "/links/index.html", icon: "iconfont icon-link-fill" }
     - { key: "about", link: "/about/index.html", icon: "iconfont icon-user-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
