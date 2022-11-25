@@ -68,10 +68,31 @@ I must study politics and war that my sons may have liberty to study mathematics
 我必须研究政治和战争,这样我的儿子们能够学习数学和哲学.我的儿子们应该学习数学、哲学、地理、博物、造船、航海、商业和农业使得他们的孩子们可以学习绘画、诗歌、音乐、建筑、雕塑、织物和瓷器.
 {% endblockquote %}
 
-{% blockquote 作家, ——亦舒 %}
+{% blockquote 亦舒, ——作家 %}
 “成年人要在非黑即白之外，认识到生活有深深浅浅的灰。”
 {% endblockquote %}
 
-{% blockquote 作家, ——林特特 %}
+{% blockquote 林特特, ——作家 %}
 “你没有错，只是需要更强大。”
+{% endblockquote %}
+
+## 我的代码冰冰的
+
+{% gi 11 4-3-4 %} 
+![bingbing2](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing7.webp)
+![bingbing3](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing6.webp)
+![bingbing3](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing6.webp)
+![bingbing4](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing5.webp)
+
+![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3.webp)
+![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3.webp)
+![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3.webp)
+
+![bingbing5](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing4.webp)
+![bingbing7](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing2.jpg)
+![bingbing1](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing1.jpg)
+![bingbing1](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing1.jpg)
+{% endgi %}
+{% blockquote 藏锋 https://zhuanlan.zhihu.com/p/370404492    ——知乎%}
+你的心里是不是经常出现两个爱打架的小人：一个叫“马上开始”，一个叫“等会儿再”
 {% endblockquote %}
