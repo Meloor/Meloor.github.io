@@ -67,3 +67,11 @@ I must study politics and war that my sons may have liberty to study mathematics
 {% blockquote 约翰, ——亚当斯 %}
 我必须研究政治和战争,这样我的儿子们能够学习数学和哲学.我的儿子们应该学习数学、哲学、地理、博物、造船、航海、商业和农业使得他们的孩子们可以学习绘画、诗歌、音乐、建筑、雕塑、织物和瓷器.
 {% endblockquote %}
+
+{% blockquote 作家, ——亦舒 %}
+“成年人要在非黑即白之外，认识到生活有深深浅浅的灰。”
+{% endblockquote %}
+
+{% blockquote 作家, ——林特特 %}
+“你没有错，只是需要更强大。”
+{% endblockquote %}
