@@ -76,7 +76,6 @@ I must study politics and war that my sons may have liberty to study mathematics
 “你没有错，只是需要更强大。”
 {% endblockquote %}
 
-## 我的代码冰冰的
 
 {% gi 11 4-3-4 %} 
 ![bingbing2](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing7.webp)
