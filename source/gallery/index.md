@@ -95,3 +95,9 @@ I must study politics and war that my sons may have liberty to study mathematics
 {% blockquote 藏锋 https://zhuanlan.zhihu.com/p/370404492    ——知乎%}
 你的心里是不是经常出现两个爱打架的小人：一个叫“马上开始”，一个叫“等会儿再”
 {% endblockquote %}
+
+{% blockquote Eric Steven Raymond http://www.catb.org/~esr/faqs/hacker-howto.html    ——hacker-howto%}
+大约在 1991 年，我了解到许多以英语为第二语言的黑客在技术讨论中使用英语，即使他们的母语相同；当时有人告诉我，英语比任何其他语言都有更丰富的技术词汇，因此是完成这项工作的更好工具。出于类似的原因，用英语编写的技术书籍的翻译通常不能令人满意（即使完成了）。
+
+芬兰人 Linus Torvalds 用英语评论他的代码（他显然从未想过用其他方式）。他流利的英语是他能够在全球范围内招募 Linux 开发人员的一个重要因素。这是一个值得效仿的例子。
+{% endblockquote %}
