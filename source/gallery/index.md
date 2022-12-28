@@ -83,9 +83,9 @@ I must study politics and war that my sons may have liberty to study mathematics
 ![bingbing3](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing6-qsy.png)
 ![bingbing4](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing5-qsy.png)
 
-![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3-qsy.png)
-![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3-qsy.png)
-![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3-qsy.png)
+![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3-qsy2.png)
+![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3-qsy2.png)
+![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3-qsy2.png)
 
 ![bingbing5](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing4-qsy.png)
 ![bingbing7](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing2.jpg)
