@@ -78,16 +78,16 @@ I must study politics and war that my sons may have liberty to study mathematics
 
 
 {% gi 11 4-3-4 %} 
-![bingbing2](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing7.webp)
-![bingbing3](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing6.webp)
-![bingbing3](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing6.webp)
-![bingbing4](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing5.webp)
+![bingbing2](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing7-qsy.png)
+![bingbing3](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing6-qsy.png)
+![bingbing3](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing6-qsy.png)
+![bingbing4](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing5-qsy.png)
 
-![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3.webp)
-![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3.webp)
-![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3.webp)
+![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3-qsy.png)
+![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3-qsy.png)
+![bingbing6](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing3-qsy.png)
 
-![bingbing5](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing4.webp)
+![bingbing5](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing4-qsy.png)
 ![bingbing7](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing2.jpg)
 ![bingbing1](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing1.jpg)
 ![bingbing1](https://raw.githubusercontent.com/Meloor/imgbed/master/imgs/blog/bingbing1.jpg)
@@ -100,4 +100,6 @@ I must study politics and war that my sons may have liberty to study mathematics
 大约在 1991 年，我了解到许多以英语为第二语言的黑客在技术讨论中使用英语，即使他们的母语相同；当时有人告诉我，英语比任何其他语言都有更丰富的技术词汇，因此是完成这项工作的更好工具。出于类似的原因，用英语编写的技术书籍的翻译通常不能令人满意（即使完成了）。
 
 芬兰人 Linus Torvalds 用英语评论他的代码（他显然从未想过用其他方式）。他流利的英语是他能够在全球范围内招募 Linux 开发人员的一个重要因素。这是一个值得效仿的例子。
+
+所以，你不必在技术上很在行才能吸引我们的注意，但你必须表现出能引导你变得在行的特质 —— 机敏、有想法、善于观察、乐于主动参与解决问题。**如果你做不到这些使你与众不同的事情，我们建议你花点钱找家商业公司签个技术支持服务合同**，而不是要求黑客个人无偿地帮助你。
 {% endblockquote %}
